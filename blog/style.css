@@ -1,0 +1,72 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+.html{
+  height: 100%;
+  overflow: auto;
+}
+
+.boxwrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2%;
+}
+
+.left {
+  flex: 1;
+  margin-left: 5%;
+  margin-top: 12%;
+}
+
+.center {
+  flex: 2;
+  margin-top: 2%;
+}
+
+.right {
+  flex: 1;
+  margin-right: 5%;
+  margin-top: 12%;
+}
+
+.container {
+ 
+ }
+
+.post {
+  p{
+    text-indent: 25px;
+  } 
+}
+
+/*big header*/
+h1 {
+
+}
+
+/*sub header*/
+h2 {
+
+}
+ 
+p {
+
+}
+
+/*li is formatting for list items*/
+li{
+
+}
+
+strong {
+
+}
+
+a {
+
+}
+
+body {
+
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/blog/style.css" rel="stylesheet" type="text/css" media="all">
+    
+    <!--font (also ignore the error lol)>-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/index/favicon.png">
+    <title>✿⋆.˚⋆₊⊹𝑲𝒊𝒏𝒅𝒈𝒐𝒎 𝒐𝒇 𝑨𝒌𝒊𝒃𝒂𝒕𝒆𝒏⊹₊⋆˚.⋆✿</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> <!-- Make sure this is here! -->
+</head>
+  </head>
+  <body>
+    <div class="boxwrapper">
+      <!--LEFT SIDE-->
+      <div class="left">
+      
+      </div>
+      
+      <!--CENTER-->
+      <div class="center">
+        <script>
+          //proud of this code :>
+
+          //fetches json fileList
+          fetch("/blog/posts/fileList.json?v=${Date.now()}")
+            //converts json to javascript array
+            .then(response => response.json())
+            
+            //renders all posts from file names in json
+            .then(fileList => {
+              console.log(fileList);
+              //reverse chronological orders posts
+              fileList.sort((a,b) => new Date(b.substring(0,10)) - new Date(a.substring(0,10)));
+              console.log(fileList);
+              //sort() sorts in place so we have to return to use in the argument of the next arrow function
+              return fileList;
+            })
+              //for each file is converts to a string converts to html then appends to a new div and then appends that new div to id = "posts"
+            .then(sortedFileList => {
+                console.log("Sorted file list:", sortedFileList);
+
+                return Promise.all(sortedFileList.map(fileName => 
+                    fetch("/blog/posts/" + fileName)
+                      .then(response => response.text())
+
+                      //future me please note this is where you cheekily put the horizontal lines
+                      .then(markdown =>marked.parse(markdown)+"<hr>")
+                      .then(convertedMarkdown => {
+                        return { fileName, convertedMarkdown };
+                      })
+                ));
+            })
+            .then(results => {
+                const posts = document.getElementById("posts");
+                posts.innerHTML = "";
+
+                for (let post of results) { 
+                    if (post) {  // Skip failed fetches
+                        const node = document.createElement("div");
+                        node.className = "post";
+                        node.innerHTML = post.convertedMarkdown;
+                        posts.appendChild(node);
+                        console.log(node)
+                    }
+                }
+            })
+        </script>  
+        <div id="posts">
+          
+        </div>
+      </div>
+      <!--RIGHT SIDE-->
+      <div class="right">
+
+      </div>
+  </body>
+</html>

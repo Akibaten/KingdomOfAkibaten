@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:ns0="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <item>
+      <pubDate>Thu Mar  6 23:55:35 2025</pubDate>
+      <title>New Background</title>
+      <description>I have finally added a different background :D the old one was quite slow and a bit too much. This visual was made in p5js! I designed it kind of inspired by https://ramcst.neocities.org/ please check him out! its a really cool site. I initially loaded p5js but there were tons of rendering issues and it was very resource intensive. I refined it a lot and then just took a video of it and put that in the site instead :P so no p5js is running. Imagine my shock when I d for free accounts :( after all that work :((( so I just caved and got supporter c: i love neocities anyways I am happy to support. Let me know if this background is a lot overstimulating lol. I ha ve a lot of exams next week so I have to ban myself from working on this for a week or two :( its just insanely distracting I will sink so many hours into :/ Also I am really starting to realize the limitations of just manually pushing using CLI from a local directory so I might switch to github. I also started using visual studio. HUGE quality of life thing for sure. That's all! I hope this update finds you well! ^_^</description>
+      <link>https://kingdomofakibaten.neocities.org/index.html</link>
+    </item>
+    <item>
+      <pubDate>Mon Mar  3 12:05:33 2025</pubDate>
+      <title>New Blog Post (My Experience with Vyvanse)</title>
+      <description>I post about my experience with my new medication, Vyvanse, and a little, hopefully understandable explanation of how it works in the brain :)</description>
+      <link>https://kingdomofakibaten.neocities.org/blog/posts/2025-03-03-my-experience-with-vyvanse.md</link>
+    </item>
+    <item>
+      <pubDate>Fri Feb 28 16:59:32 2025</pubDate>
+      <title>MY BLOG IS LIVE!</title>
+      <description>I have finished building the way my blog workss outside of sytling and have put it up. Obviously it has no styling right now, but I'll fix that later this was a hassle enough even though it really doesn't look like much lol</description>
+      <link>https://kingdomofakibaten.neocities.org/blog.html</link>
+    </item>
+    <item>
+      <pubDate>Tue Feb 25 13:31:15 2025</pubDate>
+      <title>RSS Button</title>
+      <description>I put a button in the changelog box that links to my RSS xml (^_^)</description>
+      <link>https://kingdomofakibaten.neocities.org/index.html</link>
+    </item>
+    <item>
+      <pubDate>Mon Feb 24 18:00:11 2025</pubDate>
+      <title>RSS Widget Added</title>
+      <description>Okay I implemented it basically instantly. Javascript is far too slow at working with html. I have used a widget generator to make one for me in php which is nice. However... I wasted like 4 hours of life（；¬＿¬). Unfortunately neocities can't host php files so I have to hotlink and it might break later but oh well. Hopefully it all works now.</description>
+      <link>https://kingdomofakibaten.neocities.org/index.html</link>
+    </item>
+    <ttl>20000</ttl>
+    <ns0:link href="https://kingdomofakibaten.org/feed.xml" rel="self" type="application/rss+xml" />
+    <title>RSS Feed</title>
+    <description>This is the description of your RSS feed</description>
+    <link>https:kingdomofakibaten.neocities.org</link>
+    <lastBuildDate>
+   Tue, 10 Jul 2018 09:58 +0100
+    </lastBuildDate>
+    <item>
+      <pubDate>Mon Feb 24 15:11:26 2025</pubDate>
+      <title>FINALLY I ADDED RSS</title>
+      <description>This was one of if not the hardest thingsgs I have ever coded. RSS is actually fairly easy to implement. I fdon't have supporter so I had to come up with some work arounds where I could manually push to neocities from local files. For some reason, after this I decided to basically build my own rss widget in javascript and it was insanely hard to put it lightly. I spent 4 hours and it barely works and I still need to implement it on the websitite. I'm considering making a tutorial for all of this because I had to go to 100 different resources just to figure it out. ANYWAYS thats all ^-^</description>
+      <link>https://kingdomofakibaten.neocities.org/test.html</link>
+    </item>
+  </channel>
+</rss>

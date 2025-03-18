@@ -1,0 +1,5 @@
+changed margin sizes in index
+fixed scrollin images on index
+
+To do
+change domain name
