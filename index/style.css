@@ -34,7 +34,7 @@
     inset 0 0 0 6px rgba(120, 240, 240, .9),
     inset 0 0 0 7.5px black;
   
-  line-height: 0;
+  line-height: 1;
   word-wrap: break-word;
   background-color: rgba(255, 255, 255, 0.7);
   background-attachment: fixed;
