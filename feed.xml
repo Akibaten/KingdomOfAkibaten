@@ -1,6 +1,17 @@
 <?xml version='1.0' encoding='utf-8'?>
 <rss xmlns:ns0="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
+    <pubDate> Mon mar 24 10:17:20 2025 </pubDate>
+    <versionNumber>Ì.𝚭.Ⴢ</versionNumber>
+    <title> Finally back Medium size update <title>
+    <description> The biggest changes were a new music box on the left, removing the scrolling images box I had to make room for future plans >:), and A DOMAIN NAME YAY ٩(^ᗜ^ )و. Also a new blog post :). I was heavily inspired by doqmeat for the music box so thank you to them :). You can find their website in my buttons box :D</description>
+    <changelog>
+      -changed margin sizes in index
+      -removed scrolling images
+      -change domain name
+      -added box for music i've most recently listened to
+      -got rid of weird rss item add python script i'm just going to add it manualy to preserve line breaks
+    </changelog>
     <item>
       <pubDate>Thu Mar  6 23:55:35 2025</pubDate>
       <title>New Background</title>

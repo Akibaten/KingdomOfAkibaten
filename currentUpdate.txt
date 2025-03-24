@@ -1,5 +1,5 @@
-changed margin sizes in index
-fixed scrollin images on index
-
-To do
-change domain name
+-changed margin sizes in index
+-removed scrolling images
+-change domain name
+-added box for music i've most recently listened to
+-got rid of weird rss item add python script i'm just going to add it manualy to preserve line breaks

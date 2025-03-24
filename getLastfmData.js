@@ -14,6 +14,8 @@ async function fetchRecentTracks(){
   try{
     response = await fetch(`https://ws.audioscrobbler.com/2.0/?api_key=${apiKey}&method=User.getrecenttracks&user=${user}&format=json&limit=1`);
     const lastfmData = await response.json();
+    const imgURL = `${lastfmData.recenttracks.track[0].image[3]["#text"]}`;
+    document.getElementById("albumImage").src = imgURL;
     document.getElementById("trackInfo").textContent = `${lastfmData.recenttracks.track[0].name} by ${lastfmData.recenttracks.track[0].artist["#text"]}`;
   } catch (error){
     console.log("wahhhhhhh last fm is borken sadge");
