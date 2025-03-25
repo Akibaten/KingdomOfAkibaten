@@ -10,6 +10,17 @@ the description looks weird because I want to not destroy its readability when c
     <description>This is the description of your RSS feed</description>
     <link>https:kingdomofakibaten.neocities.org</link>
     <item>
+      <pubDate> Tue, 25 Mar 2025 1:29:35 CST</pubDate>
+      <title> A hot fix... sort of version: Ì.𝚭.Ⴢ.§</title>
+      <description> In my last push I kind of destroyed my RSS widget. I just couldn't stand for that it really killed me lol. So I spent a ton of time... hours... figuring out how to write my own rss widget. I was trying to use javascript like a noob. I didn't know xlst existed to auto format xml its so awesome THANK YOU W3. This isn't a hotfix in that its small and meant to fix things. It fixes things by changing a lot so its like a regular smallish update done "hot"-ly I guess.
+Changelog:
+-changed font to trebuchet (tbh the pixely one was getting obnoxious, it isn't websafe or standard so it was so hard to use with xls, and most importantly IT WAS DESTROYING MY KAOMOJIs :((( so I just decided to change it. I had meant to do this anyway)
+-removed php rss widget
+-created XLS to format XML and display in an object element
+-I think thats it
+      </description>
+    </item>
+    <item>
       <pubDate> Mon, 24 Mar 2025 10:17:20 CST</pubDate>
       <title> Finally back Medium size update Version: Ì.𝚭.Ⴢ</title>
       <description> The biggest changes were a new music box on the left, removing the scrolling images box I had to make room for future plans >:), a new blog post about my recent experiences finding my voice in my music, and A DOMAIN NAME YAY ٩(^ᗜ^ )و. Also a new blog post :). I was heavily inspired by doqmeat for the music box so thank you to them :). You can find their website in my buttons box :D

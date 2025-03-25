@@ -67,14 +67,16 @@ h1 {
 
 /*sub header*/
 h2 {
+  line-height: 115%;
   font-size: 30px;
   color:rgb(235,0,127);
   margin-top: 20px;
-  margin-bottom: 3px;
+  margin-bottom: 10px;
 }
  
 p {
   /*paragraph spacing*/
+  line-height: 110%;
   margin-bottom: 12px;
   color:hotpink;
   font-size: 25px;
@@ -82,6 +84,7 @@ p {
 
 /*li is formatting for list items*/
 li{
+  line-height: 120%;
   color:rgb(235,0,127);
   font-size: 25px;    
 }
