@@ -112,7 +112,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: scroll;
-  font-family: "Pixelify Sans", serif;
+  font-family: 'Trebuchet MS', sans-serif;
 }
 
 .clearfix::after {
