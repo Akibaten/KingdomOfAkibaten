@@ -1,2 +1,10 @@
+done
+added responsive design
+changed big header
+make rss feed prettier
+
 to do
--build my own xml parser for RSS the php one is bad
+rewrite about section
+make the letters prettier
+start work on the blog styling that stuff is still atrocious
+redo the boxes :))))    

@@ -11,7 +11,7 @@
 
 .left {
   flex: 1;
-  margin-left: 12%;
+  margin-left: 11%;
   margin-top: 10%;
 }
 
@@ -24,6 +24,53 @@
   flex: 1;
   margin-right: 12%;
   margin-top: 10%;
+}
+
+
+@media only screen and (max-width: 768px){
+  .boxwrapper {
+    display: grid;
+    grid: auto-flow; 
+    gap: 0%;
+  }
+
+  .left {
+    grid-row: 2;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 0%;
+  }
+
+  .center {
+    grid-row: 1;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .right {
+    grid-row: 3;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 10%;
+  }
+  
+  /* changes font size for mobile */
+  p{
+    font-size: 1em !important;
+  }
+
+  /*big header*/
+  h1 {
+    font-size: 3.125em;
+    text-align: center;
+    color:rgb(235,0,127);
+    margin-bottom: 5% !important;
+    margin-top: 5% !important;
+  }
+  
+  .horizontal-bar{
+    animation: scroll-horizontal 5s linear infinite !important;
+  }
 }
 
 .container {
@@ -46,7 +93,7 @@
   
   /*outline around letters*/
   -webkit-text-stroke-width: .5px;
-  -webkit-text-stroke-color: rgb(255,20,147); 
+  -webkit-text-stroke-color: rgb(255,20,147);
 }
 
 /*change color on hover*/
@@ -59,7 +106,7 @@
 
 /*big header*/
 h1 {
-  font-size: 50px;
+  font-size: 3.125em;
   text-align: center;
   color:rgb(235,0,127);
   margin-bottom: 2.5%;
@@ -68,7 +115,7 @@ h1 {
 /*sub header*/
 h2 {
   line-height: 115%;
-  font-size: 30px;
+  font-size: 1.875em;
   color:rgb(235,0,127);
   margin-top: 20px;
   margin-bottom: 10px;
@@ -79,14 +126,14 @@ p {
   line-height: 110%;
   margin-bottom: 12px;
   color:hotpink;
-  font-size: 25px;
+  font-size: 1.56em;
 }
 
 /*li is formatting for list items*/
 li{
   line-height: 120%;
   color:rgb(235,0,127);
-  font-size: 25px;    
+  font-size: 1.56em;    
 }
 
 strong {
@@ -181,13 +228,6 @@ body {
   animation: scroll-horizontal 15s linear infinite;
 }
 
-
-/*.horizontal-bar .content {*/
-/*  display: flex;*/
-/*  width: max-content;*/
-/*  animation: scroll-horizontal 15s linear infinite;*/
-/*}*/
-
 @keyframes scroll-vertical {
   0% {
     transform: translateY(0);
@@ -202,6 +242,6 @@ body {
     transform: translateX(50%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
