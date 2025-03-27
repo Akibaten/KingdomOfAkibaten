@@ -134,7 +134,7 @@
 
 /*big header*/
 h1 {
-  font-size: 3.125em;
+  font-size: 3hem;
   text-align: center;
   color:rgb(235,0,127);
   margin-top: .05em;
@@ -155,7 +155,7 @@ p {
   line-height: 110%;
   margin-bottom: 12px;
   color:hotpink;
-  font-size: 1.56em;
+  font-size: 1.4em;
 }
 
 /*li is formatting for list items*/
