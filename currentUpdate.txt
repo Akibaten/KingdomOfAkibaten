@@ -2,9 +2,11 @@ done
 added responsive design
 changed big header
 make rss feed prettier
+redo the boxes :))))
+make the letters prettier
+added daftpunk button
 
 to do
+add japanese verison of site
 rewrite about section
-make the letters prettier
 start work on the blog styling that stuff is still atrocious
-redo the boxes :))))    
