@@ -3,55 +3,87 @@
    "how to change link color." */
 .html{
   height: 100%;
-  overflow: auto;
 }
 
 .boxwrapper {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 2%;
 }
 
 .left {
   flex: 1;
   margin-left: 5%;
-  margin-top: 12%;
 }
 
 .center {
   flex: 2;
-  margin-top: 2%;
 }
 
 .right {
   flex: 1;
   margin-right: 5%;
-  margin-top: 12%;
 }
 
-.container {
- 
- }
+.titleContainer{
+  position: fixed;
+  top: 4.2em;
+  left: -1vw;
+  right: 24vw;
+  height:16vh;
+  text-align: center;
+  z-index: 1000;
+}
 
-.post {
+.postContainer {
+  position: fixed;
+  
+  top:20vh;
+  left:20vw;
+  right:20vw;
+  bottom: 10vh;
+  
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-bottom: 0px;
+  
+  overflow-y: scroll;
+  overflow-x: hidden;
+  
+  backdrop-filter: blur(.5em);
+  border-radius: 30px;
+  box-shadow: inset 0 0 0 .2em rgba(255,255,255,1);
+  outline: solid rgba(255,255,255,1);
+  outline-width: .2em;
+  border: solid rgba(255,255,255,.5);
+  border-width: .2em;
+
+  scrollbar-width: none;  /* Hide scrollbar in Firefox */
+  -ms-overflow-style: none;  /* Hide scrollbar in Internet Explorer and Edge */
+}
+
+.posts{
   p{
-    text-indent: 25px;
-  } 
+  }
 }
 
 /*big header*/
 h1 {
-
+  color: white;
+  background-clip: text; /* Clips the background to the text */
 }
 
 /*sub header*/
 h2 {
-
+  color: white;
+  background-clip: text; /* Clips the background to the text */
 }
  
 p {
-
+  font-size: 1em;
+  color: white;
+  background-clip: text; /* Clips the background to the text */
+  background-image: linear-gradient(to right, red, green, blue);
 }
 
 /*li is formatting for list items*/
@@ -60,13 +92,20 @@ li{
 }
 
 strong {
-
+  
 }
 
 a {
-
+  color: aliceblue;
 }
 
 body {
+  margin:0;
+  background-image: url("/blog/blogBackground.jpg");
+  font-family: "Comic Sans MS", "Comic Sans", cursive;  
+}
 
+@font-face {
+  font-family: OldEnglishGothicPixel;
+  src: url(/fonts/OldEnglishGothicPixelRegular.otf);
 }

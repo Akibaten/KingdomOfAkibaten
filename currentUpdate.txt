@@ -1,12 +1,10 @@
 done
-added responsive design
-changed big header
-make rss feed prettier
-redo the boxes :))))
-make the letters prettier
-added daftpunk button
+added blog title
+added basic formatting to blog
+added evangelion button DUDE GIF CITIES IS SO AWESOME
 
 to do
 add japanese verison of site
 rewrite about section
 start work on the blog styling that stuff is still atrocious
+MINECRAFT FLASHING THING FROM HOME MENU :333333
