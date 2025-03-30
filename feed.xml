@@ -15,6 +15,7 @@ the description looks weird because I want to not destroy its readability when c
       <description>small update to just clean things up
 Changelog:
 -replaced gross css animation with a much prettier js animation that replicates marquee
+        -HAHAHA just kidding that broke instantly on pushing I just switched it to marquee bad webdev practices yada yada yada whatever
 -changed about paragraph and picture
 -added some new buttons and a new site I like by winteryear! seriously they are so cool check them out by clicking the button :D
 -cleaned out unused assets in neocities
