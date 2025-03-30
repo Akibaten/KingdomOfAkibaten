@@ -134,7 +134,7 @@
 
 /*big header*/
 h1 {
-  font-size: 3hem;
+  font-size: 3em;
   text-align: center;
   color:rgb(235,0,127);
   margin-top: .05em;
@@ -153,7 +153,7 @@ h2 {
 p {
   /*paragraph spacing*/
   line-height: 110%;
-  margin-bottom: 12px;
+  margin-bottom: .75em;
   color:hotpink;
   font-size: 1.4em;
 }
@@ -245,18 +245,15 @@ body {
 }
 
 .horizontal-bar{
-  overflow: hidden;
-  width: 200%;
   position: fixed;
-  display: flex;
+  width: 100%;
+  bottom: 0;
+  overflow: hidden;
   white-space: nowrap;
   margin-bottom: 1%;
-  z-index: 1000;
-  bottom: 0;
-  left: 0;
-  animation: scroll-horizontal 15s linear infinite;
 }
 
+/* 
 @keyframes scroll-vertical {
   0% {
     transform: translateY(0);
@@ -273,4 +270,4 @@ body {
   100% {
     transform: translateX(-100%);
   }
-}
+} */

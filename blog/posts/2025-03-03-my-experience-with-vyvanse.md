@@ -10,13 +10,15 @@ When I started Vyvanse I felt it kick in within about an hour. Ther
 
 This has given me an opportunity to talk about one of my favorite mechanisms of action of any drug. First I should establish that vyvanse is an amphetamine and is a prodrug of amphetamine (adderall [technically adderall is dextroamphetamine and the chirality of vyvanse after conversion could be racemic but whatever thats not super important]). It is essentially adderall with an additional lysine amino acid on the end of it. This means that your body has to cleave this lysine molecule (turning it into amphetamine) before it can actually use Vyvanse in your brain.
 
-Vyvanse (Lisdexamphetamine):
+<div style="display: flex; flex-direction: row; color:white">
+<div style="flex:1">Vyvanse (Lisdexamphetamine):
 
-<img src = "https://upload.wikimedia.org/wikipedia/commons/1/1a/Lisdexamfetamine_ball-and-stick_model.png" width= "30%" height="auto">
+<img src = "https://upload.wikimedia.org/wikipedia/commons/1/1a/Lisdexamfetamine_ball-and-stick_model.png" width= "auto" height="200em"></div>
 
-Adderall (dextroamphetamine):
+<div style="flex: 2; padding-left:20%">Adderall (dextroamphetamine):
 
-<img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/D-Amphetamine-3D-balls.png/1200px-D-Amphetamine-3D-balls.png" width= "30%" height="auto">
+<img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/D-Amphetamine-3D-balls.png/1200px-D-Amphetamine-3D-balls.png" width= "auto" height="200em"></div>
+</div>
 
 This cleaving is hugely advantageous to Vyvanse because it increases it's halflife (essentially how long it can actually be effective in your brain)
 
