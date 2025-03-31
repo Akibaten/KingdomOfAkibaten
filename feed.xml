@@ -10,6 +10,17 @@ the description looks weird because I want to not destroy its readability when c
     <description>This is the description of your RSS feed</description>
     <link>https:kingdomofakibaten.neocities.org</link>
     <item>
+      <pubDate>Mon, 31 Mar 2025 01:12:32 CST</pubDate>
+      <title>Microblog Version: Lb7.WVx.2qV</title>
+      <description>
+        I wanted to add a little microblog thing for me to talk about small little things and thoughts I have, and I found https://aegi.neocities.org/ and I just loved her site and blog and it finally pushed me to make one. Please check her site out. It's really cool B)
+Changelog:
+-added a microblog and a tiny amount of formatting.
+-reverted much of the blog css I accidentally pushed oops and also added minimal formatting so its at least readable now
+-cleaned out a bunch of unused or old files in my neocities
+      </description>
+    </item>
+    <item>
       <pubDate>Sun, 30 Mar 2025 16:08:45 CST</pubDate>
       <title>Small update Version:!B.7xu.dnS.2</title>
       <description>small update to just clean things up
@@ -18,7 +29,6 @@ Changelog:
         -HAHAHA just kidding that broke instantly on pushing I just switched it to marquee bad webdev practices yada yada yada whatever
 -changed about paragraph and picture
 -added some new buttons and a new site I like by winteryear! seriously they are so cool check them out by clicking the button :D
--cleaned out unused assets in neocities
       </description>
     </item>
     <item>
