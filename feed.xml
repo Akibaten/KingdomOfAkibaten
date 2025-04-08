@@ -10,8 +10,46 @@ the description looks weird because I want to not destroy its readability when c
     <description>This is the description of your RSS feed</description>
     <link>https:kingdomofakibaten.neocities.org</link>
     <item>
+      <pubDate>Tue, 8 Apr 2025 18:01:30 CST</pubDate>
+      <title>
+        Big update
+Version: 4.aQ!.C*jPX
+      </title>
+      <description>
+        I added a japanese translation of the main page, added a new microblog post, a site news box, a preview of the microblog, and other stuff I have probably forgotten about.
+Changelog:
+-added japanese verison of homepage via json and javscript and IDs
+-added a Site news box
+-added a shrine page for later
+-added a preview of the microblog below the main page
+-other stuff i've probably forgotten about
+      </description>
+    </item>
+    <item>
+      <pubDate>Thu, 3 Apr 2025 19:10:12 CST</pubDate>
+      <title>medium to big update
+Version: 2.Pm3.OsTSEw
+      </title>
+      <description>
+        I changed the background for performance reasons. Also now that there are opaque boxes it's kind of pointless to have an animation in the back you can't see. I changed the bottom banner to CSS but improved it. There's a new microblog post, and I added a little video player that you can click to play a music snippet I made recently :3
+Changelog:
+-rewrote about section
+-added actual local comic sans tff for compatibility
+-added back buttons to alternative pages idk how I didn't have that before
+-added basic responsive design for microblog and blog
+-added trans flag button
+-added crosstile background
+-got rid of marquee in favor of css
+-microblog post about serum present :3
+-added new music snippet video player
+-added new music snippet
+-other stuff i've probably forgotten
+      </description>
+    </item>
+    <item>
       <pubDate>Mon, 31 Mar 2025 01:12:32 CST</pubDate>
-      <title>Microblog Version: Lb7.WVx.2qV</title>
+      <title>Microblog 
+Version: Lb7.WVx.2qV</title>
       <description>
         I wanted to add a little microblog thing for me to talk about small little things and thoughts I have, and I found https://aegi.neocities.org/ and I just loved her site and blog and it finally pushed me to make one. Please check her site out. It's really cool B)
 Changelog:
@@ -22,7 +60,8 @@ Changelog:
     </item>
     <item>
       <pubDate>Sun, 30 Mar 2025 16:08:45 CST</pubDate>
-      <title>Small update Version:!B.7xu.dnS.2</title>
+      <title>Small update 
+Version:!B.7xu.dnS.2</title>
       <description>small update to just clean things up
 Changelog:
 -replaced gross css animation with a much prettier js animation that replicates marquee
@@ -33,7 +72,8 @@ Changelog:
     </item>
     <item>
       <pubDate>Thu, 27 Mar 2025 13:31:52 CST</pubDate>
-      <title>Small update Version:!B.7xu.dnS.1</title>
+      <title>Small update 
+Version:!B.7xu.dnS.1</title>
       <description>small update to fix a few things
 Changelog:
 -fixed title not loading correctly on some resoulations
@@ -43,7 +83,8 @@ Changelog:
     </item>
     <item>
       <pubDate>Wed, 26 Mar 2025 20:17:52 CST</pubDate>
-      <title>Changing Formatting Version:!B.7xu.dnS</title>
+      <title>Changing Formatting 
+Version:!B.7xu.dnS</title>
       <description> I changed TONSSS of formatting in this one :D it looks so much prettier. ALSO, I added responsive design finally lol so it works on phones. There are probably issues but it seems to work okay on most phones. I also made and added a daft punk button to the hoizontally scrolling buttons.
 Changelog:
 -added responsive design
@@ -55,7 +96,8 @@ Changelog:
     </item>
     <item>
       <pubDate>Tue, 25 Mar 2025 01:29:35 CST</pubDate>
-      <title> A hot fix... sort of version: Ì.𝚭.Ⴢ.§</title>
+      <title> A hot fix... sort of 
+version: Ì.𝚭.Ⴢ.§</title>
       <description> In my last push I kind of destroyed my RSS widget. I just couldn't stand for that it really killed me lol. So I spent a ton of time... hours... figuring out how to write my own rss widget. I was trying to use javascript like a noob. I didn't know xlst existed to auto format xml its so awesome THANK YOU W3. This isn't a hotfix in that its small and meant to fix things. It fixes things by changing a lot so its like a regular smallish update done "hot"-ly I guess.
 Changelog:
 -changed font to trebuchet (tbh the pixely one was getting obnoxious, it isn't websafe or standard so it was so hard to use with xls, and most importantly IT WAS DESTROYING MY KAOMOJIs :((( so I just decided to change it. I had meant to do this anyway)
@@ -66,7 +108,8 @@ Changelog:
     </item>
     <item>
       <pubDate> Mon, 24 Mar 2025 10:17:20 CST</pubDate>
-      <title> Finally back Medium size update Version: Ì.𝚭.Ⴢ</title>
+      <title> Finally back Medium size update 
+Version: Ì.𝚭.Ⴢ</title>
       <description> The biggest changes were a new music box on the left, removing the scrolling images box I had to make room for future plans >:), a new blog post about my recent experiences finding my voice in my music, and A DOMAIN NAME YAY ٩(^ᗜ^ )و. Also a new blog post :). I was heavily inspired by doqmeat for the music box so thank you to them :). You can find their website in my buttons box :D
 Changelog:
 -changed margin sizes in index

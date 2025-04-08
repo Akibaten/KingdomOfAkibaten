@@ -92,9 +92,9 @@
 
 .container {
   display: block;
-  border-radius: .4em;
+  border-radius: .6em;
   background-image: linear-gradient(rgb(255, 255, 80),rgb(80, 255, 255), rgb(255, 80, 157), rgb(255, 255, 80),rgb(80, 255, 255));
-  box-shadow: 0 0 1em .5em rgb(205, 205, 205);
+  box-shadow: 0 0 1em .6em rgb(205, 205, 205);
   background-attachment: fixed;
   padding:.625em;
 
@@ -107,7 +107,7 @@
 }
 
 .containerBar{
-  border-radius: .4em;
+  border-radius: .6em;
   word-wrap: break-word;
   background-color: rgba(255, 255, 255, 1);
   padding: 3%;
@@ -116,7 +116,7 @@
 
 
 .containerContent{
-  border-radius: .4em;
+  border-radius: .6em;
   word-wrap: break-word; 
   background-color: rgba(255, 255, 255, 1);
   padding:3%;
@@ -134,7 +134,7 @@
 
 /*big header*/
 h1 {
-  font-size: 3em;
+  font-size: 2.5em;
   text-align: center;
   color:rgb(235,0,127);
   margin-top: .05em;
@@ -183,21 +183,51 @@ a:hover{
    background-color: rgba(240,90,165,0.5); 
 }
 
+#microBlogPreviewBoxText{
+  height: 20em;
+}
+
+/* style for microblog object*/
+#microblogPreview{
+  height: 40vh;
+  width: 60%;
+  border: solid rgba(200,200,200);
+  border-radius:5px;
+}
 
 body {
   /*background-image: linear-gradient(rgba(140, 255, 255, .7), rgba(255,140,255, .7), rgba(255,255,140, .7), rgba(140, 255, 255, .7)), url(/index/background-image.jpg);*/
   /* background-image: url('waveform-background.png'); */
   background-size: auto;
-  background-repeat: no-repeat;
+  background-image: url("/index/crossTile.png"), linear-gradient( rgb(80, 255, 255), rgb(255, 80, 157), rgb(255, 255, 80));
+  background-repeat:repeat;
+  background-size: 25vh auto;
   background-position: center;
-  background-attachment: scroll;
+  background-attachment: fixed;
+  background-position: center;
   font-family: 'Trebuchet MS', sans-serif;
+}
+
+/* button styling */
+#translateButton{
+  text-align: center; 
+  color:rgb(235,0,127);
+  background-color: white;
+  border-radius: 5px;
+  box
 }
 
 .clearfix::after {
   content: "";
   clear: both;
   display: table;
+}
+
+video {
+  clip-path: inset(1px 1px);
+  background-image: linear-gradient(to right, rgb(80, 255, 255), rgb(255, 80, 157), rgb(255, 255, 80));
+  background-clip: border-box;
+  border-radius: .4em;
 }
 
 .video-container {
@@ -253,21 +283,32 @@ body {
   margin-bottom: 1%;
 }
 
-/* 
-@keyframes scroll-vertical {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-50%);
-  }
+.marquee {
+  height: 31px;
+  width: 100%;
+
+  overflow: hidden;
+  position: relative;
 }
 
-@keyframes scroll-horizontal {
-  0% {
-    transform: translateX(50%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-} */
+.marquee div {
+  display: block;
+  width: 200%;
+  height: auto;
+
+  position: absolute;
+  overflow: hidden;
+
+  animation: marquee 18s linear infinite;
+}
+
+.marquee span {
+  float: left;
+  width: 50%;
+  font-size: 0px;
+}
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
+}

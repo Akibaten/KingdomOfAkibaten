@@ -1,10 +1,11 @@
 done
-added blog title
-added basic formatting to blog
-added evangelion button DUDE GIF CITIES IS SO AWESOME
+added japanese verison of homepage via json and javscript and IDs
+added a Site news box
+added a shrine page for later
+added a preview of the microblog below the main page
+other stuff i've probably forgotten about
 
 to do
-add japanese verison of site
-rewrite about section
 start work on the blog styling that stuff is still atrocious
-MINECRAFT FLASHING THING FROM HOME MENU :333333
+add microblog to front page in new container in the center
+leanr to use pseudo elements and replace this bad container container content system to add the linear gradient

@@ -22,26 +22,27 @@
      <link rel="preload" href="/index/buttons/noNazismButton.gif" as="image">
      <link rel="preload" href="/index/buttons/transrightsButton.png" as="image">
      <link rel="preload" href="/index/buttons/vn button.png" as="image">
+     <script src = "index/translations/translateToJP.js"></script>
   </head>
   <body>
-    <div class="video-container">
-      <video autoplay muted loop playsinline id="myVideo">
+    <!-- <div class="video-container"> -->
+      <!-- <video autoplay muted loop playsinline id="myVideo">
         <source src="/index/wave-background.mp4" type="video/mp4">
       </video>
-    </div>
+    </div> -->
     <div class="boxwrapper">
       <!--LEFT SIDE-->
       <div class="left">
         <div class="container">
           <div class="containerBar">
-            <h2>
+            <h2 id = "bio">
               <strong>
-                <u>BIO:</u>
+                BIO
               </strong>
             </h2>
           </div>
           <div class="containerContent">
-            <p style="margin-top: 5px; margin-bottom: 5px">
+            <p style="margin-top: 5px; margin-bottom: 5px" id = "bioBoxText">
               <strong>Age:</strong> 22 <br>
               <strong>Nationality:</strong> American <br>
               <strong>Pronouns:</strong> She/Her
@@ -51,29 +52,30 @@
         <div class="container">
           <!-- bar for the top of the box -->
           <div class="containerBar">
-            <h2 style="text-align: center">
+            <h2 style="text-align: center" id = "siteContents">
               <strong>
-                <u> SITE CONTENTS </u>
+                 SITE CONTENTS 
               </strong>
             </h2>  
           </div>
           <div class="containerContent">
             <ul style="margin-top: 5px">
-              <li><a href = "/blog.html">Blog</a></li>
-              <li><a href = "/microblog.html">Microblog<a></li>
+              <li id = "blogLink"><a href = "/blog.html">Blog</a></li>
+              <li id = "microblogLink"><a href = "/microblog.html">Microblog</a></li>
+              <li id = "shrinesLink"><a href="/shrines.html">Shrines</a></li>
             </ul>
           </div>
         </div>
         <div class="container">
           <!-- bar for the top of the box -->
           <div class="containerBar">
-            <h2 style="text-align: center">
+            <h2 style="text-align: center" id = "myLinks">
               <strong>
-                <u> MY LINKS </u>
+                 MY LINKS 
               </strong>
             </h2>
           </div>
-          <div class="containerContent">
+          <div class="containerContent" id = "myLinks">
             <ul style="margin-top: 5px">
               <li>Discord: @hpnasa</li>
               <li>
@@ -91,21 +93,37 @@
         <div class="container">
           <!-- bar for the top of the box -->
           <div class="containerBar">
-            <h2 style = "text-align: center">
+            <h2 style = "text-align: center" id = "siteNews">
               <strong>
-                  <u>MY FAVORITE MUSIC ARTISTS RIGHT NOW</u>
+                  SITE NEWS ٩(^ᴗ^)۶
+              </strong>
+            </h2>
+          </div>
+          <div class="containerContent">
+            <p id="siteNewsBoxText" style = "margin-top: 1%; margin-bottom: 1%;">
+              I added a Japanese translation of the homepageヽ(°〇°)ﾉ<br>
+              and I added a new preview of the microblog below the about paragraph
+            </p>
+          </div>
+        </div>
+        <div class="container">
+          <!-- bar for the top of the box -->
+          <div class="containerBar">
+            <h2 style = "text-align: center" id="favoriteMusicArtists">
+              <strong>
+                  MY FAVORITE MUSIC ARTISTS RIGHT NOW
               </strong>
             </h2>
           </div>
           <div class="containerContent">
             <ul style = "margin-top: 5px">
-              <li><a href="https://open.spotify.com/artist/13VunSzrVSmJBpUWxUajJF?si=AffHLmmeT9SuudhXrP6tDQ">Limbo</a></li>
-              <li><a href="https://open.spotify.com/artist/4oLeXFyACqeem2VImYeBFe?si=PBUEnMQ6RGSKfQCfu-p0bg">Fred again..</a></li>
-              <li><a href="https://open.spotify.com/artist/7y3QUIX6uggP35I59kusOd?si=B2E2g_GYQayH8er0es4-Vw">The Lazarus Plot</a></li>
-              <li><a href="https://open.spotify.com/artist/35l9BRT7MXmM8bv2WDQiyB?si=LZ3ir5J5TSuG7KAimZ0SVw">beabadoobee</a></li>
-              <li><a href="https://open.spotify.com/artist/6OqhFYFJDnBBHas02HopPT?si=rFUKeMngQ7-fYIao_3l0hw">Kero Kero Bonito</a></li>
+              <li id = "favoriteArtist1"><a href="https://open.spotify.com/artist/13VunSzrVSmJBpUWxUajJF?si=AffHLmmeT9SuudhXrP6tDQ">Limbo</a></li>
+              <li id = "favoriteArtist2"><a href="https://open.spotify.com/artist/4oLeXFyACqeem2VImYeBFe?si=PBUEnMQ6RGSKfQCfu-p0bg">Fred again..</a></li>
+              <li id = "favoriteArtist3"><a href="https://open.spotify.com/artist/3dz0NnIZhtKKeXZxLOxCam?si=zu1xA6AvS8mcA30yxHTAyw">Porter Robinson</a></li>
+              <li id = "favoriteArtist4"><a href="https://open.spotify.com/artist/6ignRjbPmLvKdtMLj9a5Xs?si=fl68uhS7RU2tlFphQVmHmg">Ichiko Aoba</a></li>
+              <li id = "favoriteArtist5"><a href="https://open.spotify.com/artist/6OqhFYFJDnBBHas02HopPT?si=rFUKeMngQ7-fYIao_3l0hw">Kero Kero Bonito</a></li>
             </ul>
-            <p> Music is a really big part of my life. These are just the artists I've been listening to the most recently
+            <p id = "favoriteMusicArtistsBoxText"> Music is a really big part of my life. These are just the artists I've been listening to the most recently
                 and have/had the biggest influence on me ^_^. My tastes change really rapidly and I've fallen in love
                 with so much  music in my life that I could never make a list of my favorite music ever.</p>
           </div>
@@ -116,28 +134,41 @@
       <div class="center">
         <div class="container">
           <div class="containerContent">
-            <h1>
-              <u>✿⋆.˚⋆₊𝑨𝒌𝒊𝒃𝒂𝒕𝒆𝒏⊹₊⋆˚.⋆✿</u>
+            <h1 id = "title">
+              ✿⋆.˚⋆₊𝑨𝒌𝒊𝒃𝒂𝒕𝒆𝒏⊹₊⋆˚.⋆✿
             </h1>
           </div>
         </div>
-        <div class="container">
-          <div class="containerContent">
-            <!-- <p style="text-align:right; margin-top: 0; margin-bottom: 0;"><a href="https://akibaten.xyz/index.html">ENG</a> 日本語</p> -->
-            <img src="index/nanaoNaruImage.png" style="width:50%;height:auto; margin-top: 4%;float:right;" title="very pretty picture by the artist Nanao Naru ^_^">
-            <p>
-              Hello! <br> My name is Sarah ♡⸜(˶˃ ᵕ ˂˶)⸝♡ <br>
-               I created this site as a person project. I think social media has a great capacity to connect people and do good, it's beecome
-                pretty exhausting these days >_<. I think it's begun to divide us and push us to dehumanize ourselves and other by reducing us to 
-                arbitrary metrics. As a person who really values doing creative stuff, this site allows me to post and share my works, create a creative
-                work in the process, and free me from unconsciously changing who I am and my art. I still do have social media though, I just don't use it
-                very often. Here is my <a href="https://www.instagram.com/akibaten/">instagram</a>:P <br>
-                I love music and art and human expression and any method by which we are able to do that. All of my music can be found at my soundcloud link to the side.
-                thank you for checking this out and enjoy your stay!<br>
-                ^_^   
+        <div class="container" style="font-size: .9em;">
+          <div class="containerContent" style="margin-bottom: 2%; padding-bottom: 1%; position: relative;">
+            <div  style = "position:absolute; right: 1.35em; background-color: white; height: auto; width: auto;"><button id = "translateButton" onclick="window.translate()">日本語</button></div>
+            <div>
+              <img src="index/nanaoNaruImage.png" style="width:50%;height:auto; margin-top: 2%; margin-bottom: 2%;float:right;" title="very pretty picture by the artist Nanao Naru ^_^">
+              <p id = "aboutParagraph">
+                Hello! <br> My name is Sarah<br> ♡⸜(˶˃ ᵕ ˂˶)⸝♡ <br>
+                I created this site as a personal project. I think social media has a great capacity to connect people and do good, but it's beecome
+                  pretty exhausting these days >_<. I think it's begun to divide us and push us to dehumanize ourselves and others by reducing us to 
+                  arbitrary metrics. As a person who really values doing creative stuff, this site allows me to post and share my works, create a creative
+                  work in the process, and free me from unconsciously changing who I am and my art. I still do have social media though, I just don't use it
+                  very often. Here is my <a href="https://www.instagram.com/akibaten/">instagram</a>:P <br>
+                  I love music and art and human expression and any method by which we are able to do that. All of my music can be found at my soundcloud link to the side.
+                  Thank you for checking this out and enjoy your stay!<br>
+                  ^_^
+                  <br><br> 
+                  This website is a continuous work in progress. Most of it is formatted for mobile, but this site is still best viewed in Chrome or Firefox at 1920x1080 :)
+              </p>
+            </div>
+          </div>
+          <div class = "containerContent" style="position: relative;">
+            <img src="/index/vineGrowth.gif" style = "position: absolute; top:4%; bottom: 4%; right: 2%; height: 95%; width: auto;">
+            <object data = "microblog.html" id = "microblogPreview" type="text/html" style = "float:right; margin-top: 4%;"></object>
+            
+            <!-- styling for this element is in the css file -->
+            <p id = "microBlogPreviewBoxText">
+              This is a preview of the latest post my microblog!<br>
+              I would put my blog here... but the entries are too few and it would be a bit impractical as they are much longer.
             </p>
-            <p>
-            </p>
+            <script src = "index/microBlogPreviewStyler.js"></script> 
           </div>
         </div>
       </div>
@@ -146,9 +177,9 @@
         <div class="container">
           <!-- bar for the top of the box -->
           <div class="containerBar">
-            <h2 style = " text-align: center; margin-left: 5%; margin-right: 5%; margin-top: 5%; margin-bottom: 5%;">
+            <h2 id = "lastHeardMusic" style = " text-align: center; margin-left: 5%; margin-right: 5%; margin-top: 5%; margin-bottom: 5%;">
               <strong>
-                <u> LAST MUSIC I HEARD</u>
+                 LAST MUSIC I HEARD
               </strong>
             </h2>
           </div>
@@ -160,11 +191,24 @@
           </div>
         </div>
         <div class = "container">
+          <div class = "containerContent">
+            <h2 id = "musicSnippet" style = "text-align: center;">
+              Recent Music Snippet I made
+            </h2>
+            <p style = "text-align: center; font-size: 1em;" id = "musicSnippetInstructions">click it to play with audio :3</p>
+            <div style = "padding: 1%; background-image:  linear-gradient(rgb(80, 255, 255), rgb(255, 80, 157), rgb(255, 255, 80)); margin-top: 4%; border-radius: .4em;">
+              <video id = "musicSnippet" onClick = "muted = false; currentTime = 0; controls = true; volume = .5" style = "width: 100%" height="100%" autoplay muted loop>
+                <source src="index/musicSnippets/03-04-2025-snippet.mp4" type="video/mp4">
+              </video> 
+            </div>
+          </div>
+        </div>
+        <div class = "container">
           <!-- bar for the top of the box -->
           <div class="containerBar">
-            <h2 style="text-align: center">
+            <h2 id = "favoriteSites" style="text-align: center">
               <strong>
-                <u> SITES I LIKE A LOT :D</u>
+                 SITES I LIKE A LOT :D
               </strong>
             </h2>
           </div>
@@ -186,20 +230,21 @@
                 <img src = "https://ramcst.neocities.org/resources/buttons/ramcst.gif">
               </a>
               <a href="https://winteryear.neocities.org" target="_blank"><img src="https://files.catbox.moe/n1fidz.gif" width="88" height="31"></a>
+              <a title="Laith Rai7an" href="http://arataka.neocities.org/" target="_blank"><img alt="Laith Rai7an" src="http://files.catbox.moe/k0v6qu.gif"/></a>
             </p>
           </div>
         </div>
         <div class="container">
           <!-- bar for the top of the box -->
           <div class="containerBar">
-            <h2 style="text-align: center">
+            <h2 id = "myButton" style="text-align: center">
               <strong>
-                <u> MY BUTTON :0</u>
+                 MY BUTTON :0
               </strong>
             </h2>
           </div>
           <div class="containerContent">
-            <p style="margin: .01%; text-align: center; font-size: 1.25em">feel free to <a href="https://simple.wikipedia.org/wiki/Hotlinking">hotlink</a></p>
+            <p style="margin: .01%; text-align: center; font-size: 1.25em" id = "myButtonBoxText">feel free to <a href="https://simple.wikipedia.org/wiki/Hotlinking">hotlink</a></p>
             <p style="margin:.01%; text-align: center; font-size: 0px">
               <img src = "/index/button-1.gif">
             </p>
@@ -212,18 +257,18 @@
           <div class="containerBar">
             <div style="display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 2%; margin-top: 2%">
               <a href="https://kingdomofakibaten.neocities.org/feed.xml" 
-                style="position: absolute; right: 5.5%;">
+                style="position: absolute; right: 5.5%; background-color: white;">
                   <img src="rssButton.png" style="height: 25px; width: 25px;" alt="Click for RSS feed">
               </a>
-              <h2 style="margin: 0;">
-                  <strong><u>Changelog!</u></strong>
+              <h2 id="changeLogTitle" style="margin: 0;">
+                  <strong>Changelog!</strong>
               </h2>
           </div>
           </div>
           <div class = "containerContent">          
             <div style = "border:1px solid black;">
               <object type="text/xml" data="feed.xml" width="100%" height="400px"></object>
-            </div>  
+            </div>
           </div>
         </div>
       </div>
@@ -231,15 +276,33 @@
 
     <!--scrolling bar-->
     <div class = "horizontal-bar">
-      <marquee behavior="scroll" direction="left" scrollamount="10" style="font-size:0">
-        <img src="/index/buttons/pansexual button.gif">
-        <img src="/index/buttons/vn button.png">
-        <img src="/index/buttons/hardcorehappiness button.gif">
-        <img src="/index/buttons/ableton button.png">
-        <img src="/index/buttons/transrightsButton.png">
-        <img src="/index/buttons/noNazismButton.gif">
-        <img src="/index/buttons/antiAIButton.gif">
-      </marquee>
-    </div> 
+      <div class="marquee">
+        <div>
+          <span><img src="/index/buttons/pansexual button.gif">
+            <img src = "/index/buttons/flag-trans.png"> 
+            <img src="/index/buttons/vn button.png">
+            <img src="/index/buttons/hardcorehappiness button.gif">
+            <img src="/index/buttons/ableton button.png">
+            <img src="/index/buttons/transrightsButton.png">
+            <img src="/index/buttons/noNazismButton.gif">
+            <img src="/index/buttons/antiAIButton.gif">
+            <img src = "index/buttons/girlbutton.gif"></img>
+            <a href = "https://neocities.org/site/kingdomofakibaten"><img src = "index/buttons/neocities-button.gif" style = "position: absolute; top: 0"></a>
+          </span>
+          <span>
+            <img src="/index/buttons/pansexual button.gif">
+            <img src = "/index/buttons/flag-trans.png"> 
+            <img src="/index/buttons/vn button.png">
+            <img src="/index/buttons/hardcorehappiness button.gif">
+            <img src="/index/buttons/ableton button.png">
+            <img src="/index/buttons/transrightsButton.png">
+            <img src="/index/buttons/noNazismButton.gif">
+            <img src="/index/buttons/antiAIButton.gif">
+            <img src = "index/buttons/girlbutton.gif"></img>
+            <a href = "https://neocities.org/site/kingdomofakibaten"><img src = "index/buttons/neocities-button.gif" style = "position: absolute; top: 0"></a>
+          </span>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
