@@ -6,25 +6,26 @@
 }
 
 .boxwrapper {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  display: grid;
+  grid-row-start:auto;
 }
 
 .left {
-  flex: 1;
-  width:15%;
+  grid-row:1;
+  width:25vw;
   height: 100vh;
 }
 
 .center {
-  flex: 1;
-  width: 70%;
+  grid-row:1;
+  width:50vw;
+  height: 100vh;
 }
 
 .right {  
-  flex: 1;
-  width: 15%;
+  grid-row:1;
+  width: 25vw;
+  height: 100vh;
 }
 
 @media only screen and (max-width: 768px){
@@ -59,12 +60,12 @@
 }
 
 .titleContainer{
-  margin-top: -5%;
-  margin-bottom: 3%;
-  height:16vh;
+  margin-top: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
   text-align: left;
   z-index: 1000;
-  font-size: 4em;
+  font-size: 2em;
 }
 
 .postContainer {
@@ -72,12 +73,12 @@
   
   padding-left: 5%;
   padding-right: 5%;
-  margin-bottom: 0px;
   
+  margin-top: -4%;
+
   overflow-y: scroll;
   overflow-x: hidden;
   
-  backdrop-filter: blur(.2em);
   border-radius: 10px;
   /* box-shadow: inset 0 0 0 .2em rgba(255,255,255,1);
   outline: solid rgba(255,255,255,1);
@@ -90,8 +91,11 @@
 }
 
 .posts{
-  p{
-  }
+
+}
+
+.titleContainer h1{
+  letter-spacing: -.01em;
 }
 
 /*big header*/
@@ -105,8 +109,9 @@ h2 {
 }
  
 p {
-  font-size: 1em;
-  color: aliceblue;
+  font-size: 1.1em;
+  color: white;
+  font-weight: 400;
 }
 
 /*li is formatting for list items*/
@@ -118,17 +123,23 @@ strong {
   
 }
 
-a {
-  color: magenta;
+.posts a {
+  background-color: white;
+  padding: .2em;
+  color: black;
+  text-shadow: none;
+  text-wrap: nowrap;
 }
 
 body {
-  margin:0;
-  background-image: url("/blog/blogBackground.jpg");
-  font-family: comicSans;  
+  background-image: url("/blog/blogBackground.png");
+  font-family: arialCondensed;
+  height: 100vh;
+  overflow: hidden;
+  text-shadow: 2px 2px 4px black;
 }
 
 @font-face {
-  font-family: comicSans;
-  src: url(/fonts/ComicSansMS3.ttf);
+  font-family: arialCondensed;
+  src: url("/fonts/arial-mt-condensed.ttf");
 }

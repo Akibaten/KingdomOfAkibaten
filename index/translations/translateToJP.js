@@ -16,6 +16,7 @@ window.translate = async function translate(){
     const jpObject = jpTranslation["0"][0];
     for(const [element, innerObject] of Object.entries(jpObject)) {
         for (const [id, text] of Object.entries(innerObject)) {
+            console.log(id)
             document.getElementById(id).innerHTML = text;
         }
     }      
