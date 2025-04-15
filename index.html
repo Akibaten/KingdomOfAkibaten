@@ -22,7 +22,25 @@
      <link rel="preload" href="/index/buttons/noNazismButton.gif" as="image">
      <link rel="preload" href="/index/buttons/transrightsButton.png" as="image">
      <link rel="preload" href="/index/buttons/vn button.png" as="image">
+     
+     <!-- translation change script  -->
      <script src = "index/translations/translateToJP.js"></script>
+
+    <!-- center Content switch script and makes styling for the link stay -->
+    <script>
+      function switchContent(id){
+        const ids = ["home","webmistress"];
+        for(element of ids){
+          if(element != id){
+            document.getElementById(element + "Content").style.display = "none";
+            document.getElementById(element + "LinkBox").style.paddingLeft = "0";
+          }else if(element == id){
+            document.getElementById(element + "Content").style.display = "block";
+            document.getElementById(element + "LinkBox").style.paddingLeft = "5%";
+          }
+        }
+      }
+    </script>
   </head>
   <body>
     <!-- <div class="video-container"> -->
@@ -58,13 +76,17 @@
               </strong>
             </h2>  
           </div>
+
+          <!-- site contents box -->
           <div class="containerContent">
-            <ul style="margin-top: 5px">
-              <!-- <li id = "webmistressLink"><a href= "/webmistress.html">Webmistress</a></li> -->
-              <li id = "blogLink"><a href = "/blog.html">Blog</a></li>
-              <li id = "microblogLink"><a href = "/microblog.html">Microblog</a></li>
-              <li id = "shrinesLink"><a href="/shrines.html">Shrines</a></li>
-            </ul>
+            <nav>
+              <div id = "homeLinkBox" class = "navLinkBorder" style = "background-color: cyan;"><p id = "homeLink"><a onclick="switchContent('home'); document.getElementById('title').scrollIntoView({ behavior: 'smooth'})">Home</a></p></div>
+              <div  id = "webmistressLinkBox" class = "navLinkBorder" style = "background-color: magenta;"><p id = "webmistressLink"><a onclick="switchContent('webmistress'); document.getElementById('title').scrollIntoView({ behavior: 'smooth'})">Webmistress (Me!)</a></p></div>
+              <hr style="margin: 5%;  border: solid rgba(230,80,155,1); border-width: 1px;">
+              <div class = "navLinkBorder" style = "background-color: cyan"><p id = "blogLink"><a href = "/blog.html">Blog</a></p></div>
+              <div class = "navLinkBorder" style = "background-color: magenta;"><p id = "microblogLink"><a href = "/microblog.html"><a href = "/microblog.html">Microblog</p></a></div>
+              <div class = "navLinkBorder" style = "background-color: yellow;"><p id = "shrinesLink"><a href="/shrines.html">Shrines</a></p></div>
+            </nav> 
           </div>
         </div>
         <div class="container">
@@ -102,10 +124,9 @@
           </div>
           <div class="containerContent">
             <p id="siteNewsBoxText" style = "margin-top: 1%; margin-bottom: 1%;">
-              I added a Japanese translation of the homepageヽ(°〇°)ﾉ<br>
-              and I added a new preview of the microblog below the about paragraph
+              11-04-2025 new microblog post :P
             </p>
-          </div>
+          </div>  
         </div>
         <div class="container">
           <!-- bar for the top of the box -->
@@ -141,13 +162,13 @@
           </div>
         </div>
         <div class="container" style="font-size: .9em;">
-          <div class="containerContent" style="margin-bottom: 2%; padding-bottom: 1%; position: relative;">
+          <div id = "centerContent" class="containerContent" style="margin-bottom: 2%; padding-bottom: 1%; position: relative;">
             <div  style = "position:absolute; right: 1.35em; background-color: white; height: auto; width: auto;"><button id = "translateButton" onclick="window.translate()">日本語</button></div>
-            <div>
-              <img src="index/nanaoNaruImage.png" style="width:50%;height:auto; margin-top: 2%; margin-bottom: 2%;float:right;" title="very pretty picture by the artist Nanao Naru ^_^">
-              <p id = "aboutParagraph">
-                Hello! <br> My name is Sarah<br> ♡⸜(˶˃ ᵕ ˂˶)⸝♡ <br>
-                I created this site as a personal project. I think social media has a great capacity to connect people and do good, but it's beecome
+            <div id = "homeContent" style = "display: block; margin-top: 1%">
+              <img src="index/nanaoNaruImage.png" style="width:50%;height:auto; margin: 2% 1%; float:right;" title="very pretty picture by the artist Nanao Naru ^_^">
+              <p id = "introParagraph">
+                Hi! <br> My name is Sarah<br> ♡⸜(˶˃ ᵕ ˂˶)⸝♡ <br>
+                I created this site as a personal project. I think social media has a great capacity to connect people and do good, but it's become
                   pretty exhausting these days >_<. I think it's begun to divide us and push us to dehumanize ourselves and others by reducing us to 
                   arbitrary metrics. As a person who really values doing creative stuff, this site allows me to post and share my works, create a creative
                   work in the process, and free me from unconsciously changing who I am and my art. I still do have social media though, I just don't use it
@@ -156,8 +177,54 @@
                   Thank you for checking this out and enjoy your stay!<br>
                   ^_^
                   <br><br> 
-                  This website is a continuous work in progress. Most of it is formatted for mobile, but this site is still best viewed in Chrome or Firefox at 1920x1080 :)
+                  This website is entirely built from the ground up and coded by hand (੭˃ᴗ˂)੭<br>
+                  It is a continuous work in progress. Most of it is formatted for mobile, but this site is still best viewed in Chrome or Firefox at 1920x1080 :)
               </p>
+            </div>
+            <div id = "webmistressContent" style = "display: none; margin-top: 1%;">
+              <img src="index/mugiFlex.gif" style=" width: 40%; height:auto; margin: 2% 1%; float:right;" title="mugi flexinggg (੭˃ᴗ˂)੭">
+              <p>Helloooo again! <br>ummmmm I'm Sarah (or Elizabeth that's my middle name and I like it a lot too) I'm a 20 something girl in college. I love music and coding and the internet (I love the internet
+                like a lot a lot). I'm majoring in Chemistry and Japanese in college, and so I 
+                <a href = "/unused-assets/vsCodeScreenshot.png" title = "This is what my vsCode looks like as i'm writing this :P" style = "text-decoration: none; background-color: transparent;">suppose</a> 
+                I'm pretty into Japanese culture though I don't watch much anime these days :P You'll see my home page get translated into Japanese (I didn't realize how time consuming that would be when I first implemented it xd)
+                Anywaysssssss here are some of my favorite things
+              </p>
+              <span><div style = "width: 60%">
+                <p style = "margin:0; font-size: 1.2em;">
+                  Favorite Musicians/Producers/Artists whatever:
+                </p>
+                <details>
+                  <summary>
+                    Limbo
+                  </summary>
+                  <p>
+                    lofi, singer-songwriter, producer that I really love. She inspired me so much, and I met her in person and she was just as cool AHHHHH
+                    find her <a href = "https://soundcloud.com/youknowlimbo">here</a> 
+                  </p>
+                </details>
+                <details>
+                  <summary>
+                    Minamotoya（源屋）
+                  </summary>
+                  <p>
+                    The producer that got me into j-core and all japanese hardcore edm :D He is really fantastic at writing and even though he released most of his
+                    stuff between 2008 and 2014 or so, I've rarely if ever found anything like it. His discography is pretty scattered, but surprisingly most of his
+                    stuff can actually be found on <a href = "https://open.spotify.com/artist/1U1YnsPM35df5p4slCVSpp">Spotify</a>
+                  </p>
+                </details>
+                <details>
+                  <summary>
+                    Uchu Conbini (宇宙コンビニ)
+                  </summary>
+                  <p>
+                    A really special math rock band. Everything is so powerful. The drums don't feel awkward, and yet they are unpredictable. The guitar work is truly the most beautiful.
+                    I have ever heard in math rock up there with Ivette Young, and the vocals always give me goosebumps all over my body and make me feel like that moment is one of the most
+                    important moments of my life. They are truly amazing. I actually went to the cafe in kyouto that is owned by the guitarist of this band, and it was pretty good. Their music
+                    can be found most places you find music. Here is their <a href = "https://open.spotify.com/artist/2DZe9zw4ZNgEFPA8vRMade?si=3I0yv6G3QAC9OfZ0pJCnog">Spotify</a>
+                  </p>
+                </details>
+                <span> <ul><p>more stuff to be added in the future...</p></ul> </span>
+              </div>
             </div>
           </div>
           <div class = "containerContent" style="position: relative;">
@@ -168,7 +235,6 @@
             <h2 style = "margin-top: 5%;">
               My Microblog >:)
             </h2>
-            
             <p id = "microBlogPreviewBoxText">
               This is a preview of the latest post my microblog!<br>
               I would put my blog here... but the entries are too few and it would be a bit impractical as they are much longer.<br><br>
@@ -191,7 +257,7 @@
           </div>
           <div class = "containerContent" style = "text-align: center;">
             <div style="display:flex; padding: 0px">
-              <p style = "margin-left:5%; margin-top: 0px; margin-bottom: 2%;"><img id = "albumImage" alt = "Album Image" style="width:100%; height:auto; filter: drop-shadow(8px 8px 3px rgb(200,200,200,1));;"></img></p>
+              <p style = "margin-left:5%; margin-top: 0px; margin-bottom: 2%;"><img id = "albumImage" alt = "Album Image" style="width:100%; height:auto; filter: drop-shadow(8px 8px 3px rgb(200,200,200,1));;" title="this is doesn't count music I listen to on my nightcore app on my phone >w<"></img></p>
               <p id = "trackInfo" style = "font-size: 1.25em; text-align: left; margin-left: 10%; margin-top: 2%; margin-bottom: 2%;"></p>
             </div>
           </div>
@@ -311,5 +377,9 @@
         </div>
       </div>
     </div>
+    <!-- *clicks* the homebutton in the site contents box on load i have to put it here because of the dom-->
+    <script>
+      switchContent('home');
+    </script>
   </body>
 </html>

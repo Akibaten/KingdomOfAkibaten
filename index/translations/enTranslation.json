@@ -20,15 +20,17 @@
 
             "p" : {
                 "bioBoxText" : "<strong>Age:</strong> 22 <br><strong>Nationality:</strong> American <br><strong>Pronouns:</strong> She/Her",
-                "siteNewsBoxText": "I added a Japanese translation of the homepageヽ(°〇°)ﾉ<br>and I added a new preview of the microblog below the about paragraph",
+                "siteNewsBoxText": "11-04-2025 new microblog post :P",
                 "favoriteMusicArtistsBoxText" : "Music is a really big part of my life. These are just the artists I've been listening to the most recently and have/had the biggest influence on me ^_^. My tastes change really rapidly and I've fallen in love with so much music in my life that I could never make a list of my favorite music ever.",
-                "aboutParagraph" : "Hello! <br> My name is Sarah<br> ♡⸜(˶˃ ᵕ ˂˶)⸝♡ <br>I created this site as a personal project. I think social media has a great capacity to connect people and do good, but it's beecome pretty exhausting these days >_<. I think it's begun to divide us and push us to dehumanize ourselves and others by reducing us to arbitrary metrics. As a person who really values doing creative stuff, this site allows me to post and share my works, create a creative work in the process, and free me from unconsciously changing who I am and my art. I still do have social media though, I just don't use it very often. Here is my <a href='https://www.instagram.com/akibaten/'>instagram</a>:P <br>I love music and art and human expression and any method by which we are able to do that. All of my music can be found at my soundcloud link to the side. Thank you for checking this out and enjoy your stay!<br>^_^<br><br>This website is a continuous work in progress. Most of it is formatted for mobile, but this site is still best viewed in Chrome or Firefox at 1920x1080 :)",
+                "introParagraph" : "Hello! <br> My name is Sarah<br> ♡⸜(˶˃ ᵕ ˂˶)⸝♡ <br>I created this site as a personal project. I think social media has a great capacity to connect people and do good, but it's beecome pretty exhausting these days >_<. I think it's begun to divide us and push us to dehumanize ourselves and others by reducing us to arbitrary metrics. As a person who really values doing creative stuff, this site allows me to post and share my works, create a creative work in the process, and free me from unconsciously changing who I am and my art. I still do have social media though, I just don't use it very often. Here is my <a href='https://www.instagram.com/akibaten/'>instagram</a>:P <br>I love music and art and human expression and any method by which we are able to do that. All of my music can be found at my soundcloud link to the side. Thank you for checking this out and enjoy your stay!<br>^_^<br><br>This website is a continuous work in progress. Most of it is formatted for mobile, but this site is still best viewed in Chrome or Firefox at 1920x1080 :)",
                 "microBlogPreviewBoxText": "This is a preview of the latest post my microblog!<br>I would put my blog here... but the entries are too few and it would be a bit impractical as they are much longer.",
                 "musicSnippetInstructions": "click it to play with audio :3",
                 "myButtonBoxText" : "feel free to <a href='https://simple.wikipedia.org/wiki/Hotlinking'>hotlink</a>"
             },
 
             "lists" : {
+                "homeLink" : "<a onclick=\"switchContent('home')\">Home</a>",
+                "webmistressLink" : "<a onclick=\"switchContent('webmistress')\">Webmistress(Me!)</a>",
                 "blogLink" : "<a href = '/blog.html'>Blog</a>",
                 "microblogLink" : "<a href = '/microblog.html'>Microblog</a>",
                 "shrinesLink" : "<a href = '/shrines.html'>Shrines</a>",

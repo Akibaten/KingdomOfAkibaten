@@ -5,20 +5,16 @@
 <head>
   <link rel="stylesheet" type="text/css" href="index/style.css"/>
   <style type="text/css">
-    .formattedText{
-      white-space: pre-wrap;
-      word-wrap: break-word;
-    }
   </style>
 </head>
 <body>
-    <div class = "formattedText">
-      <xsl:for-each select="rss/channel/item">
-        <h2 style = "fon-size: 20px"><xsl:value-of select="title"/></h2>
-        <p style = "font-size: 15px"><xsl:value-of select="pubDate"/></p>
-        <p style = "font-size: 15px"><xsl:value-of select="description"/></p>
-      </xsl:for-each>
+  <xsl:for-each select="rss/channel/item">
+    <div style = "background-color: white">
+    <h2 style = "margin: 0font-size: 20px"><xsl:value-of select="title"/></h2>
+    <p style = "font-size: 15px"><xsl:value-of select="pubDate"/></p>
+    <p style = "font-size: 15px; white-space: pre-wrap; word-wrap: break-word;"><xsl:value-of select="description"/></p>
     </div>
+  </xsl:for-each>
 </body>
 </html>
 </xsl:template>

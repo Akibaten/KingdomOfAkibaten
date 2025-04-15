@@ -114,7 +114,7 @@ body {
   height: 100vh;
   margin:0;
   backdrop-filter: saturate(1.5);
-  background-image: url("/webmistress/heartBackgroundTile.gif"); 
+  background-color: #f9f5ec;
   background-repeat:repeat;
   background-size: 15vh auto;
   background-position: center;

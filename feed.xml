@@ -10,10 +10,33 @@ the description looks weird because I want to not destroy its readability when c
     <description>This is the description of your RSS feed</description>
     <link>https:kingdomofakibaten.neocities.org</link>
     <item>
+      <pubDate>Tue, 15 Apr 2025 11:30:35 CST</pubDate>
+      <title>Update Version: ⶼ⩛⋃.❈⠮ₚ.⍠</title>
+      <description>
+I actually wanted to wait a little bit to push this to my site until it was *done* whatever that means.
+But I kind of hate seeing my old site when I know a slightly prettier version of it exists. Here is that version. Added a new about/webmistress tab and some fancy css animations
+for clicking on them you can find it in the new site contents box. I'm a little worried too many css animation makes my site look template-y or hurts that neo-web 1.0 aesthetic
+so I might chill on that for now.
+Changelog:
+-completely redid site contents box adding new pages that are desplayed in the center box
+-added new css animations to site contents box
+-aded webmistress page
+-1 new microblog post
+      </description>
+    </item>
+    <item>
+      <pubDate>Tue, 15 Apr 2025 03:16:25 CST</pubDate>
+      <title>New microblog Post
+      </title> 
+      <description>
+        tiny little update about things :)
+      </description>
+    </item>
+    <item>
       <pubDate>Thu, 10 Apr 2025 19:45:25 CST</pubDate>
       <title>Big update
         Version: 4.aQ!.C*jPX.1
-      </title>
+      </title> 
       <description>
 Changelog:
 -added some blog styling
@@ -85,7 +108,7 @@ Changelog:
 Version:!B.7xu.dnS.1</title>
       <description>small update to fix a few things
 Changelog:
--fixed title not loading correctly on some resoulations
+-fixed title not loading correctly on some resolutions
 -changed font size for p to better format about container
 -changed image from yui to a picture I took. I'm not sure I like it but we will see
       </description>
@@ -94,7 +117,7 @@ Changelog:
       <pubDate>Wed, 26 Mar 2025 20:17:52 CST</pubDate>
       <title>Changing Formatting 
 Version:!B.7xu.dnS</title>
-      <description> I changed TONSSS of formatting in this one :D it looks so much prettier. ALSO, I added responsive design finally lol so it works on phones. There are probably issues but it seems to work okay on most phones. I also made and added a daft punk button to the hoizontally scrolling buttons.
+      <description> I changed TONSSS of formatting in this one :D it looks so much prettier. ALSO, I added responsive design finally lol so it works on phones. There are probably issues but it seems to work okay on most phones. I also made and added a daft punk button to the horizontally scrolling buttons.
 Changelog:
 -added responsive design
 -changed Title and big header
@@ -125,7 +148,7 @@ Changelog:
 -removed scrolling images
 -change domain name
 -added box for music i've most recently listened to
--got rid of weird rss item add python script i'm just going to add it manualy to preserve line breaks
+-got rid of weird rss item add python script i'm just going to add it manually to preserve line breaks
 -New blog post about Finding my Voice in my music :)
       </description>
     </item>
@@ -144,7 +167,7 @@ Changelog:
     <item>
       <pubDate>Fri, 28 Feb 2025 16:59:32 CST</pubDate>
       <title>MY BLOG IS LIVE!</title>
-      <description>I have finished building the way my blog workss outside of sytling and have put it up. Obviously it has no styling right now, but I'll fix that later this was a hassle enough even though it really doesn't look like much lol</description>
+      <description>I have finished building the way my blog works outside of sytling and have put it up. Obviously it has no styling right now, but I'll fix that later this was a hassle enough even though it really doesn't look like much lol</description>
       <link>https://kingdomofakibaten.neocities.org/blog.html</link>
     </item>
     <item>
@@ -162,7 +185,7 @@ Changelog:
     <item>
       <pubDate>Mon, 24 Feb 2025 15:11:26 CST</pubDate>
       <title>FINALLY I ADDED RSS</title>
-      <description>This was one of if not the hardest thingsgs I have ever coded. RSS is actually fairly easy to implement. I fdon't have supporter so I had to come up with some work arounds where I could manually push to neocities from local files. For some reason, after this I decided to basically build my own rss widget in javascript and it was insanely hard to put it lightly. I spent 4 hours and it barely works and I still need to implement it on the websitite. I'm considering making a tutorial for all of this because I had to go to 100 different resources just to figure it out. ANYWAYS thats all ^-^</description>
+      <description>This was one of if not the hardest thingsgs I have ever coded. RSS is actually fairly easy to implement.I don't have supporter so I had to come up with some work around where I could manually push to neocities from local files. For some reason, after this I decided to basically build my own rss widget in javascript and it was insanely hard to put it lightly. I spent 4 hours and it barely works and I still need to implement it on the website. I'm considering making a tutorial for all of this because I had to go to 100 different resources just to figure it out. ANYWAYS thats all ^-^</description>
       <link>https://akibaten.xyz/test.html</link>
     </item>
   </channel>

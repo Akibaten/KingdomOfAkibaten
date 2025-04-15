@@ -1,11 +1,8 @@
 done
-added japanese verison of homepage via json and javscript and IDs
-added a Site news box
-added a shrine page for later
-added a preview of the microblog below the main page
-other stuff i've probably forgotten about
+-completely redid site contents box adding new pages that are desplayed in the center box
+-added new css animations to site contents box
+-aded webmistress page
+-1 new microblog post
 
 to do
-start work on the blog styling that stuff is still atrocious
-add microblog to front page in new container in the center
 leanr to use pseudo elements and replace this bad container container content system to add the linear gradient
