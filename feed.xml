@@ -10,6 +10,18 @@ the description looks weird because I want to not destroy its readability when c
     <description>This is the description of your RSS feed</description>
     <link>https:kingdomofakibaten.neocities.org</link>
     <item>
+      <pubDate>Mon, 21 Apr 2025 18:22:10 CST</pubDate>
+      <title>Version: ☨⧣⦎.ⷓ⶿➋ⷵ.Ⱌ</title>
+      <description>
+This is a pretty basic update. I just changed the borders around boxes a bit, changed the background image, and added a microblog post
+Changelog:
+-made rainbow bar around boxes skinnier and sharped the corners of the box
+-changed background image to a tileable gradient cloud thing I made
+-a few new microblog posts
+-fixed weird styling bug on the changelog on the home page
+      </description>
+    </item>
+    <item>
       <pubDate>Tue, 15 Apr 2025 11:30:35 CST</pubDate>
       <title>Update Version: ⶼ⩛⋃.❈⠮ₚ.⍠</title>
       <description>

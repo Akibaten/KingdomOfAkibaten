@@ -31,6 +31,7 @@
             "lists" : {
                 "homeLink" : "<a onclick=\"switchContent('home')\">Home</a>",
                 "webmistressLink" : "<a onclick=\"switchContent('webmistress')\">Webmistress(Me!)</a>",
+                "websiteProgressLink" : "<a onclick=\"switchContent('websiteProgress')\">Site Progress (๑˃ᴗ˂)</a>",
                 "blogLink" : "<a href = '/blog.html'>Blog</a>",
                 "microblogLink" : "<a href = '/microblog.html'>Microblog</a>",
                 "shrinesLink" : "<a href = '/shrines.html'>Shrines</a>",

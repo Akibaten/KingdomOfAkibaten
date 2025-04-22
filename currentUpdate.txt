@@ -1,8 +1,9 @@
 done
--completely redid site contents box adding new pages that are desplayed in the center box
--added new css animations to site contents box
--aded webmistress page
--1 new microblog post
+Changelog
+-made rainbow bar around boxes skinnier and sharped the corners of the box
+-changed background image to a tileable gradient cloud thing I made
+-a few new microblog posts
+-fixed weird styling bug on the changelog on the home page
 
 to do
 leanr to use pseudo elements and replace this bad container container content system to add the linear gradient

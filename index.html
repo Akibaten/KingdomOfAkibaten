@@ -21,14 +21,14 @@
      <link rel="preload" href="/index/buttons/noNazismButton.gif" as="image">
      <link rel="preload" href="/index/buttons/transrightsButton.png" as="image">
      <link rel="preload" href="/index/buttons/vn button.png" as="image">
-     
+
      <!-- translation change script  -->
      <script src = "index/translations/translateToJP.js"></script>
 
     <!-- center Content switch script and makes styling for the link stay -->
     <script>
       function switchContent(id){
-        const ids = ["home","webmistress"];
+        const ids = ["home","webmistress", "websiteProgress"];
         for(element of ids){
           if(element != id){
             document.getElementById(element + "Content").style.display = "none";
@@ -81,6 +81,7 @@
             <nav>
               <div id = "homeLinkBox" class = "navLinkBorder" style = "background-color: cyan;"><p id = "homeLink"><a onclick="switchContent('home'); document.getElementById('title').scrollIntoView({ behavior: 'smooth'})">Home</a></p></div>
               <div  id = "webmistressLinkBox" class = "navLinkBorder" style = "background-color: magenta;"><p id = "webmistressLink"><a onclick="switchContent('webmistress'); document.getElementById('title').scrollIntoView({ behavior: 'smooth'})">Webmistress (Me!)</a></p></div>
+              <div  id = "websiteProgressLinkBox" class = "navLinkBorder" style = "background-color: yellow;"><p id = "websiteProgressLink"><a onclick="switchContent('websiteProgress'); document.getElementById('title').scrollIntoView({ behavior: 'smooth'})">Site Progress (๑˃ᴗ˂)</a></p></div>
               <hr style="margin: 5%;  border: solid rgba(230,80,155,1); border-width: 1px;">
               <div class = "navLinkBorder" style = "background-color: cyan"><p id = "blogLink"><a href = "/blog.html">Blog</a></p></div>
               <div class = "navLinkBorder" style = "background-color: magenta;"><p id = "microblogLink"><a href = "/microblog.html"><a href = "/microblog.html">Microblog</p></a></div>
@@ -225,10 +226,30 @@
                 <span> <ul><p>more stuff to be added in the future...</p></ul> </span>
               </div>
             </div>
+            <div id = "websiteProgressContent">
+              <img src = "index/websiteProgressImages/Screenshot 2025-04-18 at 6.23.50 PM.png" class = "mySlides">
+              <img src = "index/websiteProgressImages/Screenshot 2025-04-18 at 6.24.13 PM.png" class = "mySlides">
+              <script>
+                var myIndex = 0;
+                carousel();
+
+                function carousel() {
+                  var i;
+                  var x = document.getElementsByClassName("mySlides");
+                  for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                  }
+                  myIndex++;
+                  if (myIndex > x.length) {myIndex = 1}    
+                  x[myIndex-1].style.display = "block";  
+                  setTimeout(carousel, 2000); // Change image every 2 seconds
+                }
+              </script>
+            </div>
           </div>
           <div class = "containerContent" style="position: relative;">
             <img src="/index/vineGrowth.gif" style = "position: absolute; top:4%; bottom: 4%; right: 2%; height: 95%; width: auto;">
-            <object data = "microblog.html" id = "microblogPreview" type="text/html" style = "float:right; margin-top: 4%;"></object>
+            <object data = "microblog.html" id = "microblogPreview" type="text/html" style = "float:right; margin-top: 4%; background-color: white;"></object>
             
             <!-- styling for this element is in the css file -->
             <h2 style = "margin-top: 5%;">
@@ -303,6 +324,7 @@
               <a href="https://winteryear.neocities.org" target="_blank"><img src="https://files.catbox.moe/n1fidz.gif" width="88" height="31"></a>
               <a title="Laith Rai7an" href="http://arataka.neocities.org/" target="_blank"><img alt="Laith Rai7an" src="http://files.catbox.moe/k0v6qu.gif"/></a>
               <a href="https://www.virtuagirl.net" title = "okay seriously this might be the coolest site i've ever seen"><img src="https://i.imgur.com/yaA0mNF.gif"></a>
+              <a href = "https://girl-wonderlost.neocities.org/" title = "a really interesting idea on taking your through someone's site like you are meeting them :3"><img src = "index/buttons/girlWonderlostButton.png"></a>
             </p>
           </div>
         </div>
