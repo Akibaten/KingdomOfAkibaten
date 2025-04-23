@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy: worker-src 'self' blob:;">
     <link href="https://akibaten.xyz/feed.xml" rel="alternate" type="application/rss+xml" title="whats new on my website" />
     <link href="/index/style.css" rel="stylesheet" type="text/css" media="all">
     <title>𝑲𝒊𝒏𝒅𝒈𝒐𝒎 𝒐𝒇 𝑨𝒌𝒊𝒃𝒂𝒕𝒆𝒏</title>
@@ -12,15 +11,6 @@
          This makes it easier to make new pages for your site. -->
     <!-- lastfm script -->
      <script src = "getLastfmData.js"></script>
-     <link rel="preload" href="/index/buttons/pansexual button.gif" as="image">
-     <link rel="preload" href="/index/buttons/DaftPunkButton.gif" as="image">
-     <link rel="preload" href="/index/buttons/ableton button.png" as="image">
-     <link rel="preload" href="/index/buttons/antiAIButton.gif" as="image">
-     <link rel="preload" href="/index/buttons/evangelion.gif" as="image">
-     <link rel="preload" href="/index/buttons/hardcorehappiness button.gif" as="image">
-     <link rel="preload" href="/index/buttons/noNazismButton.gif" as="image">
-     <link rel="preload" href="/index/buttons/transrightsButton.png" as="image">
-     <link rel="preload" href="/index/buttons/vn button.png" as="image">
 
      <!-- translation change script  -->
      <script src = "index/translations/translateToJP.js"></script>
@@ -84,7 +74,7 @@
               <div  id = "websiteProgressLinkBox" class = "navLinkBorder" style = "background-color: yellow;"><p id = "websiteProgressLink"><a onclick="switchContent('websiteProgress'); document.getElementById('title').scrollIntoView({ behavior: 'smooth'})">Site Progress (๑˃ᴗ˂)</a></p></div>
               <hr style="margin: 5%;  border: solid rgba(230,80,155,1); border-width: 1px;">
               <div class = "navLinkBorder" style = "background-color: cyan"><p id = "blogLink"><a href = "/blog.html">Blog</a></p></div>
-              <div class = "navLinkBorder" style = "background-color: magenta;"><p id = "microblogLink"><a href = "/microblog.html"><a href = "/microblog.html">Microblog</p></a></div>
+              <div class = "navLinkBorder" style = "background-color: magenta;"><p id = "microblogLink"><a href = "/microblog.html">Microblog</a></p></div>
               <div class = "navLinkBorder" style = "background-color: yellow;"><p id = "shrinesLink"><a href="/shrines.html">Shrines</a></p></div>
             </nav> 
           </div>
@@ -98,7 +88,7 @@
               </strong>
             </h2>
           </div>
-          <div class="containerContent" id = "myLinks">
+          <div class="containerContent">
             <ul style="margin-top: 5px">
               <li>Discord: @hpnasa</li>
               <li>
@@ -124,7 +114,7 @@
           </div>
           <div class="containerContent">
             <p id="siteNewsBoxText" style = "margin-top: 1%; margin-bottom: 1%;">
-              11-04-2025 new microblog post :P
+              I changed the background picture, fixed a few bugs, and optimized things a bit
             </p>
           </div>  
         </div>
@@ -169,7 +159,7 @@
               <p id = "introParagraph">
                 Hi! <br> My name is Sarah<br> ♡⸜(˶˃ ᵕ ˂˶)⸝♡ <br>
                 I created this site as a personal project. I think social media has a great capacity to connect people and do good, but it's become
-                  pretty exhausting these days >_<. I think it's begun to divide us and push us to dehumanize ourselves and others by reducing us to 
+                  pretty exhausting these days >_&lt;. I think it's begun to divide us and push us to dehumanize ourselves and others by reducing us to 
                   arbitrary metrics. As a person who really values doing creative stuff, this site allows me to post and share my works, create a creative
                   work in the process, and free me from unconsciously changing who I am and my art. I still do have social media though, I just don't use it
                   very often. Here is my <a href="https://www.instagram.com/akibaten/">instagram</a>:P <br>
@@ -224,14 +214,19 @@
                   </p>
                 </details>
                 <span> <ul><p>more stuff to be added in the future...</p></ul> </span>
-              </div>
+              </div></span>
             </div>
             <div id = "websiteProgressContent">
-              <img src = "index/websiteProgressImages/Screenshot 2025-04-18 at 6.23.50 PM.png" class = "mySlides">
+              <p> <br> Here is a little slideshow of the evolution of my homepage so far! Click the picture to start :3</p>
+              <a onclick="slideshow()"><img src = "index/websiteProgressImages/Screenshot 2025-04-18 at 6.23.50 PM.png" class = "mySlides" style = "display: block;"></a>
               <img src = "index/websiteProgressImages/Screenshot 2025-04-18 at 6.24.13 PM.png" class = "mySlides">
+              <img src = "index/websiteProgressImages/Screenshot 2025-04-23 at 12.40.14 AM.png" class = "mySlides">
               <script>
                 var myIndex = 0;
-                carousel();
+                function slideshow(){
+                  var myIndex = 0;
+                  carousel();
+                }
 
                 function carousel() {
                   var i;
@@ -288,7 +283,7 @@
               Recent Music Snippet I made
             </h2>
             <p style = "text-align: center; font-size: 1em;" id = "musicSnippetInstructions">click it to play with audio :3</p>
-            <div style = "padding: 1%; background-image:  linear-gradient(rgb(80, 255, 255), rgb(255, 80, 157), rgb(255, 255, 80)); margin-top: 4%; border-radius: .4em;">
+            <div style = "border:solid .2em rgb(255, 80, 157); border-radius: .5em;">
               <video id = "musicSnippet" onClick = "muted = false; currentTime = 0; controls = true; volume = .5" style = "width: 100%" height="100%" autoplay muted loop>
                 <source src="index/musicSnippets/03-04-2025-snippet.mp4" type="video/mp4">
               </video> 
@@ -370,33 +365,10 @@
 
     <!--scrolling bar-->
     <div class = "horizontal-bar">
-      <div class="marquee">
-        <div>
-          <span><img src="/index/buttons/pansexual button.gif">
-            <img src = "/index/buttons/flag-trans.png"> 
-            <img src="/index/buttons/vn button.png">
-            <img src="/index/buttons/hardcorehappiness button.gif">
-            <img src="/index/buttons/ableton button.png">
-            <img src="/index/buttons/transrightsButton.png">
-            <img src="/index/buttons/noNazismButton.gif">
-            <img src="/index/buttons/antiAIButton.gif">
-            <img src = "index/buttons/girlbutton.gif"></img>
-            <a href = "https://neocities.org/site/kingdomofakibaten"><img src = "index/buttons/neocities-button.gif" style = "position: absolute; top: 0"></a>
-          </span>
-          <span>
-            <img src="/index/buttons/pansexual button.gif">
-            <img src = "/index/buttons/flag-trans.png"> 
-            <img src="/index/buttons/vn button.png">
-            <img src="/index/buttons/hardcorehappiness button.gif">
-            <img src="/index/buttons/ableton button.png">
-            <img src="/index/buttons/transrightsButton.png">
-            <img src="/index/buttons/noNazismButton.gif">
-            <img src="/index/buttons/antiAIButton.gif">
-            <img src = "index/buttons/girlbutton.gif"></img>
-            <a href = "https://neocities.org/site/kingdomofakibaten"><img src = "index/buttons/neocities-button.gif" style = "position: absolute; top: 0"></a>
-          </span>
-        </div>
-      </div>
+      <marquee direction = "left" style = "display: inline-block;">
+          <img src="/index/buttons/pansexual button.gif"><img src = "/index/buttons/flag-trans.png"><img src="/index/buttons/vn button.png"><img src="/index/buttons/hardcorehappiness button.gif"><img src="/index/buttons/ableton button.png"><img src="/index/buttons/transrightsButton.png"><img src="/index/buttons/noNazismButton.gif"><img src="/index/buttons/antiAIButton.gif"><img src = "index/buttons/girlbutton.gif"><img src="index/buttons/firefox.png" height = "31" width = "88">
+          <a href = "https://neocities.org/site/kingdomofakibaten" style = "position: absolute; top: 0;"><img src = "index/buttons/neocities-button.gif"></a>
+        </marquee>
     </div>
     <!-- *clicks* the homebutton in the site contents box on load i have to put it here because of the dom-->
     <script>
