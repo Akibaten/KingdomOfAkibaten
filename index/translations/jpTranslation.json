@@ -35,6 +35,7 @@
                 "blogLink" : "<a href = '/blog.html'>ブログ</a>",
                 "microblogLink" : "<a href = '/microblog.html'>マイクロブログ</a>",
                 "shrinesLink" : "<a href = '/shrines.html'>神社</a>",
+                "mailboxLink" : "<a href='https://akibaten.atabook.org/'>郵便受け</a>",
                 "favoriteArtist1": "<a href='https://open.spotify.com/artist/13VunSzrVSmJBpUWxUajJF?si=AffHLmmeT9SuudhXrP6tDQ'>リンボ</a>",
                 "favoriteArtist2": "<a href='https://open.spotify.com/artist/4oLeXFyACqeem2VImYeBFe?si=PBUEnMQ6RGSKfQCfu-p0bg'>ハイメラ</a>",
                 "favoriteArtist3": "<a href='https://open.spotify.com/artist/3dz0NnIZhtKKeXZxLOxCam?si=zu1xA6AvS8mcA30yxHTAyw'>ポーターロビンソン</a>",

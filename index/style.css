@@ -180,13 +180,12 @@ nav{
 }
 
 .navLinkBorder{
-  transition: padding .2s linear;
+  transition: padding-left .2s linear;
   margin: .5em 0;
 }
 
 .navLinkBorder:hover{
   padding-left: 5% !important;
-  animation: navLinkBorder 1s linear infinite;
 }
 
 nav p{

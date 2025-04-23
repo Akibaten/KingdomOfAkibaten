@@ -10,6 +10,18 @@ the description looks weird because I want to not destroy its readability when c
     <description>This is the description of your RSS feed</description>
     <link>https:kingdomofakibaten.neocities.org</link>
     <item>
+      <pubDate>Wed, 23 Apr 2025 18:27:10 CST</pubDate>
+      <title>⩩⽨⾉.Ⅱ⚈⢈.⢏</title>
+      <description>
+Two updates in one day :O I added a mailbox tab thats a guestbook if you want to say hello ^o^ and added some text and test results to the webmistress tab :)
+Changelog:
+-added mailbox link using atabook
+-added new text in webmistress tab for favorite media
+-added new marquee in webmistress tab for test results
+-added some js files for a future project 0_o
+      </description>
+    </item>
+    <item>
       <pubDate>Wed, 23 Apr 2025 00:34:10 CST</pubDate>
       <title>☨⧣⦎.ⷓ⶿➋ⷵ.Ⱌ hotfix</title>
       <description>
