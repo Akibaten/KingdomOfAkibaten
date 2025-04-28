@@ -10,6 +10,18 @@ the description looks weird because I want to not destroy its readability when c
     <description>This is the description of your RSS feed</description>
     <link>https:kingdomofakibaten.neocities.org</link>
     <item>
+      <pubDate>Wed, 23 Apr 2025 18:28:52 CST</pubDate>
+      <title>⩩⽨⾉.Ⅱ⚈⢈.⢏.1</title>
+      <description>
+This is just a little update. I did a little optimizing and added a new microblog post.
+Changelog:
+-added new microblog Post
+-removed filter on home page for optimization
+-vaguely started my Inside Mari shrine
+-other stuff I've probably forgotten about
+      </description>
+    </item>
+    <item>
       <pubDate>Wed, 23 Apr 2025 18:27:10 CST</pubDate>
       <title>⩩⽨⾉.Ⅱ⚈⢈.⢏</title>
       <description>

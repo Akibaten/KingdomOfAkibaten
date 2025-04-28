@@ -21,7 +21,7 @@
 /*big header*/
 h1 {
   color: black;
-  font-size: 2em;
+  font-size: 3em;
 }
 
 /*sub header*/
@@ -30,12 +30,20 @@ h2 {
 }
  
 p {
-  font-size: 1em;
+  font-size: 2em;
   color: black;
   overflow-wrap: break-word;  
 }
 
 body {
   margin:0;
-  font-family: "Trebuchet MS";
+  font-family: "indieFlower";
+  background-image: url("/musicalSketchbook/graphpaperBackground.jpg");
+  background-size: 256px;
+  letter-spacing:1px
+}
+
+@font-face {
+  font-family: indieFlower;
+  src: url("/fonts/IndieFlower-Regular.ttf");
 }

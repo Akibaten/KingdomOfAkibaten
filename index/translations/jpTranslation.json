@@ -32,6 +32,8 @@
                 "homeLink" : "<a onclick=\"switchContent('home'); document.getElementById('title').scrollIntoView({ behavior: 'smooth'})\">ホーム</a>",
                 "webmistressLink" : "<a onclick=\"switchContent('webmistress')\">ウェブミストレス(私!)</a>",
                 "websiteProgressLink" : "<a onclick=\"switchContent('websiteProgress')\">サイト進歩(๑˃ᴗ˂)</a>",
+                "mainMusicLink": "<a href = 'https://soundcloud.com/akibaten'>♫♪私の音楽♫♪</a>",
+                "musicSketchbookLink": "<a href = 'https://soundcloud.com/akiba10'>音楽スケッチブック</a>",
                 "blogLink" : "<a href = '/blog.html'>ブログ</a>",
                 "microblogLink" : "<a href = '/microblog.html'>マイクロブログ</a>",
                 "shrinesLink" : "<a href = '/shrines.html'>神社</a>",

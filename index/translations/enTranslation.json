@@ -32,6 +32,8 @@
                 "homeLink" : "<a onclick=\"switchContent('home')\">Home</a>",
                 "webmistressLink" : "<a onclick=\"switchContent('webmistress')\">Webmistress(Me!)</a>",
                 "websiteProgressLink" : "<a onclick=\"switchContent('websiteProgress')\">Site Progress (๑˃ᴗ˂)</a>",
+                "mainMusicLink": "<a href = 'https://soundcloud.com/akibaten'>♫♪ My Music ♫♪</a>",
+                "musicSketchbookLink": "<a href = 'https://soundcloud.com/akiba10'>Music Sketchbook</a>",
                 "blogLink" : "<a href = '/blog.html'>Blog</a>",
                 "microblogLink" : "<a href = '/microblog.html'>Microblog</a>",
                 "shrinesLink" : "<a href = '/shrines.html'>Shrines</a>",
