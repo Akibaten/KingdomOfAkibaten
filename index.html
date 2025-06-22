@@ -18,25 +18,27 @@
     <!-- center Content switch script and makes styling for the link stay -->
     <script>
       function switchContent(id){
-        const ids = ["home","webmistress", "websiteProgress"];
-        for(element of ids){
-          if(element != id){
-            document.getElementById(element + "Content").style.display = "none";
-            document.getElementById(element + "LinkBox").style.paddingLeft = "0";
-          }else if(element == id){
-            document.getElementById(element + "Content").style.display = "block";
-            document.getElementById(element + "LinkBox").style.paddingLeft = "5%";
-          }
+        //I rewrote this whole function like 1.5 months after adding it OMG what was I doing ;-;
+
+        //makes all pages invisible
+        for(page of document.getElementsByClassName("page")){
+          page.style.display= "none";
         }
+        //resets all nav buttons
+        for(button of document.getElementsByClassName("navLinkBorder")){
+          button.style.paddingLeft = "0";
+        }
+        const targetPage = document.getElementById(id);
+        targetPage.style.display = "block";
       }
     </script>
   </head>
   <body>
-    <div class="boxwrapper">
+    <div id="boxwrapper">
       <!--LEFT SIDE-->
       <div class="left">
         <div class="container">
-          <div class="containerBar">
+          <div class="containerBar" style = "height: max-content">
             <h2 id = "bio">
               <strong>
                 BIO
@@ -64,12 +66,13 @@
           <!-- site contents box -->
           <div class="containerContent">
             <nav>
-              <div id = "homeLinkBox" class = "navLinkBorder" style = "background-color: cyan;"><p id = "homeLink"><a onclick="switchContent('home'); document.getElementById('title').scrollIntoView({ behavior: 'smooth'})">Home</a></p></div>
-              <div  id = "webmistressLinkBox" class = "navLinkBorder" style = "background-color: magenta;"><p id = "webmistressLink"><a onclick="switchContent('webmistress'); document.getElementById('title').scrollIntoView({ behavior: 'smooth'})">Webmistress (Me!)</a></p></div>
-              <div  id = "websiteProgressLinkBox" class = "navLinkBorder" style = "background-color: yellow;"><p id = "websiteProgressLink"><a onclick="switchContent('websiteProgress'); document.getElementById('title').scrollIntoView({ behavior: 'smooth'})">Site Progress (๑˃ᴗ˂)</a></p></div>
+              <div id = "homeLinkBox" class = "navLinkBorder" style = "background-color: cyan;"><p><a id = "homeLink" onclick="switchContent('homeContent'); this.parentElement.parentElement.style.paddingLeft = '5%';window.scrollTo(0,0)">Home <img src="index/gifs/rainbowStars.gif"></a></p></div>
+              <div  id = "webmistressLinkBox" class = "navLinkBorder" style = "background-color: magenta;"><p><a id = "webmistressLink" onclick="switchContent('webmistressContent'); this.parentElement.parentElement.style.paddingLeft = '5%'; document.getElementById('title').scrollIntoView({ behavior: 'smooth'})">Webmistress (Me!) <img src="index/gifs/lotusFlower.gif"></a></p></div>
+              <div id = "linksLinkBox" class="navLinkBorder" style = "background-color: yellow;"><p><a id="linksLink" onclick = "switchContent('linksContent'); this.parentElement.parentElement.style.paddingLeft = '5%'; document.getElementById('title').scrollIntoView({ behavior: 'smooth'})">Cool Links <img src="index/gifs/lily.gif"></a></p></div>
+              <div  id = "websiteProgressLinkBox" class = "navLinkBorder" style = "background-color: cyan;"><p><a id = "websiteProgressLink" onclick="switchContent('websiteProgressContent'); this.parentElement.parentElement.style.paddingLeft = '5%'; document.getElementById('title').scrollIntoView({ behavior: 'smooth'})">Site Progress <img src="index/gifs/IMG-2382.gif"></a></p></div>
               <hr style="margin: 5%;  border: solid rgba(230,80,155,1); border-width: 1px;">
-              <div class = "navLinkBorder" style = "background-color: cyan"><p id = "mainMusicLink"><a href = "https://soundcloud.com/akibaten">♫♪ My Music ♫♪</a></p></div>
-              <div class = "navLinkBorder" style = "background-color: cyan"><p id = "musicSketchbookLink"><a href = "https://soundcloud.com/akiba10">Music Sketchbook</a></p></div>
+              <div class = "navLinkBorder" style = "background-color: magenta"><p id = "mainMusicLink"><a href = "https://soundcloud.com/akibaten">♫♪ My Music ♫♪</a></p></div>
+              <div class = "navLinkBorder" style = "background-color: yellow"><p id = "musicSketchbookLink"><a href = "https://soundcloud.com/akiba10">Music Sketchbook</a></p></div>
               <div class = "navLinkBorder" style = "background-color: cyan"><p id = "blogLink"><a href = "/blog.html">Blog</a></p></div>
               <div class = "navLinkBorder" style = "background-color: magenta;"><p id = "microblogLink"><a href = "/microblog.html">Microblog</a></p></div>
               <div class = "navLinkBorder" style = "background-color: yellow;"><p id = "shrinesLink"><a href="/shrines.html">Shrines</a></p></div>
@@ -107,38 +110,25 @@
         <div class="container">
           <!-- bar for the top of the box -->
           <div class="containerBar">
-            <h2 style = "text-align: center" id = "siteNews">
-              <strong>
-                  SITE NEWS ٩(^ᴗ^)۶
-              </strong>
-            </h2>
-          </div>
-          <div class="containerContent">
-            <p id="siteNewsBoxText" style = "margin-top: 1%; margin-bottom: 1%;">
-              new microblog post 2025-04-23 :)
-            </p>
-          </div>  
-        </div>
-        <div class="container">
-          <!-- bar for the top of the box -->
-          <div class="containerBar">
             <h2 style = "text-align: center" id="favoriteMusicArtists">
               <strong>
                   MY FAVORITE MUSIC ARTISTS RIGHT NOW
               </strong>
             </h2>
           </div>
-          <div class="containerContent">
-            <ul style = "margin-top: 5px">
-              <li id = "favoriteArtist1"><a href="https://open.spotify.com/artist/13VunSzrVSmJBpUWxUajJF?si=AffHLmmeT9SuudhXrP6tDQ">Limbo</a></li>
-              <li id = "favoriteArtist2"><a href="https://open.spotify.com/artist/4oLeXFyACqeem2VImYeBFe?si=PBUEnMQ6RGSKfQCfu-p0bg">Fred again..</a></li>
-              <li id = "favoriteArtist3"><a href="https://open.spotify.com/artist/3dz0NnIZhtKKeXZxLOxCam?si=zu1xA6AvS8mcA30yxHTAyw">Porter Robinson</a></li>
-              <li id = "favoriteArtist4"><a href="https://open.spotify.com/artist/6ignRjbPmLvKdtMLj9a5Xs?si=fl68uhS7RU2tlFphQVmHmg">Ichiko Aoba</a></li>
-              <li id = "favoriteArtist5"><a href="https://open.spotify.com/artist/6OqhFYFJDnBBHas02HopPT?si=rFUKeMngQ7-fYIao_3l0hw">Kero Kero Bonito</a></li>
-            </ul>
-            <p id = "favoriteMusicArtistsBoxText"> Music is a really big part of my life. These are just the artists I've been listening to the most recently
-                and have/had the biggest influence on me ^_^. My tastes change really rapidly and I've fallen in love
-                with so much  music in my life that I could never make a list of my favorite music ever.</p>
+          <div class="containerContent" style = "height: 40vh; position: relative;">
+            <div style = "overflow: scroll; position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: 3%;">
+              <ul style = "margin-top: 5px">
+                <li id = "favoriteArtist1"><a href="https://open.spotify.com/artist/13VunSzrVSmJBpUWxUajJF?si=AffHLmmeT9SuudhXrP6tDQ">Limbo</a></li>
+                <li id = "favoriteArtist2"><a href="https://open.spotify.com/artist/4oLeXFyACqeem2VImYeBFe?si=PBUEnMQ6RGSKfQCfu-p0bg">Fred again..</a></li>
+                <li id = "favoriteArtist3"><a href="https://open.spotify.com/artist/3dz0NnIZhtKKeXZxLOxCam?si=zu1xA6AvS8mcA30yxHTAyw">Porter Robinson</a></li>
+                <li id = "favoriteArtist4"><a href="https://open.spotify.com/artist/6ignRjbPmLvKdtMLj9a5Xs?si=fl68uhS7RU2tlFphQVmHmg">Ichiko Aoba</a></li>
+                <li id = "favoriteArtist5"><a href="https://open.spotify.com/artist/6OqhFYFJDnBBHas02HopPT?si=rFUKeMngQ7-fYIao_3l0hw">Kero Kero Bonito</a></li>
+              </ul>
+              <p id = "favoriteMusicArtistsBoxText"> Music is a really big part of my life. These are just the artists I've been listening to the most recently
+                  and have/had the biggest influence on me ^_^. My tastes change really rapidly and I've fallen in love
+                  with so much  music in my life that I could never make a list of my favorite music ever.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -153,155 +143,187 @@
           </div>
         </div>
         <div class="container" style="font-size: .9em;">
-          <div id = "centerContent" class="containerContent" style="margin-bottom: 2%; padding-bottom: 1%; position: relative;">
-            <div  style = "position:absolute; right: 1.35em; background-color: white; height: auto; width: auto;"><button id = "translateButton" onclick="window.translate()">日本語</button></div>
-            <div id = "homeContent" style = "display: block; margin-top: 1%">
-              <img src="index/nanaoNaruImage.png" style="width:50%;height:auto; margin: 2% 1%; float:right;" title="very pretty picture by the artist Nanao Naru ^_^">
-              <p id = "introParagraph">
-                Hi! <br> My name is Sarah<br> ♡⸜(˶˃ ᵕ ˂˶)⸝♡ <br>
-                I created this site as a personal project. I think social media has a great capacity to connect people and do good, but it's become
-                  pretty exhausting these days >_&lt;. I think it's begun to divide us and push us to dehumanize ourselves and others by reducing us to 
-                  arbitrary metrics. As a person who really values doing creative stuff, this site allows me to post and share my works, create a creative
-                  work in the process, and free me from unconsciously changing who I am and my art. I still do have social media though, I just don't use it
-                  very often. Here is my <a href="https://www.instagram.com/akibaten/">instagram</a>:P <br>
-                  I love music and art and human expression and any method by which we are able to do that. All of my music can be found at my soundcloud link to the side.
-                  Thank you for checking this out and enjoy your stay!<br>
-                  ^_^
-                  <br><br> 
-                  This website is entirely built from the ground up and coded by hand (੭˃ᴗ˂)੭<br>
-                  It is a continuous work in progress. Most of it is formatted for mobile, but this site is still best viewed in Chrome or Firefox at 1920x1080 :)
-              </p>
-            </div>
-            <div id = "webmistressContent" style = "display: none; margin-top: 1%;">
-              <img src="index/mugiFlex.gif" style=" width: 40%; height:auto; margin: 2% 1%; float:right;" title="mugi flexinggg (੭˃ᴗ˂)੭">
-              <p>Helloooo again! <br>ummmmm I'm Sarah (or Elizabeth that's my middle name and I like it a lot too) I'm a 20 something girl in college. I love music and coding and the internet (I love the internet
-                like a lot a lot). I'm majoring in Chemistry and Japanese in college, and so I 
-                <a href = "/unused-assets/vsCodeScreenshot.png" title = "This is what my vsCode looks like as i'm writing this :P" style = "text-decoration: none; background-color: transparent;">suppose</a> 
-                I'm pretty into Japanese culture though I don't watch much anime these days :P You'll see my home page get translated into Japanese (I didn't realize how time consuming that would be when I first implemented it xd)
-                Anywaysssssss here are some of my favorite things
-              </p>
-              <div style = "width: 47%; display: inline-block; vertical-align: text-top; margin: 0">
-                <p style = "margin:0; font-size: 1.2em;">
-                  Favorite Musicians/Producers/Artists whatever:
+          <div id = "mainCenter" class="containerContent">
+            <button id = "translateButton" style = "position: absolute; top: 2%; right: 2%" onclick="window.translate()">日本語</button>
+            <div id = "mainCenterContent">
+              <div id = "homeContent" class = "page" style = "display: block;">
+                <img src="index/nanaoNaruImage.png" style="width:50%;height:auto; margin: 2% 1%; float:right;" title="very pretty picture by the artist Nanao Naru ^_^">
+                <p id = "introParagraph">
+                  Hello ^_^<br>
+                  My name is Sarah. I use the name akibaten in most places.<br>
+                  I love being creative, but I really struggle to create full, cohesive, completed works. This site is my attempt
+                  to combat that. I create a lot (or at least I try to), and for so long, everything I made has been more or less ephemeral.
+                  Poetry lost in journals or songs played once in a dj set and never again or drawings stashed in forgotten sketchbooks. I think
+                  a part of me is scared of being judged or scared of being looked at. On this site I can kind of just put anything I want without
+                  constantly judging myself (or less so than I would otherwise). When I do this, the site and my art kind of grow with me in a big
+                  cohesive project that's really just <em>me</em>. So when I am proud of something, instead of waiting because I want it to be a part
+                  of some huge project that might not materialize, I can just put it here.
+                  <!-- Hi! <br> My name is Sarah<br> ♡⸜(˶˃ ᵕ ˂˶)⸝♡ <br>
+                  I created this site as a personal project. I think social media has a great capacity to connect people and do good, but it's become
+                    pretty exhausting these days >_&lt;. I think it's begun to divide us and push us to dehumanize ourselves and others by reducing us to 
+                    arbitrary metrics. As a person who really values doing creative stuff, this site allows me to post and share my works, create a creative
+                    work in the process, and free me from unconsciously changing who I am and my art. I still do have social media though, I just don't use it
+                    very often. Here is my <a href="https://www.instagram.com/akibaten/">instagram</a>:P <br>
+                    I love music and art and human expression and any method by which we are able to do that. All of my music can be found at my soundcloud link to the side.
+                    Thank you for checking this out and enjoy your stay!<br>
+                    ^_^
+                    <br><br> 
+                    This website is entirely built from the ground up and coded by hand (੭˃ᴗ˂)੭<br>
+                    It is a continuous work in progress. Most of it is formatted for mobile, but this site is still best viewed in Chrome or Firefox at 1920x1080 :) -->
                 </p>
-                <details>
-                  <summary>
-                    Limbo
-                  </summary>
-                  <p>
-                    lofi, singer-songwriter, producer that I really love. She inspired me so much, and I met her in person and she was just as cool AHHHHH
-                    find her <a href = "https://soundcloud.com/youknowlimbo">here</a> 
-                  </p>
-                </details>
-                <details>
-                  <summary>
-                    Minamotoya（源屋）
-                  </summary>
-                  <p>
-                    The producer that got me into j-core and all japanese hardcore edm :D He is really fantastic at writing and even though he released most of his
-                    stuff between 2008 and 2014 or so, I've rarely if ever found anything like it. His discography is pretty scattered, but surprisingly most of his
-                    stuff can actually be found on <a href = "https://open.spotify.com/artist/1U1YnsPM35df5p4slCVSpp">Spotify</a>
-                  </p>
-                </details>
-                <details>
-                  <summary>
-                    Uchu Conbini (宇宙コンビニ)
-                  </summary>
-                  <p>
-                    A really special math rock band. Everything is so powerful. The drums don't feel awkward, and yet they are unpredictable. The guitar work is truly the most beautiful.
-                    I have ever heard in math rock up there with Ivette Young, and the vocals always give me goosebumps all over my body and make me feel like that moment is one of the most
-                    important moments of my life. They are truly amazing. I actually went to the cafe in kyouto that is owned by the guitarist of this band, and it was pretty good. Their music
-                    can be found most places you find music. Here is their <a href = "https://open.spotify.com/artist/2DZe9zw4ZNgEFPA8vRMade?si=3I0yv6G3QAC9OfZ0pJCnog">Spotify</a>
-                  </p>
-                </details>
               </div>
-              <div style = "width: 47%; display: inline-block; vertical-align: text-top; margin: 0">
-                <p style = "margin:0; font-size: 1.2em;">
-                  Favorite pieces of media right now:
+              <div id = "webmistressContent" class = "page" style = "display: none; margin-top: 1%;">
+                <img src="index/mugiFlex.gif" style=" width: 40%; height:auto; margin: 2% 1%; float:right;" title="mugi flexinggg (੭˃ᴗ˂)੭">
+                <p>Helloooo again! <br>ummmmm I'm Sarah (or Elizabeth that's my middle name and I like it a lot too) I'm a 20 something girl in college. I love music and coding and the internet (I love the internet
+                  like a lot a lot). I'm majoring in Chemistry and Japanese in college, and so I 
+                  <a href = "/unused-assets/vsCodeScreenshot.png" title = "This is what my vsCode looks like as i'm writing this :P" style = "text-decoration: none; background-color: transparent;">suppose</a> 
+                  I'm pretty into Japanese culture though I don't watch much anime these days :P You'll see my home page get translated into Japanese (I didn't realize how time consuming that would be when I first implemented it xd)
+                  Anywaysssssss here are some of my favorite things
                 </p>
-                <details>
-                  <summary>
-                    Inside Mari by Shuzo Oshimi
-                  </summary>
-                  <p>
-                    Inside Mari is a manga about a really existentially lost guy that one day wakes up in the body of a girl. It begins as a mystery as he searches for
-                    why this happened, but quickly becomes much more complicated and psychological. I can't say anymore without spoiling stuff so you have to read it ;) It helped me
-                    figure out who I was and taught me a lot about identity not just as an abstract concept but a lens through which we see the world and understand ourselves, and as
-                    cringe as it feels to say, it kind of... healed a part of me.
+                <div style = "width: 47%; display: inline-block; vertical-align: text-top; margin: 0">
+                  <p style = "margin:0; font-size: 1.2em;">
+                    Favorite Musicians/Producers/Artists whatever:
                   </p>
-                </details>
-                <details>
-                  <summary>
-                    The End of Evangelion
-                  </summary>
-                  <p>
-                    The End of Evangelion is my favorite movie of all time. It's so powerful, and when I watched it for the first time I felt every idea and concept it showed interface
-                    with my soul in a way thats hard to describe. It is the perfect end to any piece of media I've ever watched and does an incredible job of exploring idas about
-                    spirituality and the concept of a system/outcome/chain of events being perfectly imperfect.
+                  <details>
+                    <summary>
+                      Limbo
+                    </summary>
+                    <p>
+                      lofi, singer-songwriter, producer that I really love. She inspired me so much, and I met her in person and she was just as cool AHHHHH
+                      find her <a href = "https://soundcloud.com/youknowlimbo">here</a> 
+                    </p>
+                  </details>
+                  <details>
+                    <summary>
+                      Minamotoya（源屋）
+                    </summary>
+                    <p>
+                      The producer that got me into j-core and all japanese hardcore edm :D He is really fantastic at writing and even though he released most of his
+                      stuff between 2008 and 2014 or so, I've rarely if ever found anything like it. His discography is pretty scattered, but surprisingly most of his
+                      stuff can actually be found on <a href = "https://open.spotify.com/artist/1U1YnsPM35df5p4slCVSpp">Spotify</a>
+                    </p>
+                  </details>
+                  <details>
+                    <summary>
+                      Uchu Conbini (宇宙コンビニ)
+                    </summary>
+                    <p>
+                      A really special math rock band. Everything is so powerful. The drums don't feel awkward, and yet they are unpredictable. The guitar work is truly the most beautiful.
+                      I have ever heard in math rock up there with Ivette Young, and the vocals always give me goosebumps all over my body and make me feel like that moment is one of the most
+                      important moments of my life. They are truly amazing. I actually went to the cafe in kyouto that is owned by the guitarist of this band, and it was pretty good. Their music
+                      can be found most places you find music. Here is their <a href = "https://open.spotify.com/artist/2DZe9zw4ZNgEFPA8vRMade?si=3I0yv6G3QAC9OfZ0pJCnog">Spotify</a>
+                    </p>
+                  </details>
+                </div>
+                <div style = "width: 47%; display: inline-block; vertical-align: text-top; margin: 0">
+                  <p style = "margin:0; font-size: 1.2em;">
+                    Favorite pieces of media right now:
                   </p>
-                </details>
-                <details>
-                  <summary>
-                    All About Lily Chou chou
-                  </summary>
-                  <p>
-                    Another movie I love to death. Its a heart-wrenching watch, but it portrays so much and says so much. In writing this right now I realize sometimes its okay to not
-                    abstract some thing we love so we can explain why we like it. I like this movie because I can <em>feel</em> it. The imagery, emotions, writing... it all hits my brain
-                    in such a beautiful way and tumbles down all the paths of my feelings in such a unique way I haven't felt it anywhere else.
-                  </p>
-                </details>
+                  <details>
+                    <summary>
+                      Inside Mari by Shuzo Oshimi
+                    </summary>
+                    <p>
+                      Inside Mari is a manga about a really existentially lost guy that one day wakes up in the body of a girl. It begins as a mystery as he searches for
+                      why this happened, but quickly becomes much more complicated and psychological. I can't say anymore without spoiling stuff so you have to read it ;) It helped me
+                      figure out who I was and taught me a lot about identity not just as an abstract concept but a lens through which we see the world and understand ourselves, and as
+                      cringe as it feels to say, it kind of... healed a part of me.
+                    </p>
+                  </details>
+                  <details>
+                    <summary>
+                      The End of Evangelion
+                    </summary>
+                    <p>
+                      The End of Evangelion is my favorite movie of all time. It's so powerful, and when I watched it for the first time I felt every idea and concept it showed interface
+                      with my soul in a way thats hard to describe. It is the perfect end to any piece of media I've ever watched and does an incredible job of exploring idas about
+                      spirituality and the concept of a system/outcome/chain of events being perfectly imperfect.
+                    </p>
+                  </details>
+                  <details>
+                    <summary>
+                      All About Lily Chou chou
+                    </summary>
+                    <p>
+                      Another movie I love to death. Its a heart-wrenching watch, but it portrays so much and says so much. In writing this right now I realize sometimes its okay to not
+                      abstract some thing we love so we can explain why we like it. I like this movie because I can <em>feel</em> it. The imagery, emotions, writing... it all hits my brain
+                      in such a beautiful way and tumbles down all the paths of my feelings in such a unique way I haven't felt it anywhere else.
+                    </p>
+                  </details>
+                </div>
+                <p>
+                  <u>Tests I've taken</u>
+                </p>
+                <div>
+                  <marquee direction = "left" scrollamount="8x  " style = "margin-bottom: 1em; width: 100%">
+                    <a href="https://theotaku.com/quizzes/view/2675/what_k-on%21_band_character_are_you%3F"><img  src="http://www.theotaku.com/guru_results/2675_Mio_Akiyama.jpg" alt="What K-ON! Band Character Are You?" height = "182"></a>
+                    <a href = "https://cadnomori.neocities.org/quizzes/nen"><img src = "index/testResults/conjurer.png" alt = "my nen type :o" height = "182"></a>
+                    <A href="https://www.theotaku.com/quizzes/view/4097/what_dere_type_are_you%3F"><img border="0" src="http://www.theotaku.com/guru_results/4097_Kuudere.jpg" alt="What Dere Type Are You?" height = "182"/></a>
+                    <A href="https://www.quotev.com/quiz/12039206/Which-Vocaloid-are-you"><img border="0" src="index/testResults/vocaloidQuiz.jpg" alt="What Vocaloid Are You?" height = "182"/><br></a><A href="https://www.quotev.com/quiz/12039206/Which-Vocaloid-are-you"></A>
+                  </marquee>
+                </div>
               </div>
-              <p>
-                <u>Tests I've taken</u>
-              </p>
-              <div>
-                <marquee direction = "left" scrollamount="8x  " style = "margin-bottom: 1em">
-                  <a href="https://theotaku.com/quizzes/view/2675/what_k-on%21_band_character_are_you%3F"><img  src="http://www.theotaku.com/guru_results/2675_Mio_Akiyama.jpg" alt="What K-ON! Band Character Are You?" height = "182"></a>
-                  <a href = "https://cadnomori.neocities.org/quizzes/nen"><img src = "index/testResults/conjurer.png" alt = "my nen type :o" height = "182"></a>
-                  <A href="https://www.theotaku.com/quizzes/view/4097/what_dere_type_are_you%3F"><img border="0" src="http://www.theotaku.com/guru_results/4097_Kuudere.jpg" alt="What Dere Type Are You?" height = "182"/><br /></a><A href="https://www.theotaku.com/quizzes/view/4097/what_dere_type_are_you%3F">
-                </marquee>
-              </div>
-            </div>
-            <div id = "websiteProgressContent">
-              <p> <br> Here is a little slideshow of the evolution of my homepage so far! Click the picture to start :3</p>
-              <a onclick="slideshow()"><img src = "index/websiteProgressImages/Screenshot 2025-04-18 at 6.23.50 PM.png" class = "mySlides" style = "display: block;"></a>
-              <img src = "index/websiteProgressImages/Screenshot 2025-04-18 at 6.24.13 PM.png" class = "mySlides">
-              <img src = "index/websiteProgressImages/Screenshot 2025-04-23 at 12.40.14 AM.png" class = "mySlides">
-              <script>
-                var myIndex = 0;
-                function slideshow(){
+              <div id = "websiteProgressContent" class = "page" >
+                <p> <br> Here is a little slideshow of the evolution of my homepage so far! Click the picture to start :3</p>
+                <a onclick="slideshow()"><img src = "index/websiteProgressImages/Screenshot 2025-04-18 at 6.23.50 PM.png" class = "mySlides" style = "display: block;"></a>
+                <img src = "index/websiteProgressImages/Screenshot 2025-04-18 at 6.24.13 PM.png" class = "mySlides">
+                <img src = "index/websiteProgressImages/Screenshot 2025-04-23 at 12.40.14 AM.png" class = "mySlides">
+                <script>
                   var myIndex = 0;
-                  carousel();
-                }
-
-                function carousel() {
-                  var i;
-                  var x = document.getElementsByClassName("mySlides");
-                  for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";  
+                  function slideshow(){
+                    var myIndex = 0;
+                    carousel();
                   }
-                  myIndex++;
-                  if (myIndex > x.length) {myIndex = 1}    
-                  x[myIndex-1].style.display = "block";  
-                  setTimeout(carousel, 2000); // Change image every 2 seconds
-                }
-              </script>
+  
+                  function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < x.length; i++) {
+                      x[i].style.display = "none";  
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) {myIndex = 1}    
+                    x[myIndex-1].style.display = "block";  
+                    setTimeout(carousel, 2000); // Change image every 2 seconds
+                  }
+                </script>
+              </div>
+              <div id="linksContent" class = "page">
+                <p>ah shoot under construction :(</p>
+              </div>
             </div>
           </div>
-          <div class = "containerContent" style="position: relative;">
-            <img src="/index/vineGrowth.gif" style = "position: absolute; top:4%; bottom: 4%; right: 2%; height: 95%; width: auto;">
-            <object data = "microblog.html" id = "microblogPreview" type="text/html" style = "float:right; margin-top: 4%; background-color: white;"></object>
-            
-            <!-- styling for this element is in the css file -->
-            <h2 style = "margin-top: 5%;">
-              My Microblog >:)
+        </div>
+        <div class="container" style = "height: 100%;">
+          <div class="containerContent" style = "height: 100%;">
+            <style>
+              p {
+                margin-top: 0em;
+              }
+            </style>
+            <h2>
+              The Importance of Existence
             </h2>
-            <p id = "microBlogPreviewBoxText">
-              This is a preview of the latest post my microblog!<br>
-              I would put my blog here... but the entries are too few and it would be a bit impractical as they are much longer.<br><br>
-              <img src = "index/k-on5.gif" style="padding-left: 2%; width: 20%;">
+            <p style = "text-indent: 1em; margin-top: 4vh">
+              Existence is so weird and confusing, and infinitely complex for every person, and I feel like if I struggle to make big projects or albums, maybe that's because I should try to make my whole existence a project in it of itself.
+              I'm not sure there could be a project that could be bigger than that, or at least not one I can make by my lonesome.
             </p>
-            <script src = "index/microBlogPreviewStyler.js"></script> 
+            <p style = "text-align: right; text-indent: 1em;">
+              I've always tried to push myself to never have a filter about what I do and don't talk about with relation to myself. I think recently
+              I have started to internalize that it is okay for me to have stuff in my brain just for me, but even still those things are pretty rare.
+            </p>
+            <p  style = "text-indent: 1em;">
+              This website is about as <em>me</em> as I can possibly be publicly. We all have so much life we need to live, and I hope people perusing
+              my existence will make someone as happy as perusing other people's inner worlds makes me.
+            </p>
+            <img src = "">
+          </div>
+        </div>
+        <div class = "container">
+          <div class = "containerContent" style = "margin: 0; padding: .5em">
+            <marquee id = "stamps" scrollamount = "20">
+              <img src = "/index/stamps/badapple.gif"><img src = "/index/stamps/k-onStamp.gif"><img src = "/index/stamps/rainbowz.jpg"><img src = "/index/stamps/pirate.png"><img src = "/index/stamps/himejoshi.png"><img src = "/index/stamps/scene.gif"><img src = "/index/stamps/cringeandfree.gif">
+            </marquee>
           </div>
         </div>
       </div>
@@ -323,18 +345,20 @@
             </div>
           </div>
         </div>
-        <div class = "container">
-          <div class = "containerContent">
-            <h2 id = "musicSnippet" style = "text-align: center;">
-              Recent Music Snippet I made
+        <div class="container">
+          <!-- bar for the top of the box -->
+          <div class="containerBar">
+            <h2 style = "text-align: center" id = "siteNews">
+              <strong>
+                  SITE NEWS ٩(^ᴗ^)۶
+              </strong>
             </h2>
-            <p style = "text-align: center; font-size: 1em;" id = "musicSnippetInstructions">click it to play with audio :3</p>
-            <div style = "border:solid .2em rgb(255, 80, 157); border-radius: .5em;">
-              <video id = "musicSnippet" onClick = "muted = false; currentTime = 0; controls = true; volume = .5" style = "width: 100%" height="100%">
-                <source src="index/musicSnippets/03-04-2025-snippet.mp4" type="video/mp4">
-              </video> 
-            </div>
           </div>
+          <div class="containerContent">
+            <p id="siteNewsBoxText" style = "margin-top: 1%; margin-bottom: 1%;">
+              new microblog post 2025-04-23 :)
+            </p>
+          </div>  
         </div>
         <div class = "container">
           <!-- bar for the top of the box -->
@@ -366,6 +390,7 @@
               <a title="Laith Rai7an" href="http://arataka.neocities.org/" target="_blank"><img alt="Laith Rai7an" src="http://files.catbox.moe/k0v6qu.gif"/></a>
               <a href="https://www.virtuagirl.net" title = "okay seriously this might be the coolest site i've ever seen"><img src="https://i.imgur.com/yaA0mNF.gif"></a>
               <a href = "https://girl-wonderlost.neocities.org/" title = "a really interesting idea on taking your through someone's site like you are meeting them :3"><img src = "index/buttons/girlWonderlostButton.png"></a>
+              <a href = "https://mazapandust.com/" title = "really cool aesthetic darker site ^-^"><img src = "index/buttons/maztvButton.gif">  </a>
             </p>
           </div>
         </div>
@@ -388,7 +413,7 @@
             </p>
           </div>
         </div>
-        <div class="container">
+        <div class="container" style = "height:100%">
           <div class="containerBar">
             <div style="display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 2%; margin-top: 2%">
               <a href="https://kingdomofakibaten.neocities.org/feed.xml" 
@@ -400,9 +425,9 @@
               </h2>
           </div>
           </div>
-          <div class = "containerContent">          
-            <div style = "border:1px solid black;">
-              <object type="text/xml" data="feed.xml" width="100%" height="400px"></object>
+          <div class = "containerContent" style = "height: 100%;">          
+            <div style = "border:1px solid black; height: 100%;">
+              <object type="text/xml" data="feed.xml" style = "width: 100%; height: 100%;"></object>
             </div>
           </div>
         </div>
@@ -418,7 +443,7 @@
     </div>
     <!-- *clicks* the homebutton in the site contents box on load i have to put it here because of the dom-->
     <script>
-      switchContent('home');
+      document.getElementById('homeLink').click()
     </script>
   </body> 
 </html>

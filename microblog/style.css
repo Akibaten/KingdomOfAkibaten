@@ -1,37 +1,29 @@
 /* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
    HTML content. To learn how to do something, just try searching Google for questions like
    "how to change link color." */
-.html{
-  height: 100%;
-}
 
 .boxwrapper {
   display: flex;
-  align-items: flex-start;
   justify-content: space-between;
 }
 
 .left {
-  flex: 1;
-  width: 35%;
+  flex: 1 30%;
   height: 100vh;
 }
 
 .center {
-  flex: 1;
-  width: 30%;
+  flex: 2 40%;
 }
 
 .right {
-  flex: 1;
-  width:35%;
+  flex: 1 30%;
   height: 100vh;
 }
 
 @media only screen and (max-width: 768px){
   .boxwrapper.boxwrapper {
     display: grid;
-    grid: auto-flow; 
     gap: 0%;
   }
 
@@ -47,9 +39,9 @@
 
   .center.center {
     grid-row: 2;
-    width: auto;
-    padding-left: 10%;
-    padding-right: 10%;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
   .right.right {
@@ -107,6 +99,8 @@ strong {
 
 body {
   margin:0;
+  width: 100vw;
+  height: 100vh;
   font-family: "Courier Prime", "Courier New", sans-serif;
 }
 

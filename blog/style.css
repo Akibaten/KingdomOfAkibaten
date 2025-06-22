@@ -8,109 +8,92 @@
 .boxwrapper {
   display: grid;
   grid-row-start:auto;
+  height: 100vh;
 }
 
 .left {
   grid-row:1;
-  width:25vw;
-  height: 100vh;
+  width:22vw;
 }
 
 .center {
   grid-row:1;
-  width:50vw;
-  height: 100vh;
+  width:56vw;
+  margin-top: 5vh;
+  position: relative;
+  display: flex;
 }
 
 .right {  
   grid-row:1;
-  width: 25vw;
-  height: 100vh;
+  width: 22vw;
+  position: relative;
 }
 
-@media only screen and (max-width: 768px){
-  .boxwrapper.boxwrapper {
-    flex-direction:column;
-  }
-
-  .left.left{
-    height:10px;
-  }
-
-  .center.center{
-    width:100%;
-  }
-
-  .right.right{
-    height: 10px;
-  }
-
-  .titleContainer.titleContainer{
-    width: 100%;
-    font-size: 2em;
-    text-align: center;
-    margin-top: 0%!important;
-  }
-
-  .postContainer.postContainer{
-    margin-left: 2%;
-    margin-right: 2%;
-    height: 60vh;
-  }
+#postNavigation {
+  width: 22%;
+  padding-right: 2%;
+  position: relative;
+  border-right: solid black 2px;
+  animation: postNavigationBox ease 1.25s;
 }
 
-.titleContainer{
-  margin-top: 10%;
-  padding-left: 5%;
-  padding-right: 5%;
-  text-align: left;
-  z-index: 1000;
-  font-size: 2em;
+#postsContainer {
+  overflow: hidden;
+  width: 76%;
+  position: relative;
+  margin-left: 2%;
+  animation: posts 1.25s;
 }
 
-.postContainer {
-  height: 70vh;
-  
-  padding-left: 5%;
-  padding-right: 5%;
-  
-  margin-top: -4%;
-
-  overflow-y: scroll;
-  overflow-x: hidden;
-  
-  border-radius: 10px;
-  /* box-shadow: inset 0 0 0 .2em rgba(255,255,255,1);
-  outline: solid rgba(255,255,255,1);
-  outline-width: .2em;
-  border: solid rgba(255,255,255,.5);
-  border-width: .2em; */
-
-  scrollbar-width: none;  /* Hide scrollbar in Firefox */
-  -ms-overflow-style: none;  /* Hide scrollbar in Internet Explorer and Edge */
-}
-
-.posts{
-
-}
-
-.titleContainer h1{
+#titleContainer h1{
   letter-spacing: -.01em;
+}
+
+#moodGif {
+  filter: url('#grain') grayscale(1) saturate(0) contrast(1.4) brightness(1.4);
+  width: 80%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  animation: moodGifFadeIn 2s;
+}
+
+.post{
+  position: absolute;
+  visibility: hidden;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+#postNavigation button {
+  all: unset;
+  margin: .25em 0em;
+  padding-left: 0em;
+  transition: padding-left linear .2s;
+}
+
+#postNavigation button:hover{
+  padding-left: 1em;
 }
 
 /*big header*/
 h1 {
-  color: aliceblue;
+  color: black;
 }
 
 /*sub header*/
 h2 {
-  color: aliceblue;
+  color: black;
 }
  
 p {
   font-size: 1.1em;
-  color: white;
+  color: black;
   font-weight: 400;
 }
 
@@ -123,23 +106,48 @@ strong {
   
 }
 
-.posts a {
-  background-color: white;
-  padding: .2em;
-  color: black;
-  text-shadow: none;
-  text-wrap: nowrap;
+a {
+  word-break:break-all;
 }
 
 body {
-  background-image: url("/blog/blogBackground.png");
-  font-family: arialCondensed;
+  background-color: white;
+  font-family: 'Courier New', Courier, monospace;
   height: 100vh;
-  overflow: hidden;
-  text-shadow: 2px 2px 4px black;
+  width: 100vw;
+  background-attachment: fixed;
+  overscroll-behavior: none;
+  overflow: scroll;
+  margin: 0;
 }
 
 @font-face {
   font-family: arialCondensed;
   src: url("/fonts/arial-mt-condensed.ttf");
+}
+
+/* animations */
+@keyframes postNavigationBox{
+  from{transform: translateX(-70%);}
+  to {transform: translateX((0%));}
+}
+
+@keyframes backButton {
+  from{transform: translateY(-200%);}
+  to {transform: translateY((0%));}
+}
+
+@keyframes posts {
+  from{transform: translateY(200%);}
+  to {transform: translateY((0%));}
+}
+
+@keyframes moodGifFadeIn {
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+@keyframes blurIn{
+  from{filter: blur(100px)}
+  to {filter: blur(0)}
 }
