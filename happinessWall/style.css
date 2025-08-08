@@ -8,16 +8,16 @@
 }
 
 .left {
-  flex: 1 25%;
+  flex: 1 5%;
   height: 100vh;
 }
 
 .center {
-  flex: 2 50%;
+  flex: 2 90%;
 }
 
 .right {
-  flex: 1 25%;
+  flex: 1 5%;
   height: 100vh;
 }
 
@@ -31,8 +31,6 @@
     grid-row: 1;
     width: auto;
     height: auto;
-    padding-left: 2%;
-    padding-right: 2%;
     padding-bottom: 0%;
     height: max-content;
   }
@@ -42,73 +40,71 @@
     width: 100%;
     padding-left: 5%;
     padding-right: 5%;
+    box-sizing: border-box;
   }
 
   .right.right {
     grid-row: 3;
     width:auto;
     height:auto;
-    padding-left: 2%;
-    padding-right: 2%;
     padding-bottom: 10%;
+  }
+
+  .stickyNote.stickyNote{
+    width: 100%;
   }
 }
 
-.container {  
-  background-color: lightgrey;
+#stickyNotes {
+  margin-bottom: 5rem;
 }
 
-#title {
-  height: 10%;
-  margin-bottom: 1rem;
-  display: relative;
-}
-
-#mainContent {
-  grid-column: 2/5;
-}
-
-#links {
-  grid-column: 1/2;
-  overflow-wrap: break-word;
-  white-space: norma;
-  word-break: break-word;
-}
-
-.toolTip {
-  text-decoration-line: underline;
-  text-decoration-style: dotted;
+.stickyNote {
+  display: inline-block;
   position: relative;
-}
-
-.toolTip .toolTipText {
-  opacity: 0;
-  width: 100%;
-  background-color: white;
+  vertical-align: top;
+  aspect-ratio: 1/1;
+  width: 15rem;
+  font-size: 3rem;
   text-align: center;
-  padding: .1rem .25rem;
+  align-content: center;
+  margin-bottom: 4%;
 
-  /* Position the tooltip */
-  position: absolute;
-
-  left: 0;
-  transform: translateY(-100%);
-  top:0;
-
+  transition: scale .5s;
   z-index: 1;
-  font-size: 1.1rem;
-
-  pointer-events: none;
 }
 
-.toolTip:hover .toolTipText{
-  opacity: 100%;
+.stickyNote span{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: .1em;
+  font-size: 1.5rem;
+  color: rgba(0,0,0,0);
+  transition: color 1s;
+}
+
+.stickyNote:hover{
+  box-shadow: 0px 0px 15px 4px rgba(0,0,0,0.44);
+  scale: 1.25;
+  z-index: 2000;
+
+
+  /* i didn't know you could do this with rules lol */
+  span{
+    color: rgba(0,0,0,1);
+  }
+}
+
+.titleContainer { 
+  margin-top: 5%;
+  text-align: center;
 }
 
 /*big header*/
 h1 {
   color: black;
-  font-size: 2em;
+  font-size: 3em;
 }
 
 /*sub header*/
@@ -117,10 +113,9 @@ h2 {
 }
  
 p {
-  font-size: 1em;
+  font-size: 5em;
   color: black;
-  overflow-wrap: break-word;
-  font-weight: 400;
+  overflow-wrap: break-word;  
 }
 
 /*li is formatting for list items*/
@@ -136,5 +131,10 @@ body {
   margin:0;
   width: 100vw;
   height: 100vh;
-  font-family: "Ubuntu Sans Mono", monospace;
+  font-family: gaegu;
+}
+
+@font-face {
+  font-family: gaegu;
+  src: url("/fonts/Gaegu-Regular.ttf") format("truetype");
 }

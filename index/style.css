@@ -34,46 +34,34 @@
 
 
 @media only screen and (max-width: 768px){
-  .boxwrapper {
-    display: grid;
-    gap: 0%;
+  #boxwrapper#boxwrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin: 0;
+    padding: 5%;
+    box-sizing: border-box;
   }
 
-  .left {
-    grid-row: 2;
-    margin-left: 2%;
-    margin-right: 2%;
+  .left.left {
+    order: 1;
     margin-bottom: 0%;
   }
 
-  .center {
-    grid-row: 1;
-    margin-left: 2%;
-    margin-right: 2%;
+  .center.center {
+    order: 0;
   }
 
-  .right {
-    grid-row: 3;
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-bottom: 10%;
+  .right.right {
+    order: 2;
+    margin-bottom: 0%;
   }
 
   /* fixes padding for container */
-  .container{
-    padding: 1em !important;  
+  .container.container{
+    padding: .5em;
   }
-  
-  .containerContent{
-    border-radius: .4em;
-    word-wrap: break-word; 
-    padding:1em!important;
-    padding-bottom: 5%;
-  
-    /*outline around letters*/
-    -webkit-text-stroke-width: .5px;
-    -webkit-text-stroke-color: rgb(255,20,147);
-  }
+
 
   /* changes font size for mobile */
   p{

@@ -54,6 +54,10 @@
   }
 }
 
+#posts {
+  margin-bottom: 5rem;
+}
+
 .container { 
   width: 100%;
 }
