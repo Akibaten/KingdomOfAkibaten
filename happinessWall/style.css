@@ -57,18 +57,22 @@
 
 #stickyNotes {
   margin-bottom: 5rem;
+  font-size: 0;
 }
 
 .stickyNote {
   display: inline-block;
   position: relative;
+  box-sizing: border-box;
   vertical-align: top;
   aspect-ratio: 1/1;
   width: 15rem;
-  font-size: 3rem;
+  height: 15rem;
+  font-size: 2rem;
   text-align: center;
   align-content: center;
-  margin-bottom: 4%;
+  margin: .4%;
+  padding: .1em;
 
   transition: scale .5s;
   z-index: 1;
@@ -97,7 +101,7 @@
 }
 
 .titleContainer { 
-  margin-top: 5%;
+  margin-top: 3%;
   text-align: center;
 }
 
@@ -113,19 +117,20 @@ h2 {
 }
  
 p {
-  font-size: 5em;
+  font-size: 2em;
   color: black;
   overflow-wrap: break-word;  
+  line-height: 0;
 }
 
 /*li is formatting for list items*/
-li{
+/* li{
 
 }
 
 strong {
   
-}
+} */
 
 body {
   margin:0;
