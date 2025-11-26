@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://akibaten.xyz/feed.xml" rel="alternate" type="application/rss+xml" title="whats new on my website" />
-    <link href="/index/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/index.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/img/favicon.png" rel="shortcut icon" type="image/x-icon">
     <title>𝑲𝒊𝒏𝒅𝒈𝒐𝒎 𝒐𝒇 𝑨𝒌𝒊𝒃𝒂𝒕𝒆𝒏</title>
     <!-- The style.css file allows you to change the look of your web pages.
          If you include the next line in all your web pages, they will all share the same look.
          This makes it easier to make new pages for your site. -->
     <!-- lastfm script -->
-     <script src = "getLastfmData.js"></script>
+     <script src = "/js/getLastfmData.js"></script>
 
      <!-- translation change script  -->
      <script src = "index/translations/translateToJP.js"></script>
@@ -41,7 +42,7 @@
           <div class="containerBar" style = "height: max-content">
             <h2 id = "bio">
               <strong>
-                BIO
+                Bio
               </strong>
             </h2>
           </div>
@@ -56,9 +57,9 @@
         <div class="container">
           <!-- bar for the top of the box -->
           <div class="containerBar">
-            <h2 style="text-align: center" id = "siteContents">
+            <h2 style="text-align: center" id = "navigation">
               <strong>
-                 SITE CONTENTS 
+                 Navigation
               </strong>
             </h2>  
           </div>
@@ -66,58 +67,34 @@
           <!-- site contents box -->
           <div class="containerContent">
             <nav>
-              <div id = "homeLinkBox" class = "navLinkBorder" style = "background-color: cyan;"><p><a id = "homeLink" onclick="switchContent('homeContent'); this.parentElement.parentElement.style.paddingLeft = '5%';window.scrollTo(0,0)">Home <img src="index/gifs/rainbowStars.gif"></a></p></div>
-              <div  id = "webmistressLinkBox" class = "navLinkBorder" style = "background-color: magenta;"><p><a id = "webmistressLink" onclick="switchContent('webmistressContent'); this.parentElement.parentElement.style.paddingLeft = '5%'; document.getElementById('title').scrollIntoView({ behavior: 'smooth'})">Webmistress (Me!) <img src="index/gifs/lotusFlower.gif"></a></p></div>
-              <div id = "linksLinkBox" class="navLinkBorder" style = "background-color: yellow;"><p><a id="linksLink" onclick = "switchContent('linksContent'); this.parentElement.parentElement.style.paddingLeft = '5%'; document.getElementById('title').scrollIntoView({ behavior: 'smooth'})">Cool Links <img src="index/gifs/lily.gif"></a></p></div>
-              <div  id = "websiteProgressLinkBox" class = "navLinkBorder" style = "background-color: cyan;"><p><a id = "websiteProgressLink" onclick="switchContent('websiteProgressContent'); this.parentElement.parentElement.style.paddingLeft = '5%'; document.getElementById('title').scrollIntoView({ behavior: 'smooth'})">Site Progress <img src="index/gifs/IMG-2382.gif"></a></p></div>
+              <div id = "homeLinkBox" class = "navLinkBorder" style = "background-color: cyan;"><p><a id = "homeLink" onclick="switchContent('homeContent'); this.parentElement.parentElement.style.paddingLeft = '5%';window.scrollTo(0,0)">Home <img src="/img/index/navBarGifs/rainbowStars.gif"></a></p></div>
+              <div  id = "webmistressLinkBox" class = "navLinkBorder" style = "background-color: magenta;"><p><a id = "webmistressLink" onclick="switchContent('webmistressContent'); this.parentElement.parentElement.style.paddingLeft = '5%'; document.getElementById('title').scrollIntoView({ behavior: 'smooth'})">Webmistress (Me!) <img src="/img/index/navBarGifs/lotusFlower.gif"></a></p></div>
+              <div id = "linksLinkBox" class="navLinkBorder" style = "background-color: yellow;"><p><a id="linksLink" onclick = "switchContent('linksContent'); this.parentElement.parentElement.style.paddingLeft = '5%'; document.getElementById('title').scrollIntoView({ behavior: 'smooth'})">Cool Links <img src="/img/index/navBarGifs/lily.gif"></a></p></div>
+              <div  id = "websiteProgressLinkBox" class = "navLinkBorder" style = "background-color: cyan;"><p><a id = "websiteProgressLink" onclick="switchContent('websiteProgressContent'); this.parentElement.parentElement.style.paddingLeft = '5%'; document.getElementById('title').scrollIntoView({ behavior: 'smooth'})">Site Progress <img src="/img/index/navBarGifs/IMG-2382.gif"></a></p></div>
               <hr style="margin: 5%;  border: solid rgba(230,80,155,1); border-width: 1px;">
-              <div class = "navLinkBorder" style = "background-color: magenta"><p id = "mainMusicLink"><a href = "https://soundcloud.com/akibaten">♫♪ My Music ♫♪</a></p></div>
-              <div class = "navLinkBorder" style = "background-color: yellow"><p id = "happinessWallLink"><a href = "/happinessWall.html">Happiness Wall</a></p></div>
-              <div class = "navLinkBorder" style = "background-color: cyan"><p id = "blogLink"><a href = "/blog.html">Blog</a></p></div>
-              <div class = "navLinkBorder" style = "background-color: magenta;"><p id = "microblogLink"><a href = "/microblog.html">Microblog</a></p></div>
-              <div class = "navLinkBorder" style = "background-color: yellow;"><p id = "shrinesLink"><a href="/shrines.html">Shrines</a></p></div>
-              <div class = "navLinkBorder" style = "background-color: cyan;"><p id = "mailboxLink"><a href="https://akibaten.atabook.org/">Mailbox</a></p></div>
+              <div class = "navLinkBorder" style = "background-color: hsl(180, 100%, 50%)"><p id = "mainMusicLink"><a href = "https://soundcloud.com/akibaten">♫♪ My Music ♫♪</a></p></div>
+              <div class = "navLinkBorder" style = "background-color: hsl(120, 100%, 50%)"><p id = "plantsLink"><a href = "/plants.html">My Plants <img src = "/img/index/navBarGifs/leaf.gif"></a></p></div>
+              <div class = "navLinkBorder" style = "background-color: hsl(60, 100%, 50%)"><p id = "happinessWallLink"><a href = "/happinessWall.html">Happiness Wall <img src = "/img/index/navBarGifs/happycat.gif"></a></p></div>
+              <div class = "navLinkBorder" style = "background-color: hsl(0, 100%, 50%)"><p id = "blogLink"><a href = "/blog.html">Blog <img src = "/img/index/navBarGifs/blog.gif"></a></p></div>
+              <div class = "navLinkBorder" style = "background-color: hsl(300, 100%, 50%)"><p id = "microblogLink"><a href = "/microblog.html">Microblog <img src = "/img/index/navBarGifs/microblog.gif"></a></p></div>
+              <div class = "navLinkBorder" style = "background-color: hsl(240, 100%, 50%)"><p id = "shrinesLink"><a href="/shrines.html">Shrines <img src = "/img/index/navBarGifs/shrine.gif"></a></p></div>
+              <div class = "navLinkBorder" style = "background-color: hsl(180, 100%, 50%)"><p id = "guestbookLink"><a href="https://akibaten.atabook.org/">Guestbook <img src = "/img/index/navBarGifs/guestbook.gif"></a></p></div>
+              <div class = "navLinkBorder" style = "background-color: hsl(120, 100%, 50%);"><p id = "neocities"><a href="https://neocities.org/site/kingdomofakibaten">Neocities <img src = "/img/index/navBarGifs/neocitiesLink.gif"></a></p></div>
             </nav> 
           </div>
         </div>
-        <div class="container">
-          <!-- bar for the top of the box -->
-          <div class="containerBar">
-            <h2 style="text-align: center" id = "myLinks">
-              <strong>
-                 MY LINKS 
-              </strong>
-            </h2>
-          </div>
-          <div class="containerContent">
-            <ul style="margin-top: 5px">
-              <li>Discord: @hpnasa</li>
-              <li>
-                <a href="https://www.instagram.com/akibaten/">Instagram</a>
-              </li>
-              <li>
-                <a href="https://kingdomofakibaten.neocities.org/RYMDisclaimer">Rate Your Music!</a>
-              </li>
-              <li>
-                <a href="https://x.com/AkibatenB">Twitter</a>
-              </li>
-              <li>
-                <a href="https://on.soundcloud.com/Sbg8WUZoroCgkTw2A">Soundcloud</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="container">
+
+        <div class="container" style = "height: 100%">
           <!-- bar for the top of the box -->
           <div class="containerBar">
             <h2 style = "text-align: center" id="favoriteMusicArtists">
               <strong>
-                  MY FAVORITE MUSIC ARTISTS RIGHT NOW
+                  My Favorite Music Artists Right Now
               </strong>
             </h2>
           </div>
-          <div class="containerContent" style = "height: 40vh; position: relative;">
-            <div style = "overflow: scroll; position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: 3%;">
+          <div class="containerContent" style = "position: relative; height: 100%;">
+            <div style = "overflow: scroll; height: auto">
               <ul style = "margin-top: 5px">
                 <li id = "favoriteArtist1"><a href="https://open.spotify.com/artist/13VunSzrVSmJBpUWxUajJF?si=AffHLmmeT9SuudhXrP6tDQ">Limbo</a></li>
                 <li id = "favoriteArtist2"><a href="https://open.spotify.com/artist/4oLeXFyACqeem2VImYeBFe?si=PBUEnMQ6RGSKfQCfu-p0bg">Fred again..</a></li>
@@ -147,7 +124,7 @@
             <!-- <button id = "translateButton" style = "position: absolute; top: 2%; right: 2%" onclick="window.translate()">日本語</button> -->
             <div id = "mainCenterContent">
               <div id = "homeContent" class = "page" style = "display: block;">
-                <img src="index/nanaoNaruImage.png" style="width:50%;height:auto; margin: 2% 1%; float:right;" title="very pretty picture by the artist Nanao Naru ^_^">
+                <img src="/img/index/nanaoNaruImage.png" style="width:50%;height:auto; margin: 2% 1%; float:right;" title="very pretty picture by the artist Nanao Naru ^_^">
                 <p id = "introParagraph">
                   Hello ^_^<br>
                   My name is Sarah. I use the name akibaten in most places.<br>
@@ -158,25 +135,13 @@
                   constantly judging myself (or less so than I would otherwise). When I do this, the site and my art kind of grow with me in a big
                   cohesive project that's really just <em>me</em>. So when I am proud of something, instead of waiting because I want it to be a part
                   of some huge project that might not materialize, I can just put it here.
-                  <!-- Hi! <br> My name is Sarah<br> ♡⸜(˶˃ ᵕ ˂˶)⸝♡ <br>
-                  I created this site as a personal project. I think social media has a great capacity to connect people and do good, but it's become
-                    pretty exhausting these days >_&lt;. I think it's begun to divide us and push us to dehumanize ourselves and others by reducing us to 
-                    arbitrary metrics. As a person who really values doing creative stuff, this site allows me to post and share my works, create a creative
-                    work in the process, and free me from unconsciously changing who I am and my art. I still do have social media though, I just don't use it
-                    very often. Here is my <a href="https://www.instagram.com/akibaten/">instagram</a>:P <br>
-                    I love music and art and human expression and any method by which we are able to do that. All of my music can be found at my soundcloud link to the side.
-                    Thank you for checking this out and enjoy your stay!<br>
-                    ^_^
-                    <br><br> 
-                    This website is entirely built from the ground up and coded by hand (੭˃ᴗ˂)੭<br>
-                    It is a continuous work in progress. Most of it is formatted for mobile, but this site is still best viewed in Chrome or Firefox at 1920x1080 :) -->
                 </p>
               </div>
-              <div id = "webmistressContent" class = "page" style = "display: none; margin-top: 1%;">
-                <img src="index/mugiFlex.gif" style=" width: 40%; height:auto; margin: 2% 1%; float:right;" title="mugi flexinggg (੭˃ᴗ˂)੭">
+              <div id = "webmistressContent" class = "page" style = "display: none;">
+                <img src="/img/index/mugiFlex.gif" style=" width: 40%; height:auto; margin: 2% 1%; float:right;" title="mugi flexinggg (੭˃ᴗ˂)੭">
                 <p>Helloooo again! <br>ummmmm I'm Sarah (or Elizabeth that's my middle name and I like it a lot too) I'm a 20 something girl in college. I love music and coding and the internet (I love the internet
                   like a lot a lot). I'm majoring in Chemistry and Japanese in college, and so I 
-                  <a href = "/unused-assets/vsCodeScreenshot.png" title = "This is what my vsCode looks like as i'm writing this :P" style = "text-decoration: none; background-color: transparent;">suppose</a> 
+                  <a href = "/img/index/vsCodeScreenshot.png" title = "This is what my vsCode looks like as i'm writing this :P" style = "text-decoration: none; background-color: transparent;">suppose</a> 
                   I'm pretty into Japanese culture though I don't watch much anime these days :P You'll see my home page get translated into Japanese (I didn't realize how time consuming that would be when I first implemented it xd)
                   Anywaysssssss here are some of my favorite things
                 </p>
@@ -250,6 +215,15 @@
                       in such a beautiful way and tumbles down all the paths of my feelings in such a unique way I haven't felt it anywhere else.
                     </p>
                   </details>
+                  <details>
+                    <summary>
+                      I Love My Computer by Ninajirachi
+                    </summary>
+                    <p>
+                      Beautiful, electronic album about a girl loving her computer. Made by Ninajirachi who is an incredibly talented producer. I believe this sort of dance music,
+                      a vocalist and individual producer where an album has overarching aesthetics over drawn out atmosphere and ambience in individual songs, is the future of dance music.
+                    </p>
+                  </details>
                 </div>
                 <p>
                   <u>Tests I've taken</u>
@@ -257,17 +231,17 @@
                 <div>
                   <marquee direction = "left" scrollamount="8x  " style = "margin-bottom: 1em; width: 100%">
                     <a href="https://theotaku.com/quizzes/view/2675/what_k-on%21_band_character_are_you%3F"><img  src="http://www.theotaku.com/guru_results/2675_Mio_Akiyama.jpg" alt="What K-ON! Band Character Are You?" height = "182"></a>
-                    <a href = "https://cadnomori.neocities.org/quizzes/nen"><img src = "index/testResults/conjurer.png" alt = "my nen type :o" height = "182"></a>
+                    <a href = "https://cadnomori.neocities.org/quizzes/nen"><img src = "/img/index/testResults/conjurer.png" alt = "my nen type :o" height = "182"></a>
                     <A href="https://www.theotaku.com/quizzes/view/4097/what_dere_type_are_you%3F"><img border="0" src="http://www.theotaku.com/guru_results/4097_Kuudere.jpg" alt="What Dere Type Are You?" height = "182"/></a>
-                    <A href="https://www.quotev.com/quiz/12039206/Which-Vocaloid-are-you"><img border="0" src="index/testResults/vocaloidQuiz.jpg" alt="What Vocaloid Are You?" height = "182"/><br></a><A href="https://www.quotev.com/quiz/12039206/Which-Vocaloid-are-you"></A>
+                    <A href="https://www.quotev.com/quiz/12039206/Which-Vocaloid-are-you"><img border="0" src="/img/index/testResults/vocaloidQuiz.jpg" alt="What Vocaloid Are You?" height = "182"/><br></a><A href="https://www.quotev.com/quiz/12039206/Which-Vocaloid-are-you"></A>
                   </marquee>
                 </div>
               </div>
               <div id = "websiteProgressContent" class = "page" >
                 <p> <br> Here is a little slideshow of the evolution of my homepage so far! Click the picture to start :3</p>
-                <a onclick="slideshow()"><img src = "index/websiteProgressImages/Screenshot 2025-04-18 at 6.23.50 PM.png" class = "mySlides" style = "display: block;"></a>
-                <img src = "index/websiteProgressImages/Screenshot 2025-04-18 at 6.24.13 PM.png" class = "mySlides">
-                <img src = "index/websiteProgressImages/Screenshot 2025-04-23 at 12.40.14 AM.png" class = "mySlides">
+                <a onclick="slideshow()"><img src = "/img/index/websiteProgressImages/Screenshot 2025-04-18 at 6.23.50 PM.png" class = "mySlides" style = "display: block;"></a>
+                <img src = "/img/index/websiteProgressImages/Screenshot 2025-04-18 at 6.24.13 PM.png" class = "mySlides">
+                <img src = "/img/index/websiteProgressImages/Screenshot 2025-04-23 at 12.40.14 AM.png" class = "mySlides">
                 <script>
                   var myIndex = 0;
                   function slideshow(){
@@ -289,8 +263,38 @@
                 </script>
               </div>
               <div id="linksContent" class = "page">
+                <h2 style = "margin-bottom: 1rem; text-align: center;">
+                  Here is a collection of links that I think are Cool
+                </h2>
                 <p>
-                  <a href = ""></a>
+                  <a href = "https://aegi.neocities.org/digitalgarden/notes/thedustytoolbox">The Dusty Toolbox</a>
+                </p>
+                <p>
+                  a really good post from a neocities person that really inspired me in my website
+                </p>
+                <p>
+                  <a href = "https://voodu.xyz/socialmedia">THE NEW WEB IS UNDERGROUND!</a>
+                </p>
+                <p>
+                  a manifesto advocating for a turn away from traditional social media and towards indieweb and its importance
+                </p>
+                <p>
+                  <a href = "https://kaomoji.ru/en/">Kaomoji</a>
+                </p>
+                <p>
+                  a large collection of various kaomojis like o(>ω<)o or („¬ᴗ¬„) organized by emotions
+                </p>
+                <p>
+                  <a href = "https://xyz.crd.co/">xyz.crd.co</a>
+                </p>
+                <p>
+                  a massive collection of cute repeating gifs of various sizes
+                </p>
+                <p>
+                  <a href = "https://cnvmp3.com/">CnvMP3</a>
+                </p>
+                <p>
+                  a fast, free, and ad-free converter to convert youtube videos into mp3 or mp4 files
                 </p>
               </div>
             </div>
@@ -304,7 +308,7 @@
               }
             </style>
             <h2>
-              The Importance of Existence
+              Why make a website?
             </h2>
             <p style = "text-indent: 1em; margin-top: 4vh">
               Existence is so weird and confusing, and infinitely complex for every person, and I feel like if I struggle to make big projects or albums, maybe that's because I should try to make my whole existence a project in it of itself.
@@ -318,13 +322,15 @@
               This website is about as <em>me</em> as I can possibly be publicly. We all have so much life we need to live, and I hope people perusing
               my existence will make someone as happy as perusing other people's inner worlds makes me.
             </p>
-            <img src = "">
+            <p style = "text-align: right; text-indent: 1em;">
+              I love to correspond with anyone! If you want to talk chat with me or message me privately feel free to email me at akibaten@proton.me ^_^
+            </p>
           </div>
         </div>
         <div class = "container">
           <div class = "containerContent" style = "margin: 0; padding: .5em">
             <marquee id = "stamps" scrollamount = "20">
-              <img src = "/index/stamps/badapple.gif"><img src = "/index/stamps/k-onStamp.gif"><img src = "/index/stamps/rainbowz.jpg"><img src = "/index/stamps/pirate.png"><img src = "/index/stamps/himejoshi.png"><img src = "/index/stamps/scene.gif"><img src = "/index/stamps/cringeandfree.gif"><img src = "index/stamps/iMiss2012.gif"><img src = "/index/stamps/nyanCat.gif">
+              <img src = "/img/index/stamps/badapple.gif"><img src = "/img/index/stamps/k-onStamp.gif"><img src = "/img/index/stamps/rainbowz.jpg"><img src = "/img/index/stamps/pirate.png"><img src = "/img/index/stamps/himejoshi.png"><img src = "/img/index/stamps/scene.gif"><img src = "/img/index/stamps/cringeandfree.gif"><img src = "index/stamps/iMiss2012.gif"><img src = "/img/index/stamps/nyanCat.gif">
             </marquee>
           </div>
         </div>
@@ -336,7 +342,7 @@
           <div class="containerBar">
             <h2 id = "lastHeardMusic" style = " text-align: center; margin-left: 5%; margin-right: 5%; margin-top: 5%; margin-bottom: 5%;">
               <strong>
-                 LAST MUSIC I HEARD
+                 Last Music I Heard
               </strong>
             </h2>
           </div>
@@ -352,7 +358,7 @@
           <div class="containerBar">
             <h2 style = "text-align: center" id = "siteNews">
               <strong>
-                  SITE NEWS ٩(^ᴗ^)۶
+                   Site News ٩(^ᴗ^)۶
               </strong>
             </h2>
           </div>
@@ -367,7 +373,7 @@
           <div class="containerBar">
             <h2 id = "favoriteSites" style="text-align: center">
               <strong>
-                 SITES I LIKE A LOT :D
+                  Sites I Like A Lot:D
               </strong>
             </h2>
           </div>
@@ -377,22 +383,26 @@
                 <img src="https://lilithdev.neocities.org/buttons/lilithdevbtn.gif">
               </a>
               <a href="https://doqmeat.com/">
-                <img src="/index/doqmeat-2.png">
+                <img src="/img/index/buttons/doqmeat-2.png">
               </a>
               <a href = "https://tokyo-to.neocities.org/">
-                <img src = "/index/tokyo-to.png">
+                <img src = "/img/index/buttons/tokyo-to.png">
               </a>
               <a href = "https://spondulio.neocities.org/">
-                <img src = "/index/buttons/spondbutton.gif">
+                <img src = "/img/index/buttons/spondbutton.gif">
               </a>
               <a href = "https://ramcst.neocities.org/">
                 <img src = "https://ramcst.neocities.org/resources/buttons/ramcst.gif">
               </a>
-              <a href="https://winteryear.neocities.org" target="_blank"><img src="https://files.catbox.moe/n1fidz.gif" width="88" height="31"></a>
+              <a href="https://winteryear.neocities.org" target="_blank"><img src="img/index/buttons/winterYearButton.gif" width="88" height="31"></a>
               <a title="Laith Rai7an" href="http://arataka.neocities.org/" target="_blank"><img alt="Laith Rai7an" src="http://files.catbox.moe/k0v6qu.gif"/></a>
               <a href="https://www.virtuagirl.net" title = "okay seriously this might be the coolest site i've ever seen"><img src="https://i.imgur.com/yaA0mNF.gif"></a>
-              <a href = "https://girl-wonderlost.neocities.org/" title = "a really interesting idea on taking your through someone's site like you are meeting them :3"><img src = "index/buttons/girlWonderlostButton.png"></a>
-              <a href = "https://mazapandust.com/" title = "really cool aesthetic darker site ^-^"><img src = "index/buttons/maztvButton.gif">  </a>
+              <a href = "https://girl-wonderlost.neocities.org/" title = "a really interesting idea on taking your through someone's site like you are meeting them :3"><img src = "img/index/buttons/girlWonderlostButton.png"></a>
+              <a href = "https://mazapandust.com/" title = "really cool aesthetic darker site ^-^"><img src = "img/index/buttons/maztvButton.gif">  </a>
+              <a href = "https://gogogal.online/" title = "really cool y2k site with magazine scans c:"><img src = "/img/index/buttons/gogogalButton.gif"></a>
+              <a href="https://confettiguts.gay/" title = "incredibly colorful and beautiful site. be forewarned it is loud on load xd"><img src="https://confettiguts.gay/siteImg/confettiguts.gif"></a>
+							<a href="https://ransei.neocities.org/"><img src="https://ransei.neocities.org/assets/img/embeded.gif"></a>
+              <a href="https://lydels.neocities.org/" target="_blank" rel="noopener noreferrer"><img src="https://lydels.neocities.org/imagenes/index/lydelsbutton.gif" alt="button"></a>
             </p>
           </div>
         </div>
@@ -401,17 +411,17 @@
           <div class="containerBar">
             <h2 id = "myButton" style="text-align: center">
               <strong>
-                 MY BUTTON :0
+                 My Button :0
               </strong>
             </h2>
           </div>
           <div class="containerContent">
             <p style="margin: .01%; text-align: center; font-size: 1.25em" id = "myButtonBoxText">feel free to <a href="https://simple.wikipedia.org/wiki/Hotlinking">hotlink</a></p>
             <p style="margin:.01%; text-align: center; font-size: 0px">
-              <img src = "/index/button-1.gif">
+              <img src = "/img/index/buttons/akibatenButton.gif">
             </p>
             <p style="margin-bottom: .01%; margin-top: .01%; text-align: center; font-size: 0px">
-              <textarea style = "width: 90%"><a href="https://kingdomofakibaten.neocities.org/"><img src="https://kingdomofakibaten.neocities.org/index/button-1.gif"></a></textarea>
+              <textarea style = "width: 90%"><a href="https://kingdomofakibaten.neocities.org/"><img src="https://kingdomofakibaten.neocities.org/img/index/akibatenButton.gif"></a></textarea>
             </p>
           </div>
         </div>
@@ -439,8 +449,8 @@
     <!--scrolling bar-->
     <div class = "horizontal-bar">
       <marquee direction = "left" style = "display: inline-block;">
-          <img src="/index/buttons/pansexual button.gif"><img src = "/index/buttons/flag-trans.png"><img src="/index/buttons/vn button.png"><img src="/index/buttons/hardcorehappiness button.gif"><img src="/index/buttons/ableton button.png"><img src="/index/buttons/transrightsButton.png"><img src="/index/buttons/noNazismButton.gif"><img src="/index/buttons/antiAIButton.gif"><img src = "index/buttons/girlbutton.gif"><img src="index/buttons/firefox.png" height = "31" width = "88">
-          <a href = "https://neocities.org/site/kingdomofakibaten" style = "position: absolute; top: 0;"><img src = "index/buttons/neocities-button.gif"></a>
+          <img src="/img/index/buttons/pansexual button.gif"><img src = "/img/index/buttons/flag-trans.png"><img src="/img/index/buttons/vn button.png"><img src="/img/index/buttons/hardcorehappiness button.gif"><img src="/img/index/buttons/ableton button.png"><img src="/img/index/buttons/transrightsButton.png"><img src="/img/index/buttons/noNazismButton.gif"><img src="/img/index/buttons/antiAIButton.gif"><img src = "img/index/buttons/girlbutton.gif"><img src="img/index/buttons/firefox.png" height = "31" width = "88">
+          <a href = "https://neocities.org/site/kingdomofakibaten" style = "position: absolute; top: 0;"><img src = "img/index/buttons/neocities-button.gif"></a>
         </marquee>
     </div>
     <!-- *clicks* the homebutton in the site contents box on load i have to put it here because of the dom-->

@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#maincontent {
+  margin: 0 15% 0 15%;
+  display: flex;
+  width: 70%;
+  flex-direction: row;
+}
+
+#leftContent{
+  width: 70%;
+  height: 100%;
+  padding: 2rem;
+  background-color: white;
+}
+
+#rightContent{
+  width: 30%;
+  height: 100vh;
+  background-color: black;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+em {
+
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+  font-size: 1.5em;
+}
+
+strong {
+
+}
+
+body {
+  font-family: monospace;
+  background-color:  	#ff48a4;
+}

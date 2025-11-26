@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+em {
+  font-family: Cardo-Italic; 
+}
+
+strong {
+    font-family: Cardo-Bold;
+}
+
+body {
+  font-family: Cardo-Regular;
+}
+
+@font-face {
+    font-family: Cardo-Regular;
+    src: url(/fonts/Cardo-Regular.ttf);
+}
+
+@font-face {
+    font-family: Cardo-Italic;
+    src: url(/fonts/Cardo-Italic.ttf);
+}
+
+@font-face {
+    font-family: Cardo-Bold;
+    src: url(/fonts/Cardo-Bold.ttf);
+}

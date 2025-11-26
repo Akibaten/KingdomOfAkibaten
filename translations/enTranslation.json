@@ -1,0 +1,49 @@
+{
+    "0": [
+        {
+            "h1" : {
+                "title" : "✿⋆.˚⋆₊𝑨𝒌𝒊𝒃𝒂𝒕𝒆𝒏⊹₊⋆˚.⋆✿"
+            },
+
+            "h2" : {
+                "bio": "BIO",
+                "siteContents": "SITE CONTENTS",
+                "myLinks" : "MY LINKS",
+                "siteNews": "SITE NEWS ٩(^ᴗ^)۶",
+                "favoriteMusicArtists": "MY FAVORITE MUSIC ARTISTS RIGHT NOW",
+                "lastHeardMusic": "LAST MUSIC I HEARD",
+                "musicSnippet": "Recent Music Snippet I made",
+                "favoriteSites": "SITES I LIKE A LOT :D",
+                "myButton": "MY BUTTON :0",
+                "changeLogTitle": "Changelog!"
+            },
+
+            "p" : {
+                "bioBoxText" : "<strong>Age:</strong> 22 <br><strong>Nationality:</strong> American <br><strong>Pronouns:</strong> She/Her",
+                "siteNewsBoxText": "11-04-2025 new microblog post :P",
+                "favoriteMusicArtistsBoxText" : "Music is a really big part of my life. These are just the artists I've been listening to the most recently and have/had the biggest influence on me ^_^. My tastes change really rapidly and I've fallen in love with so much music in my life that I could never make a list of my favorite music ever.",
+                "introParagraph" : "Hello! <br> My name is Sarah<br> ♡⸜(˶˃ ᵕ ˂˶)⸝♡ <br>I created this site as a personal project. I think social media has a great capacity to connect people and do good, but it's beecome pretty exhausting these days >_<. I think it's begun to divide us and push us to dehumanize ourselves and others by reducing us to arbitrary metrics. As a person who really values doing creative stuff, this site allows me to post and share my works, create a creative work in the process, and free me from unconsciously changing who I am and my art. I still do have social media though, I just don't use it very often. Here is my <a href='https://www.instagram.com/akibaten/'>instagram</a>:P <br>I love music and art and human expression and any method by which we are able to do that. All of my music can be found at my soundcloud link to the side. Thank you for checking this out and enjoy your stay!<br>^_^<br><br>This website is a continuous work in progress. Most of it is formatted for mobile, but this site is still best viewed in Chrome or Firefox at 1920x1080 :)",
+                "microBlogPreviewBoxText": "This is a preview of the latest post my microblog!<br>I would put my blog here... but the entries are too few and it would be a bit impractical as they are much longer.",
+                "musicSnippetInstructions": "click it to play with audio :3",
+                "myButtonBoxText" : "feel free to <a href='https://simple.wikipedia.org/wiki/Hotlinking'>hotlink</a>"
+            },
+
+            "lists" : {
+                "homeLink" : "<a onclick=\"switchContent('home')\">Home</a>",
+                "webmistressLink" : "<a onclick=\"switchContent('webmistress')\">Webmistress(Me!)</a>",
+                "websiteProgressLink" : "<a onclick=\"switchContent('websiteProgress')\">Site Progress (๑˃ᴗ˂)</a>",
+                "mainMusicLink": "<a href = 'https://soundcloud.com/akibaten'>♫♪ My Music ♫♪</a>",
+                "musicSketchbookLink": "<a href = 'https://soundcloud.com/akiba10'>Music Sketchbook</a>",
+                "blogLink" : "<a href = '/blog.html'>Blog</a>",
+                "microblogLink" : "<a href = '/microblog.html'>Microblog</a>",
+                "shrinesLink" : "<a href = '/shrines.html'>Shrines</a>",
+                "mailboxLink" : "<a href='https://akibaten.atabook.org/'>Mailbox</a>",
+                "favoriteArtist1": "<a href = 'https://open.spotify.com/artist/13VunSzrVSmJBpUWxUajJF?si=AffHLmmeT9SuudhXrP6tDQ'>Limbo</a>",
+                "favoriteArtist2": "<a href = 'https://open.spotify.com/artist/4oLeXFyACqeem2VImYeBFe?si=PBUEnMQ6RGSKfQCfu-p0bg'>Fred again..</a>",
+                "favoriteArtist3": "<a href = 'https://open.spotify.com/artist/3dz0NnIZhtKKeXZxLOxCam?si=zu1xA6AvS8mcA30yxHTAyw'>Porter Robinson</a>",
+                "favoriteArtist4": "<a href = 'https://open.spotify.com/artist/6ignRjbPmLvKdtMLj9a5Xs?si=fl68uhS7RU2tlFphQVmHmg'>Ichiko Aoba</a>",
+                "favoriteArtist5": "<a href = 'https://open.spotify.com/artist/6OqhFYFJDnBBHas02HopPT?si=rFUKeMngQ7-fYIao_3l0hw'>Kero Kero Bonito</a>"
+            }
+        }
+    ]
+}

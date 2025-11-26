@@ -1,0 +1,324 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+#boxwrapper {
+  display: grid;
+  grid-template-columns: 27.5% 45% 27.5%;
+  margin: 0 7.5vh 2.5vh 7.5vh;
+  height: 100vh;
+}
+
+.left {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20% 5% 0% 5%;
+}
+
+.center {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+}
+
+.right {
+  grid-column: 3;
+  display: flex;
+  flex-direction: column;
+  padding: 20% 5% 0% 5%;
+}
+
+
+@media only screen and (max-width: 768px){
+  #boxwrapper#boxwrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin: 0;
+    padding: 5%;
+    box-sizing: border-box;
+  }
+
+  .left.left {
+    order: 1;
+    margin-bottom: 0%;
+  }
+
+  .center.center {
+    order: 0;
+  }
+
+  .right.right {
+    order: 2;
+    margin-bottom: 0%;
+  }
+
+  /* fixes padding for container */
+  .container.container{
+    padding: .5em;
+  }
+
+
+  /* changes font size for mobile */
+  p{
+    font-size: 1em !important;
+  }
+
+  /*big header*/
+  h1 {
+    font-size: 135% !important;
+    text-align: center; 
+    color:rgb(235,0,127);
+    margin-bottom: 5% !important;
+    margin-top: 5% !important;
+  }
+  
+  #centerContent{
+    height: 37em !important;
+  }
+
+  .horizontal-bar{
+    animation: scroll-horizontal 5s linear infinite !important;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: .4em;
+  background-image: linear-gradient(rgb(80, 255, 255), rgb(255, 80, 157), rgb(255, 255, 80));
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
+  box-shadow: 0 0 1em .6em rgb(205, 205, 205);
+  padding: .6em;
+
+  /*margin below and abocve container*/
+  margin-bottom: .5em;
+  
+}
+
+.containerBar{
+  border-radius: .4em;
+  word-wrap: break-word;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 2%;
+  margin-bottom: .3em;
+}
+
+
+.containerContent{  
+  border-radius: .25em;
+  word-wrap: break-word; 
+  background-color: rgba(255, 255, 255, 1);
+  padding:3%;
+  padding-bottom: 5%;
+  margin: 0;
+  /*outline around letters*/
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: rgb(255,20,147);
+}
+
+#mainCenter{
+  position: relative;
+  padding: 6% 5% 5% 5%;
+}
+
+#mainCenterContent{
+  position: relative; 
+  overflow: scroll;
+}
+
+#stamps img {
+  height: 4em;
+}
+
+/*big header*/
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color:rgb(235,0,127);
+  margin-top: .05em;
+  margin-bottom: .01em;
+}
+
+/*sub header*/
+h2 {
+  line-height: 115%;
+  font-size: 1.875rem;
+  color:rgb(235,0,127);
+  margin-top: .01em;
+  margin-bottom: .1em;
+}
+ 
+p {
+  /*paragraph spacing*/
+  line-height: 110%;
+  margin-bottom: 12px;
+  color:hotpink;
+  font-size: 1.4em;
+}
+
+details {
+  line-height: 110%;
+  margin-left: .75em;
+  margin-bottom: 0.75em;
+  margin-top: 0.75em;
+  color:hotpink;
+  font-size: 1.2em;
+}
+
+details p{
+  line-height: 110%;
+  margin: .5em 0 0 1.2em;
+  font-size: 1em;
+}
+
+/*li is formatting for list items*/
+nav{
+  margin: .4em;
+}
+
+.navLinkBorder{
+  transition: padding-left .2s linear;
+  margin: .5em 0;
+}
+
+.navLinkBorder:hover{
+  padding-left: 5% !important;
+}
+
+nav p{
+  line-height: 100%;
+  margin: 0;
+  color:rgb(235,0,127);
+  font-size: 1.56em;
+  background-color: white;
+}
+
+nav button {
+  background-color: transparent !important;
+  font-size: 1em !important;
+  line-height: 100%;
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: rgb(255,20,147);
+  display: block;
+  margin:0;
+  padding: 0;
+  margin-left: 1em;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+nav a{
+  background-color: transparent !important;
+  display: block;
+  text-decoration: none;
+  margin-left: 1em;
+}
+
+/*li is formatting for list items typically used for non navigation links*/
+li{
+  color:rgb(235,0,127);
+  font-size: 1.56em;    
+}
+
+strong {
+  color:rgb(235,0,127);
+}
+
+a {
+  background-color: rgba(255,105,180,0.3);
+  color:rgba(230,80,155,1);
+}
+
+a:hover{
+  cursor: pointer;
+}
+
+a img{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+a:hover{
+   background-color: rgba(240,90,165,0.5); 
+}
+
+
+/* button styling */
+#translateButton{
+  text-align: center; 
+  color:rgb(235,0,127);
+  background-color: white;
+  border-radius: 5px;
+}
+
+video {
+  clip-path: inset(1px 1px);
+  background-image: linear-gradient(to right, rgb(80, 255, 255), rgb(255, 80, 157), rgb(255, 255, 80));
+  background-clip: border-box;
+  border-radius: .4em;
+}
+
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -100;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.video-container video {
+  width: 100vw; 
+  height: 100vh;
+  object-fit: fill;
+}
+
+/* slides for website progress :3 */
+
+.mySlides{
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+.horizontal-bar{  
+  position: fixed;
+  width: 100vw;
+  top: 95vh;
+  bottom: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+body {  
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: 1024px;
+  background-image: url("/img/index/cloudsTile.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  font-family: neatHandwriting;
+  font-weight: 325;
+  overflow-y: scroll;
+}
+
+html {
+  scrollbar-color: rgba(211, 211, 211, 0.627) white;
+  scrollbar-width: thin;
+  overflow-y: scroll;
+}
+
+
+@font-face {
+  font-family: neatHandwriting;
+  src: url("/fonts/PlaypenSansHebrew-VariableFont_wght.ttf") format("truetype");
+}

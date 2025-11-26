@@ -1,0 +1,145 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+.boxwrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  flex: 1 5%;
+  height: 100vh;
+}
+
+.center {
+  flex: 2 90%;
+}
+
+.right {
+  flex: 1 5%;
+  height: 100vh;
+}
+
+@media only screen and (max-width: 768px){
+  .boxwrapper.boxwrapper {
+    display: grid;
+    gap: 0%;
+  }
+
+  .left.left {
+    grid-row: 1;
+    width: auto;
+    height: auto;
+    padding-bottom: 0%;
+    height: max-content;
+  }
+
+  .center.center {
+    grid-row: 2;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
+  }
+
+  .right.right {
+    grid-row: 3;
+    width:auto;
+    height:auto;
+    padding-bottom: 10%;
+  }
+
+  .stickyNote.stickyNote{
+    width: 100%;
+  }
+}
+
+#stickyNotes {
+  margin-bottom: 5rem;
+  font-size: 0;
+}
+
+.stickyNote {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  vertical-align: top;
+  aspect-ratio: 1/1;
+  width: 15rem;
+  height: 15rem;
+  font-size: 2rem;
+  text-align: center;
+  align-content: center;
+  margin: .4%;
+  padding: .1em;
+
+  transition: scale .5s;
+  z-index: 1;
+}
+
+.stickyNote span{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: .1em;
+  font-size: 1.5rem;
+  color: rgba(0,0,0,0);
+  transition: color 1s;
+}
+
+.stickyNote:hover{
+  box-shadow: 0px 0px 15px 4px rgba(0,0,0,0.44);
+  scale: 1.25;
+  z-index: 2000;
+
+
+  /* i didn't know you could do this with rules lol */
+  span{
+    color: rgba(0,0,0,1);
+  }
+}
+
+.titleContainer { 
+  margin-top: 3%;
+  text-align: center;
+}
+
+/*big header*/
+h1 {
+  color: black;
+  font-size: 3em;
+}
+
+/*sub header*/
+h2 {
+  color: black;
+}
+ 
+p {
+  font-size: 2em;
+  color: black;
+  overflow-wrap: break-word;  
+  line-height: 0;
+}
+
+/*li is formatting for list items*/
+/* li{
+
+}
+
+strong {
+  
+} */
+
+body {
+  margin:0;
+  width: 100vw;
+  height: 100vh;
+  font-family: gaegu;
+}
+
+@font-face {
+  font-family: gaegu;
+  src: url("/fonts/Gaegu-Regular.ttf") format("truetype");
+}
