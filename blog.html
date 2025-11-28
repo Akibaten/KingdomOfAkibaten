@@ -64,6 +64,7 @@
           <p style = "font-size: 2em; border-bottom: solid black 2px; margin-bottom: .5em;">
             Posts
           </p>
+          <button onClick = "selectPost('dev-log', 'catgirl-happy'); this.style.paddingLeft = '1em';">NeoSearch devlog 1</button>
           <button onClick = "selectPost('neocities-search-engine-and-friendship', 'tomokoIntense'); this.style.paddingLeft = '1em';">neocities search engine</button>
           <button onClick = "selectPost('i-am-a-gardener-not-an-architect', 'frierenButterfly'); this.style.paddingLeft = '1em';">I am a gardener, not an architect</button>
           <button onClick = "selectPost('a-struggling-plant-and-buying-stuff-I-dont-need', 'homuraShocked'); this.style.paddingLeft = '1em';">a struggling plant and buying stuff I don't need</button>
@@ -72,6 +73,29 @@
           <button onClick = "selectPost('blog-is-live', 'embarassed'); this.style.paddingLeft = '1em';">THE BLOG IS LIVE!!!!!!</button>
         </div>
         <div id = "postsContainer">
+          <article class = "post" id = "dev-log">
+            <h1>Neocities Search Devlog 1</h1>
+            <p>2025/11/27</p>
+            <p>
+              After lots of work and rewriting it twice (lol) I finally finished the first version of the backend of my search engine! I will have a working version up in a day or two so people can actually use it, and it will be much prettier over time. I even have some friends making art for it! Its very exciting
+            </p>
+            <p>
+              If you would like to  contribute to my development in any way, backend or frontend (i really need frontend devs lol), please please please reach out to me I would love for people to contribute :D If you want to work on stuff outside of issues I may have already posted on my github (like frontend) pease email me at <strong>akibaten@proton.me</strong>!
+            </p>
+            <p>
+              Feel free to go to my github on my homepage and analyze the whole codebase. I have a small, sample database and all of the scripts necessary to build your own database or run a scaled down version of the real thing in your terminal.
+            </p>
+            <p><a href = "https://github.com/Akibaten/NeoSearch">Here is the project :3</a>.</p>
+            <p>
+              the current program can search multiple exact keywords and will return pages that contain those words and order them based on the ranking/relevance of them in the whole dataset of websites. There is lots of tweaking to be had for the future.
+            </p>
+            <p>
+              I am pretty proud of what it is right now, and doing this project taught me so much especially about databases (databases are so cool omg). After its up or with its release, expeect several blog posts going over exactly how it works and explaining all the decision I made if you are interested :3 Also in doing this project I learned something interesting about neocities. My search engine first indexes lots of sites by starting at one person's profile and then going through and indexing every person they follow and then every person those people follow and so on. I had to rewrite my scraper to get it to be able to handle lots of sites, and I was prepared to run it to index at least 100,000 sites just to test. However, to my surprise it seems to max out sites at around 31,000 sites. Neocities most definitely has more sites then this, but as I thought about it more and more and looked at the specific error, it seems that the social graph of neocities just runs out. That means that of sites properly connected in the neocities social network (any site with greater than 0 followers where at least one follower is followed by someone else) seems to only consist of about 31,000 websites, which was interesting to me. I will have to test more but that seems to be how it is.
+            </p>
+            <p>
+              Okay that's all for now! Thank you for reading :D
+            </p>
+          </article>
           <article class="post" id="neocities-search-engine-and-friendship">
             <h1>neocities search engine</h1>
             <p>2025/11/12</p>
