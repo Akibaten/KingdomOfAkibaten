@@ -1,240 +1,297 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/blog.css" rel="stylesheet" type="text/css" media="all">
-    
-    <!--font (also ignore the error lol)>-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-    <link href="/img/favicon.png" rel="shortcut icon" type="image/x-icon">
-    <title>𝑲𝒊𝒏𝒅𝒈𝒐𝒎 𝒐𝒇 𝑨𝒌𝒊𝒃𝒂𝒕𝒆𝒏</title>
-    
-    <!-- The style.css file allows you to change the look of your web pages.
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="/css/blog.css" rel="stylesheet" type="text/css" media="all">
+
+		<!--font (also ignore the error lol)>-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+		<link href="/img/favicon.png" rel="shortcut icon" type="image/x-icon">
+		<title>𝑲𝒊𝒏𝒅𝒈𝒐𝒎 𝒐𝒇 𝑨𝒌𝒊𝒃𝒂𝒕𝒆𝒏</title>
+
+		<!-- The style.css file allows you to change the look of your web pages.
          If you include the next line in all your web pages, they will all share the same look.
          This makes it easier to make new pages for your site. -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> <!-- Make sure this is here! -->
-    <!-- script for switching opacity on of blog posts -->
-    <!-- script for displaying the most recent post on load can be found at the bottom of <body> -->
-    <script>
-      function selectPost(id, postMood){
-        //first selects all posts and makes all of them invisible
-        const posts = document.getElementsByClassName("post")
-        for(post of posts){
-          post.style.visibility = "hidden";
-          post.style.overflow = "hidden";
-        }
+		<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+		<!-- Make sure this is here! -->
+		<!-- script for switching opacity on of blog posts -->
+		<!-- script for displaying the most recent post on load can be found at the bottom of <body> -->
+		<script>
+			function selectPost(id, postMood){
+				//first selects all posts and makes all of them invisible
+				const posts = document.getElementsByClassName("post")
+				for(post of posts){
+					post.style.visibility = "hidden";
+					post.style.overflow = "hidden";
+				}
+				
+				//selects all buttons and sets their padding to 0 to reset animations
+				const navButtons = document.getElementById('postNavigation').getElementsByTagName('button');
+				
+				for(button of navButtons){
+					button.style.paddingLeft = "0em";
+				}
+				
+				//selects individual post and displays it
+				const selectedPost = document.getElementById(id);
+				selectedPost.style.visibility = "visible";
+				selectedPost.style.overflow = "scroll"
+				
+				//changes mood gif accordingly
+				document.getElementById("moodGif").src = "/img/blog/moodGifs/" + postMood + ".gif";
+			}
+		</script>
+	</head>
+	<body onload="document.getElementById('postNavigation').getElementsByTagName('button')[0].click();">
+		<div class="boxwrapper">
+			<!--LEFT SIDE-->
+			<div class="left">
+				<div class="left">
+					<p style="text-align: left; margin-left: 60%; font-size: 1.5em; animation: backButton ease 1.25s">
+						<a href="/index.html">
+							&lt;&lt;back
+						</a>
+					</p>
+				</div>
+			</div>
 
-        //selects all buttons and sets their padding to 0 to reset animations
-        const navButtons = document.getElementById('postNavigation').getElementsByTagName('button');
-        
-        for(button of navButtons){
-          button.style.paddingLeft = "0em";
-        }
-        
-        //selects individual post and displays it
-        const selectedPost = document.getElementById(id);
-        selectedPost.style.visibility = "visible";
-        selectedPost.style.overflow = "scroll"
-
-        //changes mood gif accordingly
-        document.getElementById("moodGif").src = "/img/blog/moodGifs/" + postMood + ".gif";
-      }
-    </script>
-
-  </head>
-  <body onload="document.getElementById('postNavigation').getElementsByTagName('button')[0].click();">
-    <div class="boxwrapper">
-      <!--LEFT SIDE-->
-      <div class="left">
-        <div class="left">
-          <p style="text-align: left; margin-left: 60%; font-size: 1.5em; animation: backButton ease 1.25s">
-          <a href="/index.html">
-            &lt;&lt;back
-          </a>
-          </p>
-        </div>
-      </div>
-      
-      <!--CENTER-->
-      <div class="center">
-        <div id="postNavigation">
-          <p style = "font-size: 2em; border-bottom: solid black 2px; margin-bottom: .5em;">
-            Posts
-          </p>
-          <button onClick = "selectPost('dev-log', 'catgirl-happy'); this.style.paddingLeft = '1em';">NeoSearch devlog 1</button>
-          <button onClick = "selectPost('neocities-search-engine-and-friendship', 'tomokoIntense'); this.style.paddingLeft = '1em';">neocities search engine</button>
-          <button onClick = "selectPost('i-am-a-gardener-not-an-architect', 'frierenButterfly'); this.style.paddingLeft = '1em';">I am a gardener, not an architect</button>
-          <button onClick = "selectPost('a-struggling-plant-and-buying-stuff-I-dont-need', 'homuraShocked'); this.style.paddingLeft = '1em';">a struggling plant and buying stuff I don't need</button>
-          <button onClick = "selectPost('the-suffering-that-comes-with-desire', 'sad'); this.style.paddingLeft = '1em';">the suffering that comes with desire</button>
-          <button onClick = "selectPost('finding-voice-in-music', 'amazed'); this.style.paddingLeft = '1em';">Finding Voice in Music</button>
-          <button onClick = "selectPost('blog-is-live', 'embarassed'); this.style.paddingLeft = '1em';">THE BLOG IS LIVE!!!!!!</button>
-        </div>
-        <div id = "postsContainer">
-          <article class = "post" id = "dev-log">
-            <h1>Neocities Search Devlog 1</h1>
-            <p>2025/11/27</p>
-            <p>
-              After lots of work and rewriting it twice (lol) I finally finished the first version of the backend of my search engine! I will have a working version up in a day or two so people can actually use it, and it will be much prettier over time. I even have some friends making art for it! Its very exciting
-            </p>
-            <p>
-              If you would like to  contribute to my development in any way, backend or frontend (i really need frontend devs lol), please please please reach out to me I would love for people to contribute :D If you want to work on stuff outside of issues I may have already posted on my github (like frontend) pease email me at <strong>akibaten@proton.me</strong>!
-            </p>
-            <p>
-              Feel free to go to my github on my homepage and analyze the whole codebase. I have a small, sample database and all of the scripts necessary to build your own database or run a scaled down version of the real thing in your terminal.
-            </p>
-            <p><a href = "https://github.com/Akibaten/NeoSearch">Here is the project :3</a>.</p>
-            <p>
-              the current program can search multiple exact keywords and will return pages that contain those words and order them based on the ranking/relevance of them in the whole dataset of websites. There is lots of tweaking to be had for the future.
-            </p>
-            <p>
-              I am pretty proud of what it is right now, and doing this project taught me so much especially about databases (databases are so cool omg). After its up or with its release, expeect several blog posts going over exactly how it works and explaining all the decision I made if you are interested :3 Also in doing this project I learned something interesting about neocities. My search engine first indexes lots of sites by starting at one person's profile and then going through and indexing every person they follow and then every person those people follow and so on. I had to rewrite my scraper to get it to be able to handle lots of sites, and I was prepared to run it to index at least 100,000 sites just to test. However, to my surprise it seems to max out sites at around 31,000 sites. Neocities most definitely has more sites then this, but as I thought about it more and more and looked at the specific error, it seems that the social graph of neocities just runs out. That means that of sites properly connected in the neocities social network (any site with greater than 0 followers where at least one follower is followed by someone else) seems to only consist of about 31,000 websites, which was interesting to me. I will have to test more but that seems to be how it is.
-            </p>
-            <p>
-              Okay that's all for now! Thank you for reading :D
-            </p>
-          </article>
-          <article class="post" id="neocities-search-engine-and-friendship">
-            <h1>neocities search engine</h1>
-            <p>2025/11/12</p>
-            <p>
-              Goodness I don't update neocities as much as I used to. I suppose thats the way it goes. I want to update more, but I just get so caught up in the rest of my life :( I do look at everyone's updates though. I check neocities everyday.
-            </p>
-            <p style = "padding-bottom:0">
-              Anyways, I am working on other things! I am actually working on a fairly ambitious personal project... I'm making a neocities search engine!!!! AHHHH i'm really excited for it. For some reason Neocities doesn't have search functions???? very odd and I think hurts indieweb. As fun as uncovering new websites through going down link rabbit holes is (its really fun :P), it makes consuming and getting involved with indieweb quite dense and have a bit of a learning curve. I hope to help that a little and of course those cool rabbitholes and communities will always be there. Search engines are fascinating and really cool. I am making a huge index with algorithms to search. It will be open source, but I want to make the code public when I have a working prototype. Some of my python scripts scrape websites... I felt really bad about that, like I was breaking a rule or something, but scraping isn't inherently bad. Scraping for AI and other reasons like ads is <em>really</em> bad. I hope no one hates me I'm just trying to build a tool :,)<br><br>
-              if anyone wants to give a little bit of feedback here are some questions regarding it:
-            </p>
-            <ul>
-              <style>
-                li{padding-bottom:.25rem}
-              </style>
-              <li>When you search for a keyword like "blog" or "public transit" or something, would you prefer the search results to be a link to the website where there are pages that mention those words or would you prefer to get a search results to be a link to the actual page itself that matched that keyword?</li>
-              <li>Should results come with a picture of the page it links to? (similar to the preview on the profile page of neocities)</li>
-              <li>When results for a site come up, would you like there to be a short description of the site? These descriptions could maybe be sent to me by the webmaster of that site though I'm not sure how I would verify right now</li>
-            </ul>
-            <p>
-              If you want to, send me a message or answer the questions in the comments or something. I appreciate it immensely. I'm really excited for this project :D
-            </p>
-          </article>
-          <article class="post" id = "i-am-a-gardener-not-an-architect">
-            <h1>I am a gardener, not an architect</h1>
-            <p>2025/11/02</p>
-            <p>
-              I have been feeling quite creatively frustrated lately, and it has really been making me sad. When I was a kid, I used to draw and write without any expectation or forethought. Making art and consuming art felt so magical to me. I was either making art of my own or consuming art and constantly thinking "What would I do here? What do I expect to happen?". Unbeknownst to me, that was me just trying to make art in my brain without even realizing what I was doing. Art felt effortless. So effortless in fact that I often didn't even realize I was doing it. As I grew up, it started to feel like making art was a thing I did, an activity, and if that activity were not to bear fruit in the exact way I wanted it, I would become frustrated and kill the project. I always thought I needed to finish something, something big. All of the artists I looked up to were releasing <em>works</em>, completed things they imagined from start to finish. I judge/judged myself so harshly for not being able to do that. Recently, I've realized that's just not how my brain works. For better or for worse, I can't do that, or at the very least, it is so antithetical to how my brain works that if I were to painstakingly rip it out of myself, it would be nothing short of torture, and it would completely ruin the joy of making art. I think I am much better at making art when it is in continuous living projects, stuff that doesn't have to be <strong>anything</strong>. It seems that for better or for worse, I am a gardener, not an architect. I've noticed that when I do this, creative vision of some sort emerges naturally. It's not always clean or structured, but it is much more <em>me</em> than it would be if I were to force myself to make something big, grand, and complete. For this website, I have been making pages and just not pushing/publishing them because they aren't <em>enough</em> in some way. They don't have enough content, or they aren't pretty enough or some other variation of me being a perfectionist. The same thing happens in music, but instead of making anything, this perfectionism kills the idea before it even gets to live. I think I'm going to try to really force myself past this. So I guess from now, this website and all of my art is <strong><em>incomplete</em></strong> and <strong><em>imperfect</em></strong> but above all else, it is hopefully me.
-            </p>
-          </article>
-          <article class="post" id = "a-struggling-plant-and-buying-stuff-I-dont-need">
-            <h1>
-              a struggling plant and buying stuff I don't need
-            </h1>
-            <p>2025/09/29</p>
-            <p>
-              I am doing much better now than my last entry. Lately I'm feeling much better although my mood does feel about all over the place throughout the day. I've started realizing I'm kind of putting a lot of pressure on myself for this site. I have no clue. Even though neocities is small, maybe knowing that a person looking at my site is <em>choosing</em> to look at my site makes it a lot different than other social media where my posts are always just a flash in the pan to a person scrolling, but maybe this aspect of neocities has added a lot of the humanity back to neocities. I feel like when I look at other people's sites, often times I have already decided the person is cool, and every subsequent update they make I always think is cool just because its them. I'm not scrutinizing it to tell when I can stop liking them or sort of just toss them and disregard them like someone unfollowing someone on social media. In a small community people don't feel expendable if that makes sense. I cherish all of you :>
-            </p>
-            <p>
-              One of my plants isn't doing super great right now :( <a href = "/plants.html#athena">Athena</a> (my marble queen) is struggling with growing new leaves. The leaves will grow but start to become a bit deformed, and as they unfurl, start to curl and get crispy edges.
-            </p>
-            <img src = "/img/blog/athena window.JPG" style = "width: 48%; padding: 1%;"><img src = "/img/blog/athena new leaf.JPG " style = "width: 48%; padding: 1%;">
-            <p>
-              To be honest, I don't really know why this is happening. It could be a huge range of issues:
-              <ul>
-                <li>under or overwatered (unlikely because I don't water her more than my other pothos)</li>
-                <li>she's rootbound (possible as I've never repotted her and she is <em>very</em> bush)</li>
-                <li>my room isn't humid enough (unlikely because my other pothos is fine)</li>
-                <li>root rot (I have noticed she isn't draining super great)</li>
-                <li>pests (oh my goodness no no no no no please...)</li>
-              </ul>
-              The most likely is probably either her being rootbound or possible root rot. I'll have to look more closely first, and hopefully I can fix this before it maybe starts to hurt her really healthy old leaves.
-            </p>
-            <p>
-              I ordered the EP <a href = "https://en.wikipedia.org/wiki/TOTEP"><em>TOTEP</em></a> by Kero Kero Bonito on vinyl! Once I get this it will complete most of my vinyl collection for KKB :))) which makes me super happy. I know I don't need it, but I just love having physical versions of art I like a lot. I think now I'm just missing the vinyls for the album <em>Civilization</em> and the 7 inch vinyls for <em>Flamingo</em> and <em>Swimming/The Open Road</em>. I'll get those eventually too :3 I love sliding these vinyls into clips on my wall (so I don't damage them at all) and hanging them up. My room is slowly becoming half a shrine to KKB :O
-            </p>
-            <p>
-              I've also been watching <em>Puella Magi Madoka Magica</em> and OH MY GOODNESS ITS SO GOOD. I love love love it. I'm a big fan of Akemi Homura for many reasons. I might even get a figure of her. I've been looking to add to my figure collection, but I don't watch enough anime to have tons of characters I love enough to have figures of and not feel like a poser :P Whoever is reading this, I hope you are doing well :)
-            </p>
-          </article>
-          <article class="post" id = "the-suffering-that-comes-with-desire">
-            <h1>
-              the suffering that comes with desire
-            </h1>
-            <p>2025/09/10</p>
-            <p>I've decided I'm probably going to start writing here instead of on my microblog. Moving forward I'll probably just use
-              my microblog for quick tiny posts about random stuff. I feel like my microblog posts are getting a little too long anyways.
-              I've been having a rough go of it lately. I guess. At least the last few weeks anyways. I'm doing research in computational
-              chemistry now which is cool. I get to code and bang my head against getting my python environment to work (I prefer javascript
-              anyways). My doctor's office was ordered to stop prescribing HRT and I got dropped so I have to find a new place for medication
-              now. I was reading a lot, but I'm reading a lot less now. I have been listening a lot to the ninajirachi album <em>I Love My Computer</em>.
-              It's good. Like really good. If you like dance music at all you should listen to it. It has a phenomenal aesthetic I really love.
-              My plants are doing well, and I was put in charge of all the plants in the big house I'm living in so that will be fun.
-            </p>
-            <p>
-              I feel really alone I guess? It's hard to describe. My parents went through a really messy divorce, and I don't talk to my mom anymore
-              and my dad is always mad at me for my grades. I guess I kind of feel like I lack a stabilizing force in my life. I have friends and
-              "chosen family", but I have no one to look up to. I feel like I have the ability to reach out to others but an inability to fall backwards.
-              My dad sees my grades as a sort of personal failing and compares me to his step kids who are making 4.0 GPAs (for non americans: that's perfect).
-              I'm a chemistry major and I'm passing all of my classes, but even still it's not enough. He sees me as <strong>sick</strong>. Not like I have an
-              untreated condition or something but as some immutable aspect of my character. I hate it, and anytime I struggle, I feel so guilty. As parts of my life
-              slip I can't help but constantly feel like I am proving him right. It's exhausting and hurts, and I feel like it only makes things harder.
-            </p>
-            <p>
-              I hate school. I don't hate science. I love the research I'm doing, and I love learning when I actually do which is typically right before a test. However,
-              I just can't bear to be present in my schooling in any capacity. I mean I'm writing this in an analytical chemistry lecture right now.
-            </p>
-            <p>
-              It's tough to console myself. I wish I could push myself. I wish I could give myself to school. I wish I could give it my all just for a little bit
-              even if it meant destroying myself. I really liked the person I was becoming but I just feel more and more like maybe I am not
-              ready to be her.
-            </p>
-            <p>
-              Listening to that ninajirachi's album made me want to make music so so so bad and has given me a lot of ideas for what I want to do for a project. I am excited for those random hazy abstract concepts in my brain to slowly become more real and eventuall exist.
-            </p>
-            <p>
-              I think I'm going to make a little page on my website for my plants. I love them so much. I think I might make a page for all of them like <a href = "https://doqmeat.com/collection/plushies/"><strong>this page</strong></a> on <a href = "https://doqmeat.com/"><strong>doqmeat's website</strong></a> where they detail all of their plushies. I like that a lot. I am quite happy with the setup in my new room. I think its really pretty, and I think my plants are really happy. They get so much light. Here's a picture:
-            </p>
-            <img src = "/img/blog/my room.jpg" style = "width: 80%; height: auto;">
-            <p>
-              Okay. That's all for now I think. Thank you for reading.
-            </p>
-          </article>
-          <article class = "post" id = "finding-voice-in-music">
-            <h1>Finding Voice in Music</h1>
-            <p>2025/03/24</p>
-            <p> When I started making music, I think most of my effort was based around learning technical skills like &quot;how do I eq this?&quot;, &quot;what does a good mix sound like?&quot;, &quot;How do I master? Is it necessary?&quot;, &quot;How can I understand how synths work and understand sound design?&quot; etc etc. By no means has my effort around this ended. I will never learn everything there is to know, and there will never be a time when my current skills can&#39;t be improved. However, I have enough technical understanding under my belt now to diversify and spread my time and energy across topics outside of just technical stuff. I think this can be most obviously qualified in my brain by the types of things I focused on when I listened to music. When I listen to music in any form, I think I am always sort of analyzing it, or more accurately I am listening to things I like and writing them down in a book in my brain. When I first started almost all of these little notes in my brain were about technical-ish things like &quot;I like the sound of this kick or this snare&quot;, &quot;This is a cool lead&quot;, &quot;I really like the mix here&quot; etc etc, but now these little notes in my brain have become increasingly abstract. Nowadays I am noting things in my brain like &quot;Oh I like the order or larger arrangement of this song&quot;, &quot;oh the motion of notes vertically and horizontally is really interesting here&quot;, &quot;I like the orchestration here, how the instruments interact with each other, and how it hits my brain/how it makes me feel&quot;. Things like that. This is all to say I think I&#39;ve become more focused on the concept of composition.</p>
-            <h2 id="composition">Composition</h2>
-            <p> Wikipedia explains the concept of composition in the following way: Musical composition can refer to [...] the structure of a musical piece or to the process of creating or writing a new piece of music. I think this is a fair definition, but for the sake of me expressing my understanding and conceptualization of the idea of composition in my head, I will define it like so: Composition refers to the process of combining elements or ideas at multiple levels of a hierarchy of increasing specificity. This is a somewhat vague definition, but as it applies to music I think about one of these levels of hierarchy as a movement of ideas, and within a level there are more levels of increasingly smaller movements of ideas, and within those movements smaller movements. Imagine an album; we can see that there is a theme over the album, a general movement of ideas, or a story. These movements are expressed through the tracks in the album, each track is made up of arrangements of chords or melodies which are composed of further movement of the pitches or harmonies within these sections or it could be expressed through lyrics and a story told through that. The concepts expressed through this story have even higher levels of hierarchy with their own shadow clone-like expression in different or the same elements. Maybe there is a large concept with parts explained in pieces in the tracks and these parts can interact with each other even non linearly. This applies to all art: manga, paintings, music, film, books, poetry, etc etc etc. These movements of ideas are affected and expressed through a <em>voice</em>.</p>
-            <h2 id="the-voice-of-an-artist">The Voice of an Artist</h2>
-            <p> For me at least developing a voice, the way your brain expresses and develops movement, is one of the hardest things to intentionally improve because it is an extremely abstract concept, and if you have no idea what you are even trying to develop it becomes a nearly impossible task. I have learned that this voice is not developed, but rather, it is found. It slowly develops in your insides until one day something clicks and you realize that you have created something with deliberate purpose and intentional movement both intentionally and unintentionally. You may have been finding and refining pieces of this music, and in the process of conceptualizing and putting these units together realize a deliberate movement has been made at higher, bigger levels of hierarchy even <strong>without</strong> you realizing. I honestly am not great at this, but it is something I am desperately and sometimes futilely trying to improve. I have begun to admire the technical skill of an artist less, in favor of admiring the voice that they have regardless of their success or how <em>good</em> it sounds (in an objective sense like mix or master or whatever). I have realized that the power of an artist&#39;s voice is not measured by numbers. It is solely decided by how it affects me. If a piece or album or song or concept affects me at a great level, the voice must be powerful at least relative to how it interacts with my brain. Some artists I have recently been really admiring the voice of are <a href = "https://soundcloud.com/dawndx">Dawn Dx (a friend of mine who is super talented)</a>, <a href = "https://soundcloud.com/fredagain">Fred again..</a>, <a href = "https://www.youtube.com/@ichikoaoba-hermine">Ichiko Aoba</a>, and <a href = "https://soundcloud.com/youknowlimbo">limbo</a> (all of these are SoundCloud links except Ichiko Aoba which is a youtube link so anyone can listen :D). All of these have a really powerful voice whether they are expressing simple or complex concepts.</p>
-            <h2 id="the-process-of-finding-my-voice">The Process of Finding My Voice</h2>
-            <p> I am extremely happy to say that recently I think I really have been developing a voice, and I think I have improved greatly (not that it&#39;s good just that it&#39;s much better than what I was doing before). I recently made a set for a club show that I did. It was all in Ableton and not really live so I had soooo much control over what was happening and how ideas connected without worrying about me screwing up or something. There were 7 songs total and three of them were IDs that I made (tracks I made specifically for this track that as of now are unnamed and aren&#39;t released). As I created these I realized that I was moving in them in a way that I wasn&#39;t fully aware of. As I got further in their production I started to feel how they connected at a fundamental level that was extremely satisfying. When I was finding other tracks for this set, I had a general, ineffable concept in my brain of what I wanted to happen in the set, and as I found things this concept became clearer and more refined to the point by the end I was searching for things that would fill an extremely specific role in the set, and when I sat down to put the set together, it fit together like how a puzzle can fit in pieces that have gaps between that group of pieces and the whole puzzle. I was setting tracks in the project file with space in between like I knew track 2 and 3 were obviously together, 1 and 5 were together, obviously track 6 was the final track, obviously group 2 came before group 1 and there was a gap of something else in between, and there was a gap between group 1 and the final track. I felt the spaces and gaps in the set, and I understood intuitively, generally what was supposed to fill those gaps. This was riveting and so satisfying and made me feel like I was doing <em>it</em>. I did it. I made music with purpose. When I finished this set, despite the obvious refinement it needed in certain areas, I was so proud of it. I am really excited to release this set once I refine it, and I have even floated the idea of my head of removing the songs that weren&#39;t mine, writing for the role in my brain that these tracks played, putting them in the void left by the removed songs, and releasing it as an album. This is a <em>very</em> exciting idea to me (^_^).</p>
-            <h2 id="how-i-am-working-to-improve-my-voice-now">How I Am Working to Improve My Voice Now</h2>
-            <p> Moving forward I want to improve the clarity of my voice to others by controlling and refining the level of abstraction at a macro level so it&#39;s more clear what I am trying to say when certain things are more abstract and certain things are less abstract, and I want to improve the power of my voice at a fairly small level. With the latter, I have noticed that the way I compose melodies and harmonies can be a bit repetitive at times. I have a tendency to write in blocks of midi and when I create new parts and new sections I often use the same blocks but with small changes like small changes in rhythm or maybe I raise it an octave or arpeggiate it. I don&#39;t think this is super noticeable, but I think doing this really robs me of a tool I have to imbue it with my voice and I lose an amount of je ne sais quoi that I would otherwise have. I&#39;m going to start composing and producing really trying to limit my using cmd + D to just duplicate stuff or copy pasting. I hope this helps. </p>
-            <p> On a side note, I really need to stop overanalyzing the way I view music. I think i have a tendency to reaalllyyyy overcomplicate things. I think its so fun to over analyze this stuff but if I hold to my own theories too tightly, it has a real tendency to impact my creativity, confine me, and make it hard for me to get anything done &gt;w&lt;</p>
-            <p> That&#39;s all! Thank you for reading I really appreciate it ◝(ᵔᵕᵔ)◜</p>
-          </article>
-          <article class = "post" id = "blog-is-live">
-            <h2>THE BLOG IS LIVE!!!!!!</h2>
-            <p>2025/02/28</p>
-            <p>This this took <strong>so long</strong>, genuinely. I wanted a way for my blog posts to be rendered from
-              files so I wouldn&#39;t constantly have to kill myself with the html code. I went through a lot
-              of attempts of this. I tried text to html and rendered that on the page but that was super
-              over complicated. I tried xml. I tried markdown to html the file through javascript but that
-              took forever. All these methods created unnecessary files and relied on caching which was also
-              awful. Eventually I actually just settled on rendering all the markdown files contentsinto raw
-              html (like just the p tags and content) and inserting that into divs. It didn&#39;t realize 
-              genuinely how fast javascript could convert that. This is what it is now! It has no styling
-              because I&#39;m lazy and don&#39;t want to open a whole other can of worms. I will update it in the
-              future, but for now this will be a blog for my thoughts, ideas, and maybe even essays I write
-              about stuff I care about. <strong>Thank you for looking :)</strong>
-            </p>
-          </article>
-        </div>
-      </div>
-      <!--RIGHT SIDE-->
-      <div class="right">
-        <div style = "animation: blurIn ease 1s; position: absolute; bottom: 0; right: 0; height: 20em; width: 20em"><img id = "moodGif"></div>
-      </div>
-    </div>
-  </body>
+			<!--CENTER-->
+			<div class="center">
+				<div id="postNavigation">
+					<p style="font-size: 2em; border-bottom: solid black 2px; margin-bottom: .5em;">
+						Posts
+					</p>
+					<button onClick="selectPost('NeoSearch-beta', 'nervous-miyo'); this.style.paddingLeft = '1em';">NeoSearch Beta Release!!!</button>
+					<button onClick="selectPost('dev-log', 'catgirl-happy'); this.style.paddingLeft = '1em';">NeoSearch devlog 1</button>
+					<button onClick="selectPost('neocities-search-engine-and-friendship', 'tomokoIntense'); this.style.paddingLeft = '1em';">neocities search engine</button>
+					<button onClick="selectPost('i-am-a-gardener-not-an-architect', 'frierenButterfly'); this.style.paddingLeft = '1em';">I am a gardener, not an architect</button>
+					<button onClick="selectPost('a-struggling-plant-and-buying-stuff-I-dont-need', 'homuraShocked'); this.style.paddingLeft = '1em';">a struggling plant and buying stuff I don't need</button>
+					<button onClick="selectPost('the-suffering-that-comes-with-desire', 'sad'); this.style.paddingLeft = '1em';">the suffering that comes with desire</button>
+					<button onClick="selectPost('finding-voice-in-music', 'amazed'); this.style.paddingLeft = '1em';">Finding Voice in Music</button>
+					<button onClick="selectPost('blog-is-live', 'embarassed'); this.style.paddingLeft = '1em';">THE BLOG IS LIVE!!!!!!</button>
+				</div>
+				<div id="postsContainer">
+					<article class="post" id="NeoSearch-beta">
+						<h1>NeoSearch Beta!</h1>
+						<p>2025/12/09</p>
+						<p>
+							12 days and an entire frontend later... the beta for NeoSearch is complete. Oh goodness... big undertaking lol. But at long last, a Neocities search engine!
+						</p>
+						<p>
+							NeoSearch is a search engine for Neocities! This is a beta. I want to add more art and make it prettier in the future :3 You can search a keyword or a few keywords and you will get website results you can visit! I love love love love indieweb and I hope this is a way it can become more accessible for people! The rabbit-hole-ness of indieweb is a part of what makes it so special, so NeoSearch only gives results for the website itself, but rest assured your searched terms are there~~~
+						</p>
+						<p>
+							<strong><a href="https://searchneocities.neocities.org">You can find NeoSearch here! (its a neocities website too heh)</a></strong>
+						</p>
+						<p>
+							I would love for you (yes you!) to use NeoSearch! If you have comments, questions, concerns, suggestions, thoughts, ideas, advice, or bugs to report please click the link on the bottom of any of the pages and submit a form!
+						</p>
+						<p>
+							I am really happy with what NeoSearch is right now. My own databases, scrapers, algorithm, backend, frontend... I'm like a whole fullstack dev now >:) There is still much to do, but it makes me so so happy I get to share it with people now :) I have already gotten distracted looking at new websites and finding cool stuff even while I was developing this :P in the future I might make a section to show my favorite websites I've found...
+						</p>
+						<p>
+							I would love for people to contribute! if you think this project is cool and maybe want to help in any way (art, development, etc) please email me at <u>akibaten@proton.me</u>
+						</p>
+						<p>
+							I love this project so much and hearing from others in any capacity makes me really happy!
+							If you are at all interested in how the code works, feel free to ask me any questions or poke around the <strong><a href="https://github.com/Akibaten/NeoSearch">github repo</a></strong>! You can reach out to me here on neocities (on this site's profile or the profile of the search engine site) or email me!
+						</p>
+					</article>
+					<article class="post" id="dev-log">
+						<h1>Neocities Search Devlog 1</h1>
+						<p>2025/11/27</p>
+						<p>
+							After lots of work and rewriting it twice (lol) I finally finished the first version of the backend of my search engine! I will have a working version up in a day or two so people can actually use it, and it will be much prettier over time. I even have some friends making art for it! Its very exciting
+						</p>
+						<p>
+							If you would like to  contribute to my development in any way, backend or frontend (i really need frontend devs lol), please please please reach out to me I would love for people to contribute :D If you want to work on stuff outside of issues I may have already posted on my github (like frontend) pease email me at <strong>akibaten@proton.me</strong>!
+						</p>
+						<p>
+							Feel free to go to my github on my homepage and analyze the whole codebase. I have a small, sample database and all of the scripts necessary to build your own database or run a scaled down version of the real thing in your terminal.
+						</p>
+						<p><a href="https://github.com/Akibaten/NeoSearch">Here is the project :3</a>.</p>
+						<p>
+							the current program can search multiple exact keywords and will return pages that contain those words and order them based on the ranking/relevance of them in the whole dataset of websites. There is lots of tweaking to be had for the future.
+						</p>
+						<p>
+							I am pretty proud of what it is right now, and doing this project taught me so much especially about databases (databases are so cool omg). After its up or with its release, expeect several blog posts going over exactly how it works and explaining all the decision I made if you are interested :3 Also in doing this project I learned something interesting about neocities. My search engine first indexes lots of sites by starting at one person's profile and then going through and indexing every person they follow and then every person those people follow and so on. I had to rewrite my scraper to get it to be able to handle lots of sites, and I was prepared to run it to index at least 100,000 sites just to test. However, to my surprise it seems to max out sites at around 31,000 sites. Neocities most definitely has more sites then this, but as I thought about it more and more and looked at the specific error, it seems that the social graph of neocities just runs out. That means that of sites properly connected in the neocities social network (any site with greater than 0 followers where at least one follower is followed by someone else) seems to only consist of about 31,000 websites, which was interesting to me. I will have to test more but that seems to be how it is.
+						</p>
+						<p>
+							Okay that's all for now! Thank you for reading :D
+						</p>
+					</article>
+					<article class="post" id="neocities-search-engine-and-friendship">
+						<h1>neocities search engine</h1>
+						<p>2025/11/12</p>
+						<p>
+							Goodness I don't update neocities as much as I used to. I suppose thats the way it goes. I want to update more, but I just get so caught up in the rest of my life :( I do look at everyone's updates though. I check neocities everyday.
+						</p>
+						<p style="padding-bottom:0">
+							Anyways, I am working on other things! I am actually working on a fairly ambitious personal project... I'm making a neocities search engine!!!! AHHHH i'm really excited for it. For some reason Neocities doesn't have search functions???? very odd and I think hurts indieweb. As fun as uncovering new websites through going down link rabbit holes is (its really fun :P), it makes consuming and getting involved with indieweb quite dense and have a bit of a learning curve. I hope to help that a little and of course those cool rabbitholes and communities will always be there. Search engines are fascinating and really cool. I am making a huge index with algorithms to search. It will be open source, but I want to make the code public when I have a working prototype. Some of my python scripts scrape websites... I felt really bad about that, like I was breaking a rule or something, but scraping isn't inherently bad. Scraping for AI and other reasons like ads is <em>really</em>
+							bad. I hope no one hates me I'm just trying to build a tool :,)<br><br>
+							if anyone wants to give a little bit of feedback here are some questions regarding it:
+						</p>
+						<ul>
+							<style>
+								li{padding-bottom:.25rem}
+							</style>
+							<li>When you search for a keyword like "blog" or "public transit" or something, would you prefer the search results to be a link to the website where there are pages that mention those words or would you prefer to get a search results to be a link to the actual page itself that matched that keyword?</li>
+							<li>Should results come with a picture of the page it links to? (similar to the preview on the profile page of neocities)</li>
+							<li>When results for a site come up, would you like there to be a short description of the site? These descriptions could maybe be sent to me by the webmaster of that site though I'm not sure how I would verify right now</li>
+						</ul>
+						<p>
+							If you want to, send me a message or answer the questions in the comments or something. I appreciate it immensely. I'm really excited for this project :D
+						</p>
+					</article>
+					<article class="post" id="i-am-a-gardener-not-an-architect">
+						<h1>I am a gardener, not an architect</h1>
+						<p>2025/11/02</p>
+						<p>
+							I have been feeling quite creatively frustrated lately, and it has really been making me sad. When I was a kid, I used to draw and write without any expectation or forethought. Making art and consuming art felt so magical to me. I was either making art of my own or consuming art and constantly thinking "What would I do here? What do I expect to happen?". Unbeknownst to me, that was me just trying to make art in my brain without even realizing what I was doing. Art felt effortless. So effortless in fact that I often didn't even realize I was doing it. As I grew up, it started to feel like making art was a thing I did, an activity, and if that activity were not to bear fruit in the exact way I wanted it, I would become frustrated and kill the project. I always thought I needed to finish something, something big. All of the artists I looked up to were releasing <em>works</em>, completed things they imagined from start to finish. I judge/judged myself so harshly for not being able to do that. Recently, I've realized that's just not how my brain works. For better or for worse, I can't do that, or at the very least, it is so antithetical to how my brain works that if I were to painstakingly rip it out of myself, it would be nothing short of torture, and it would completely ruin the joy of making art. I think I am much better at making art when it is in continuous living projects, stuff that doesn't have to be <strong>anything</strong>. It seems that for better or for worse, I am a gardener, not an architect. I've noticed that when I do this, creative vision of some sort emerges naturally. It's not always clean or structured, but it is much more <em>me</em>
+							than it would be if I were to force myself to make something big, grand, and complete. For this website, I have been making pages and just not pushing/publishing them because they aren't <em>enough</em>
+							in some way. They don't have enough content, or they aren't pretty enough or some other variation of me being a perfectionist. The same thing happens in music, but instead of making anything, this perfectionism kills the idea before it even gets to live. I think I'm going to try to really force myself past this. So I guess from now, this website and all of my art is <strong><em>incomplete</em></strong>
+							and <strong><em>imperfect</em></strong>
+							but above all else, it is hopefully me.
+						</p>
+					</article>
+					<article class="post" id="a-struggling-plant-and-buying-stuff-I-dont-need">
+						<h1>
+							a struggling plant and buying stuff I don't need
+						</h1>
+						<p>2025/09/29</p>
+						<p>
+							I am doing much better now than my last entry. Lately I'm feeling much better although my mood does feel about all over the place throughout the day. I've started realizing I'm kind of putting a lot of pressure on myself for this site. I have no clue. Even though neocities is small, maybe knowing that a person looking at my site is <em>choosing</em>
+							to look at my site makes it a lot different than other social media where my posts are always just a flash in the pan to a person scrolling, but maybe this aspect of neocities has added a lot of the humanity back to neocities. I feel like when I look at other people's sites, often times I have already decided the person is cool, and every subsequent update they make I always think is cool just because its them. I'm not scrutinizing it to tell when I can stop liking them or sort of just toss them and disregard them like someone unfollowing someone on social media. In a small community people don't feel expendable if that makes sense. I cherish all of you :>
+						</p>
+						<p>
+							One of my plants isn't doing super great right now :( <a href="/plants.html#athena">Athena</a>
+							(my marble queen) is struggling with growing new leaves. The leaves will grow but start to become a bit deformed, and as they unfurl, start to curl and get crispy edges.
+						</p>
+						<img src="/img/blog/athena window.JPG" style="width: 48%; padding: 1%;"><img src="/img/blog/athena new leaf.JPG " style="width: 48%; padding: 1%;">
+						<p>
+							To be honest, I don't really know why this is happening. It could be a huge range of issues:
+							<ul>
+								<li>under or overwatered (unlikely because I don't water her more than my other pothos)</li>
+								<li>she's rootbound (possible as I've never repotted her and she is <em>very</em>
+									bush)</li>
+								<li>my room isn't humid enough (unlikely because my other pothos is fine)</li>
+								<li>root rot (I have noticed she isn't draining super great)</li>
+								<li>pests (oh my goodness no no no no no please...)</li>
+							</ul>
+							The most likely is probably either her being rootbound or possible root rot. I'll have to look more closely first, and hopefully I can fix this before it maybe starts to hurt her really healthy old leaves.
+						</p>
+						<p>
+							I ordered the EP <a href="https://en.wikipedia.org/wiki/TOTEP"><em>TOTEP</em></a>
+							by Kero Kero Bonito on vinyl! Once I get this it will complete most of my vinyl collection for KKB :))) which makes me super happy. I know I don't need it, but I just love having physical versions of art I like a lot. I think now I'm just missing the vinyls for the album <em>Civilization</em>
+							and the 7 inch vinyls for <em>Flamingo</em>
+							and <em>Swimming/The Open Road</em>. I'll get those eventually too :3 I love sliding these vinyls into clips on my wall (so I don't damage them at all) and hanging them up. My room is slowly becoming half a shrine to KKB :O
+						</p>
+						<p>
+							I've also been watching <em>Puella Magi Madoka Magica</em>
+							and OH MY GOODNESS ITS SO GOOD. I love love love it. I'm a big fan of Akemi Homura for many reasons. I might even get a figure of her. I've been looking to add to my figure collection, but I don't watch enough anime to have tons of characters I love enough to have figures of and not feel like a poser :P Whoever is reading this, I hope you are doing well :)
+						</p>
+					</article>
+					<article class="post" id="the-suffering-that-comes-with-desire">
+						<h1>
+							the suffering that comes with desire
+						</h1>
+						<p>2025/09/10</p>
+						<p>I've decided I'm probably going to start writing here instead of on my microblog. Moving forward I'll probably just use
+							my microblog for quick tiny posts about random stuff. I feel like my microblog posts are getting a little too long anyways.
+							I've been having a rough go of it lately. I guess. At least the last few weeks anyways. I'm doing research in computational
+							chemistry now which is cool. I get to code and bang my head against getting my python environment to work (I prefer javascript
+							anyways). My doctor's office was ordered to stop prescribing HRT and I got dropped so I have to find a new place for medication
+							now. I was reading a lot, but I'm reading a lot less now. I have been listening a lot to the ninajirachi album <em>I Love My Computer</em>.
+							It's good. Like really good. If you like dance music at all you should listen to it. It has a phenomenal aesthetic I really love.
+							My plants are doing well, and I was put in charge of all the plants in the big house I'm living in so that will be fun.</p>
+						<p>
+							I feel really alone I guess? It's hard to describe. My parents went through a really messy divorce, and I don't talk to my mom anymore
+							and my dad is always mad at me for my grades. I guess I kind of feel like I lack a stabilizing force in my life. I have friends and
+							"chosen family", but I have no one to look up to. I feel like I have the ability to reach out to others but an inability to fall backwards.
+							My dad sees my grades as a sort of personal failing and compares me to his step kids who are making 4.0 GPAs (for non americans: that's perfect).
+							I'm a chemistry major and I'm passing all of my classes, but even still it's not enough. He sees me as <strong>sick</strong>. Not like I have an
+							untreated condition or something but as some immutable aspect of my character. I hate it, and anytime I struggle, I feel so guilty. As parts of my life
+							slip I can't help but constantly feel like I am proving him right. It's exhausting and hurts, and I feel like it only makes things harder.
+						</p>
+						<p>
+							I hate school. I don't hate science. I love the research I'm doing, and I love learning when I actually do which is typically right before a test. However,
+							I just can't bear to be present in my schooling in any capacity. I mean I'm writing this in an analytical chemistry lecture right now.
+						</p>
+						<p>
+							It's tough to console myself. I wish I could push myself. I wish I could give myself to school. I wish I could give it my all just for a little bit
+							even if it meant destroying myself. I really liked the person I was becoming but I just feel more and more like maybe I am not
+							ready to be her.
+						</p>
+						<p>
+							Listening to that ninajirachi's album made me want to make music so so so bad and has given me a lot of ideas for what I want to do for a project. I am excited for those random hazy abstract concepts in my brain to slowly become more real and eventuall exist.
+						</p>
+						<p>
+							I think I'm going to make a little page on my website for my plants. I love them so much. I think I might make a page for all of them like <a href="https://doqmeat.com/collection/plushies/"><strong>this page</strong></a>
+							on <a href="https://doqmeat.com/"><strong>doqmeat's website</strong></a>
+							where they detail all of their plushies. I like that a lot. I am quite happy with the setup in my new room. I think its really pretty, and I think my plants are really happy. They get so much light. Here's a picture:
+						</p>
+						<img src="/img/blog/my room.jpg" style="width: 80%; height: auto;">
+						<p>
+							Okay. That's all for now I think. Thank you for reading.
+						</p>
+					</article>
+					<article class="post" id="finding-voice-in-music">
+						<h1>Finding Voice in Music</h1>
+						<p>2025/03/24</p>
+						<p>
+							When I started making music, I think most of my effort was based around learning technical skills like &quot;how do I eq this?&quot;, &quot;what does a good mix sound like?&quot;, &quot;How do I master? Is it necessary?&quot;, &quot;How can I understand how synths work and understand sound design?&quot; etc etc. By no means has my effort around this ended. I will never learn everything there is to know, and there will never be a time when my current skills can&#39;t be improved. However, I have enough technical understanding under my belt now to diversify and spread my time and energy across topics outside of just technical stuff. I think this can be most obviously qualified in my brain by the types of things I focused on when I listened to music. When I listen to music in any form, I think I am always sort of analyzing it, or more accurately I am listening to things I like and writing them down in a book in my brain. When I first started almost all of these little notes in my brain were about technical-ish things like &quot;I like the sound of this kick or this snare&quot;, &quot;This is a cool lead&quot;, &quot;I really like the mix here&quot; etc etc, but now these little notes in my brain have become increasingly abstract. Nowadays I am noting things in my brain like &quot;Oh I like the order or larger arrangement of this song&quot;, &quot;oh the motion of notes vertically and horizontally is really interesting here&quot;, &quot;I like the orchestration here, how the instruments interact with each other, and how it hits my brain/how it makes me feel&quot;. Things like that. This is all to say I think I&#39;ve become more focused on the concept of composition.
+						</p>
+						<h2 id="composition">Composition</h2>
+						<p>
+							Wikipedia explains the concept of composition in the following way: Musical composition can refer to [...] the structure of a musical piece or to the process of creating or writing a new piece of music. I think this is a fair definition, but for the sake of me expressing my understanding and conceptualization of the idea of composition in my head, I will define it like so: Composition refers to the process of combining elements or ideas at multiple levels of a hierarchy of increasing specificity. This is a somewhat vague definition, but as it applies to music I think about one of these levels of hierarchy as a movement of ideas, and within a level there are more levels of increasingly smaller movements of ideas, and within those movements smaller movements. Imagine an album; we can see that there is a theme over the album, a general movement of ideas, or a story. These movements are expressed through the tracks in the album, each track is made up of arrangements of chords or melodies which are composed of further movement of the pitches or harmonies within these sections or it could be expressed through lyrics and a story told through that. The concepts expressed through this story have even higher levels of hierarchy with their own shadow clone-like expression in different or the same elements. Maybe there is a large concept with parts explained in pieces in the tracks and these parts can interact with each other even non linearly. This applies to all art: manga, paintings, music, film, books, poetry, etc etc etc. These movements of ideas are affected and expressed through a <em>voice</em>.
+						</p>
+						<h2 id="the-voice-of-an-artist">The Voice of an Artist</h2>
+						<p>
+							For me at least developing a voice, the way your brain expresses and develops movement, is one of the hardest things to intentionally improve because it is an extremely abstract concept, and if you have no idea what you are even trying to develop it becomes a nearly impossible task. I have learned that this voice is not developed, but rather, it is found. It slowly develops in your insides until one day something clicks and you realize that you have created something with deliberate purpose and intentional movement both intentionally and unintentionally. You may have been finding and refining pieces of this music, and in the process of conceptualizing and putting these units together realize a deliberate movement has been made at higher, bigger levels of hierarchy even <strong>without</strong>
+							you realizing. I honestly am not great at this, but it is something I am desperately and sometimes futilely trying to improve. I have begun to admire the technical skill of an artist less, in favor of admiring the voice that they have regardless of their success or how <em>good</em>
+							it sounds (in an objective sense like mix or master or whatever). I have realized that the power of an artist&#39;s voice is not measured by numbers. It is solely decided by how it affects me. If a piece or album or song or concept affects me at a great level, the voice must be powerful at least relative to how it interacts with my brain. Some artists I have recently been really admiring the voice of are <a href="https://soundcloud.com/dawndx">Dawn Dx (a friend of mine who is super talented)</a>, <a href="https://soundcloud.com/fredagain">Fred again..</a>, <a href="https://www.youtube.com/@ichikoaoba-hermine">Ichiko Aoba</a>, and <a href="https://soundcloud.com/youknowlimbo">limbo</a>
+							(all of these are SoundCloud links except Ichiko Aoba which is a youtube link so anyone can listen :D). All of these have a really powerful voice whether they are expressing simple or complex concepts.
+						</p>
+						<h2 id="the-process-of-finding-my-voice">The Process of Finding My Voice</h2>
+						<p>
+							I am extremely happy to say that recently I think I really have been developing a voice, and I think I have improved greatly (not that it&#39;s good just that it&#39;s much better than what I was doing before). I recently made a set for a club show that I did. It was all in Ableton and not really live so I had soooo much control over what was happening and how ideas connected without worrying about me screwing up or something. There were 7 songs total and three of them were IDs that I made (tracks I made specifically for this track that as of now are unnamed and aren&#39;t released). As I created these I realized that I was moving in them in a way that I wasn&#39;t fully aware of. As I got further in their production I started to feel how they connected at a fundamental level that was extremely satisfying. When I was finding other tracks for this set, I had a general, ineffable concept in my brain of what I wanted to happen in the set, and as I found things this concept became clearer and more refined to the point by the end I was searching for things that would fill an extremely specific role in the set, and when I sat down to put the set together, it fit together like how a puzzle can fit in pieces that have gaps between that group of pieces and the whole puzzle. I was setting tracks in the project file with space in between like I knew track 2 and 3 were obviously together, 1 and 5 were together, obviously track 6 was the final track, obviously group 2 came before group 1 and there was a gap of something else in between, and there was a gap between group 1 and the final track. I felt the spaces and gaps in the set, and I understood intuitively, generally what was supposed to fill those gaps. This was riveting and so satisfying and made me feel like I was doing <em>it</em>. I did it. I made music with purpose. When I finished this set, despite the obvious refinement it needed in certain areas, I was so proud of it. I am really excited to release this set once I refine it, and I have even floated the idea of my head of removing the songs that weren&#39;t mine, writing for the role in my brain that these tracks played, putting them in the void left by the removed songs, and releasing it as an album. This is a <em>very</em>
+							exciting idea to me (^_^).
+						</p>
+						<h2 id="how-i-am-working-to-improve-my-voice-now">How I Am Working to Improve My Voice Now</h2>
+						<p>
+							Moving forward I want to improve the clarity of my voice to others by controlling and refining the level of abstraction at a macro level so it&#39;s more clear what I am trying to say when certain things are more abstract and certain things are less abstract, and I want to improve the power of my voice at a fairly small level. With the latter, I have noticed that the way I compose melodies and harmonies can be a bit repetitive at times. I have a tendency to write in blocks of midi and when I create new parts and new sections I often use the same blocks but with small changes like small changes in rhythm or maybe I raise it an octave or arpeggiate it. I don&#39;t think this is super noticeable, but I think doing this really robs me of a tool I have to imbue it with my voice and I lose an amount of je ne sais quoi that I would otherwise have. I&#39;m going to start composing and producing really trying to limit my using cmd + D to just duplicate stuff or copy pasting. I hope this helps.
+						</p>
+						<p>
+							On a side note, I really need to stop overanalyzing the way I view music. I think i have a tendency to reaalllyyyy overcomplicate things. I think its so fun to over analyze this stuff but if I hold to my own theories too tightly, it has a real tendency to impact my creativity, confine me, and make it hard for me to get anything done &gt;w&lt;
+						</p>
+						<p>
+							That&#39;s all! Thank you for reading I really appreciate it ◝(ᵔᵕᵔ)◜
+						</p>
+					</article>
+					<article class="post" id="blog-is-live">
+						<h2>THE BLOG IS LIVE!!!!!!</h2>
+						<p>2025/02/28</p>
+						<p>This this took <strong>so long</strong>, genuinely. I wanted a way for my blog posts to be rendered from
+							files so I wouldn&#39;t constantly have to kill myself with the html code. I went through a lot
+							of attempts of this. I tried text to html and rendered that on the page but that was super
+							over complicated. I tried xml. I tried markdown to html the file through javascript but that
+							took forever. All these methods created unnecessary files and relied on caching which was also
+							awful. Eventually I actually just settled on rendering all the markdown files contentsinto raw
+							html (like just the p tags and content) and inserting that into divs. It didn&#39;t realize
+							genuinely how fast javascript could convert that. This is what it is now! It has no styling
+							because I&#39;m lazy and don&#39;t want to open a whole other can of worms. I will update it in the
+							future, but for now this will be a blog for my thoughts, ideas, and maybe even essays I write
+							about stuff I care about. <strong>Thank you for looking :)</strong></p>
+					</article>
+				</div>
+			</div>
+			<!--RIGHT SIDE-->
+			<div class="right">
+				<div style="animation: blurIn ease 1s; position: absolute; bottom: 0; right: 0; height: 20em; width: 20em"><img id="moodGif"></div>
+			</div>
+		</div>
+	</body>
 </html>
