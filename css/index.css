@@ -31,7 +31,7 @@
 }
 
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
   #boxwrapper#boxwrapper {
     display: flex;
     flex-direction: column;
@@ -56,30 +56,30 @@
   }
 
   /* fixes padding for container */
-  .container.container{
+  .container.container {
     padding: .5em;
   }
 
 
   /* changes font size for mobile */
-  p{
+  p {
     font-size: 1em !important;
   }
 
   /*big header*/
   h1 {
     font-size: 135% !important;
-    text-align: center; 
-    color:rgb(235,0,127);
+    text-align: center;
+    color: rgb(235, 0, 127);
     margin-bottom: 5% !important;
     margin-top: 5% !important;
   }
-  
-  #centerContent{
+
+  #centerContent {
     height: 37em !important;
   }
 
-  .horizontal-bar{
+  .horizontal-bar {
     animation: scroll-horizontal 5s linear infinite !important;
   }
 }
@@ -96,10 +96,10 @@
 
   /*margin below and abocve container*/
   margin-bottom: .5em;
-  
+
 }
 
-.containerBar{
+.containerBar {
   border-radius: .4em;
   word-wrap: break-word;
   background-color: rgba(255, 255, 255, 1);
@@ -108,25 +108,25 @@
 }
 
 
-.containerContent{  
+.containerContent {
   border-radius: .25em;
-  word-wrap: break-word; 
-  background-color: rgba(255, 255, 255, 1);
-  padding:3%;
+  word-wrap: break-word;
+  background-color: #f9f9f9;
+  padding: 3%;
   padding-bottom: 5%;
   margin: 0;
   /*outline around letters*/
   -webkit-text-stroke-width: .5px;
-  -webkit-text-stroke-color: rgb(255,20,147);
+  -webkit-text-stroke-color: rgb(255, 20, 147);
 }
 
-#mainCenter{
+#mainCenter {
   position: relative;
   padding: 6% 5% 5% 5%;
 }
 
-#mainCenterContent{
-  position: relative; 
+#mainCenterContent {
+  position: relative;
   overflow: scroll;
 }
 
@@ -138,7 +138,7 @@
 h1 {
   font-size: 2.5rem;
   text-align: center;
-  color:rgb(235,0,127);
+  color: rgb(235, 0, 127);
   margin-top: .05em;
   margin-bottom: .01em;
 }
@@ -147,16 +147,16 @@ h1 {
 h2 {
   line-height: 115%;
   font-size: 1.875rem;
-  color:rgb(235,0,127);
+  color: rgb(235, 0, 127);
   margin-top: .01em;
   margin-bottom: .1em;
 }
- 
+
 p {
   /*paragraph spacing*/
   line-height: 110%;
   margin-bottom: 12px;
-  color:hotpink;
+  color: hotpink;
   font-size: 1.4em;
 }
 
@@ -165,36 +165,36 @@ details {
   margin-left: .75em;
   margin-bottom: 0.75em;
   margin-top: 0.75em;
-  color:hotpink;
+  color: hotpink;
   font-size: 1.2em;
 }
 
-details p{
+details p {
   line-height: 110%;
   margin: .5em 0 0 1.2em;
   font-size: 1em;
 }
 
 /*li is formatting for list items*/
-nav{
+nav {
   margin: .4em;
 }
 
-.navLinkBorder{
+.navLinkBorder {
   transition: padding-left .2s linear;
   margin: .5em 0;
 }
 
-.navLinkBorder:hover{
+.navLinkBorder:hover {
   padding-left: 5% !important;
 }
 
-nav p{
+nav p {
   line-height: 100%;
   margin: 0;
-  color:rgb(235,0,127);
+  color: rgb(235, 0, 127);
   font-size: 1.56em;
-  background-color: white;
+  background-color: #f9f9f9;
 }
 
 nav button {
@@ -202,9 +202,9 @@ nav button {
   font-size: 1em !important;
   line-height: 100%;
   -webkit-text-stroke-width: .5px;
-  -webkit-text-stroke-color: rgb(255,20,147);
+  -webkit-text-stroke-color: rgb(255, 20, 147);
   display: block;
-  margin:0;
+  margin: 0;
   padding: 0;
   margin-left: 1em;
   border: none;
@@ -212,7 +212,7 @@ nav button {
   box-shadow: none;
 }
 
-nav a{
+nav a {
   background-color: transparent !important;
   display: block;
   text-decoration: none;
@@ -220,39 +220,39 @@ nav a{
 }
 
 /*li is formatting for list items typically used for non navigation links*/
-li{
-  color:rgb(235,0,127);
-  font-size: 1.56em;    
+li {
+  color: rgb(235, 0, 127);
+  font-size: 1.56em;
 }
 
 strong {
-  color:rgb(235,0,127);
+  color: rgb(235, 0, 127);
 }
 
 a {
-  background-color: rgba(255,105,180,0.3);
-  color:rgba(230,80,155,1);
+  background-color: rgba(255, 105, 180, 0.3);
+  color: rgba(230, 80, 155, 1);
 }
 
-a:hover{
+a:hover {
   cursor: pointer;
 }
 
-a img{
+a img {
   display: inline-block;
   vertical-align: middle;
 }
 
-a:hover{
-   background-color: rgba(240,90,165,0.5); 
+a:hover {
+  background-color: rgba(240, 90, 165, 0.5);
 }
 
 
 /* button styling */
-#translateButton{
-  text-align: center; 
-  color:rgb(235,0,127);
-  background-color: white;
+#translateButton {
+  text-align: center;
+  color: rgb(235, 0, 127);
+  background-color: #f9f9f9;
   border-radius: 5px;
 }
 
@@ -275,20 +275,20 @@ video {
 }
 
 .video-container video {
-  width: 100vw; 
+  width: 100vw;
   height: 100vh;
   object-fit: fill;
 }
 
 /* slides for website progress :3 */
 
-.mySlides{
+.mySlides {
   display: none;
   width: 100%;
   height: auto;
 }
 
-.horizontal-bar{  
+.horizontal-bar {
   position: fixed;
   width: 100vw;
   top: 95vh;
@@ -298,7 +298,14 @@ video {
   z-index: 1000;
 }
 
-body {  
+#neosearch-iframe {
+  width: 100%;
+  height: 25rem;
+  border: .125rem solid rgb(235, 0, 127);
+  border-radius: .4rem;
+}
+
+body {
   margin: 0;
   width: 100vw;
   height: 100vh;
@@ -312,7 +319,7 @@ body {
 }
 
 html {
-  scrollbar-color: rgba(211, 211, 211, 0.627) white;
+  scrollbar-color: rgba(211, 211, 211, 0.627) #f9f9f9;
   scrollbar-width: thin;
   overflow-y: scroll;
 }
