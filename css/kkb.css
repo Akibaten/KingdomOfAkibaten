@@ -5,24 +5,63 @@
 }
 
 #maincontent {
-  margin: 0 15% 0 15%;
-  display: flex;
-  width: 70%;
-  flex-direction: row;
+  width: 80vw;
 }
 
 #leftContent{
-  width: 70%;
-  height: 100%;
   padding: 2rem;
+  height: 100vh;
+  overflow-y: scroll;
   background-color: white;
 }
 
 #rightContent{
-  width: 30%;
-  height: 100vh;
   background-color: black;
 }
+
+#title {
+  font-family:introbonito;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 4vw;
+  text-align: center
+}
+
+#intro {
+  width: 97.5%;
+  margin: 0 1.25% 0 1.25%;
+  background-color: white;
+}
+
+#bonito-generation {
+  background-color: yellow;
+}
+
+.marquee-container {
+   width: 100%;
+   padding: 15px 0;
+ }
+
+ .marquee-content {
+   animation: marquee 20s linear infinite;
+ }
+
+ .marquee-item {
+   flex: 0 0 auto;
+   padding: 0 20px;
+   font-size: 1.2rem;
+   color: #495057;
+ }
+
+ @keyframes marquee {
+   0% {
+     transform: translateY(20%);
+   }
+
+   100% {
+     transform: translateY(-200%);
+   }
+ }
 
 p {
   font-size: 1.5em;
@@ -43,6 +82,18 @@ strong {
 }
 
 body {
+  height: 100vh;
+  width: 100vw;
   font-family: monospace;
   background-color:  	#ff48a4;
+}
+
+@font-face {
+  font-family: KKB-civilization;
+  src: url(../fonts/KKB-civilization.ttf)
+}
+
+@font-face {
+  font-family: introbonito;
+  src: url(../fonts/Orbitron-VariableFont_wght.ttf)
 }

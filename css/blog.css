@@ -1,32 +1,26 @@
-/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
-   HTML content. To learn how to do something, just try searching Google for questions like
-   "how to change link color." */
 .html{
   height: 100%;
 }
 
 .boxwrapper {
-  display: grid;
-  grid-row-start:auto;
+  display: flex;
+  flex-direction: row;
   height: 100vh;
 }
 
 .left {
-  grid-row:1;
-  width:22vw;
+  width: 22%;
 }
 
 .center {
-  grid-row:1;
-  width:56vw;
+  width:56%;
   margin-top: 5vh;
   position: relative;
   display: flex;
 }
 
 .right {  
-  grid-row:1;
-  width: 22vw;
+  width: 22%;
   position: relative;
 }
 
@@ -38,7 +32,7 @@
 }
 
 #postsContainer {
-  overflow: hidden;
+  overflow: scroll;
   width: 76%;
   position: relative;
   box-sizing: border-box;
@@ -48,23 +42,14 @@
   letter-spacing: -.01em;
 }
 
-#moodGif {
-  width: 80%;
-  height: auto;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
 .post{
   position: absolute;
-  visibility: hidden;
-  overflow: hidden;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   padding: 0 1.5rem 5rem 1.5rem;
+  box-sizing: border-box;
 }
 
 #postNavigation button {
@@ -78,41 +63,140 @@
   padding-left: 1em;
 }
 
+#moodGifContainer {
+  animation: blurIn ease 1s;
+  position: fixed; 
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  width:17.5vw;
+}
+
+#moodGif {
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+
+#back-button {
+  text-align: left;
+  margin-left: 60%;
+  font-size: 1.5em;
+}
+
+#dropdown {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .boxwrapper{
+    display: block;
+  }
+
+  .left{
+    width: 100vw;
+    padding: 0 10% 2rem 10%;
+  }
+  
+  .center{
+    margin-top: 0;
+    width: 100vw;
+    height: 100%;
+    box-sizing:border-box;
+  }
+  
+  .right{
+    display: none;
+  }
+
+  #postNavigation {
+    display: none;
+  }
+
+  #postsContainer{
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: block;
+  }
+
+  #moodGifContainer {
+    position: relative;
+    width: auto;
+    padding: 0 5% 2rem 5%;
+    box-sizing: border-box;
+  }
+
+  #moodGif {
+    position: relative;
+    width: 100%;
+  }
+
+  .post {
+    height: auto;
+    overflow: auto;
+    position: relative;
+    padding-bottom: 1.5rem;
+  }
+
+  #backButton {
+    margin-left: 0%
+  }
+
+  #dropdown {
+    display:flex;
+    width: 100%;
+  }
+}
+
 /*big header*/
 h1 {
+  all: revert;
   color: black;
 }
 
 /*sub header*/
 h2 {
+  all: revert;
   color: black;
 }
  
 p {
-  font-size: 1.1em;
+  all: revert;
+  font-size: 1.2em;
+  letter-spacing: -.5px;
   color: black;
-  font-weight: 400;
 }
 
 /*li is formatting for list items*/
 li{
+  all: revert;
 
 }
 
 strong {
+  all: revert;
   
 }
 
+button {
+  font-size: 1.05em !important;
+}
+
 a {
+  all: revert;
   word-break:break-all;
   color: black;
+  font-size: 1.2em;
   text-decoration-thickness: 2px;
 }
 
 body {
+  width: 100vw;
   background-color: white;
   font-family: 'Courier New', Courier, monospace;
-  height: 100vh;
   width: 100vw;
   background-attachment: fixed;
   overscroll-behavior: none;
